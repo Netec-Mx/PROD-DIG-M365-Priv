@@ -1,4 +1,7 @@
-<img src="assets/LogoNetec.png" alt="logo" width="300"/>
+<a href="https://netec.com">
+  <img src="https://static.wixstatic.com/media/96edd2_934dddb3230b4b16b1d1c56c51143738~mv2.png" alt="Logo de Netec" width="300"/>
+</a>
+
 
 # Productividad Digital con Microsoft 365
 
@@ -28,7 +31,6 @@ Personal operativo que participa en actividades administrativas, financieras, co
 
 Las ocho misiones ocurren en el **cierre operativo de abril de 2025** de una institución ficticia. Cada misión plantea una situación del cierre, una acción práctica con Microsoft 365 y una comprobación individual del resultado. Los artefactos de una misión se reutilizan en las siguientes.
 
-<img src="images/mapa-misiones.svg" alt="Mapa de las ocho misiones del curso y la herramienta principal de cada una" width="760"/>
 
 ## Lista de laboratorios
 
@@ -74,62 +76,6 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
   - **Descripción**: depurar un expediente con errores de nombre, campos faltantes, versiones y responsables sin definir, y preparar con Copilot Chat básico una lista de comprobación y un resumen de hallazgos. Comprobación: presentar el expediente depurado y describir mejoras aplicables al trabajo propio.
   - ⏱️ **Duración estimada**: 42 min.
 
-### Distribución del tiempo
-
-| Módulo | Teoría | Práctica | Total |
-|---|---|---|---|
-| 1. Fundamentos de productividad digital | 18 min | 42 min | 60 min |
-| 2. Microsoft 365 y colaboración | 18 min | 42 min | 60 min |
-| 3. Teams y trabajo coordinado | 18 min | 42 min | 60 min |
-| 4. SharePoint y gestión documental | 18 min | 42 min | 60 min |
-| 5. Forms y captura de información | 18 min | 42 min | 60 min |
-| 6. Planner y gestión de tareas | 18 min | 42 min | 60 min |
-| 7. Automatización y flujos de trabajo | 18 min | 42 min | 60 min |
-| 8. Uso eficiente de la información | 18 min | 42 min | 60 min |
-| **Total** | **144 min (30%)** | **336 min (70%)** | **480 min (8 h)** |
-
-## Instrucciones generales del laboratorio
-
-1. Antes del curso, el instructor prepara el sitio de práctica, las bibliotecas y los archivos con la [Guía de configuración](SETUP_GUIDE.md).
-2. Cada misión está en su carpeta `CapituloNN` con su `README.md`; los archivos de entrada están en `CapituloNN/recursos/`. Para descargar uno, abrirlo y seleccionar **Download raw file**.
-3. Guardar el trabajo en OneDrive, en la carpeta `CierreOperativo/Semana1/`, con su apellido en el nombre de los archivos (`[Apellido]`).
-4. Las misiones son individuales y progresivas: los archivos de las misiones 1 y 2 se usan en la 3; el equipo de Teams de la Misión 3 y la biblioteca de la Misión 4 se reutilizan en las misiones 5 y 8, y el plan de Planner de la Misión 6 es el disparador del flujo de la Misión 7.
-5. Usar Copilot Chat básico solo con la cuenta institucional ([m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat)) y solo con la información del caso. Revisar siempre su respuesta antes de usarla.
-6. Todos los datos son ficticios. No cargar información real de la organización en las prácticas.
-
-## Estructura del repositorio
-
-```text
-.
-├── README.md            Página principal (este archivo)
-├── SETUP_GUIDE.md       Guía de configuración del entorno
-├── assets/              Logotipo
-├── images/              Mapa del curso y diagrama de cada misión
-├── Capitulo01/          Misión 1: README.md y recursos/
-├── ...
-└── Capitulo08/          Misión 8: README.md y recursos/
-```
-
-## Recursos adicionales
-
-- [Microsoft 365 Copilot Chat](https://learn.microsoft.com/es-es/copilot/overview)
-- [Introducción a Microsoft Teams](https://learn.microsoft.com/es-es/microsoftteams/teams-overview)
-- [Ayuda de Microsoft Planner](https://support.microsoft.com/es-es/planner)
-
-## Enlaces de referencia
-
-- [Crear un formulario con Microsoft Forms](https://support.microsoft.com/es-es/office/crear-un-formulario-con-microsoft-forms-4ffb64cc-7d5d-402f-b82e-b1d49418fd9d)
-- [Control de versiones en SharePoint](https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-en-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37)
-- [Conector de Planner para Power Automate](https://learn.microsoft.com/es-es/connectors/planner/)
-- [Conectar Power BI Desktop con Excel](https://learn.microsoft.com/es-es/power-bi/connect-data/desktop-connect-excel)
-
-## Flujo de colaboración
-
-- Trabajar en `changes_course`.
-- Crear Pull Request hacia `main`.
-- Merge por `Squash and merge`.
-
----
 
 ## 📬 **Contacto y más información**
 
