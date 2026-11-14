@@ -19,6 +19,8 @@ En esta práctica recibirás cinco incidentes operativos del cierre mensual inst
 - [ ] Diseñar un microflujo que muestre cómo las herramientas seleccionadas se conectan entre sí para resolver el cierre mensual de forma integrada.
 - [ ] Contrastar las elecciones propias con criterios objetivos para identificar alternativas válidas y sus compromisos (trade-offs).
 
+<img src="../images/p02-objetivo.svg" alt="Diagrama de la Práctica 2. Misión «Elige la herramienta correcta»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 ### Conocimientos previos
@@ -33,8 +35,8 @@ En esta práctica recibirás cinco incidentes operativos del cierre mensual inst
 
 | Recurso | Verificación |
 |---|---|
-| Cuenta institucional Microsoft 365 | Inicia sesión en https://www.office.com y confirma acceso al portal |
-| Copilot Chat básico (protección comercial) | Abre https://copilot.microsoft.com con tu cuenta institucional; debe mostrar el icono de protección comercial (escudo verde) |
+| Cuenta institucional Microsoft 365 | Inicia sesión en https://m365.cloud.microsoft y confirma acceso al portal |
+| Copilot Chat básico (protección de datos empresariales) | Abre https://m365.cloud.microsoft/chat con tu cuenta institucional; debe mostrar el icono de protección de datos empresariales (escudo verde) |
 | Word Online / PowerPoint Online | Disponibles desde el lanzador de aplicaciones en office.com |
 | OneDrive for Business | Carpeta `/CierreOperativo/Semana1/` visible con los artefactos de la Práctica 1 |
 
@@ -44,10 +46,10 @@ En esta práctica recibirás cinco incidentes operativos del cierre mensual inst
 
 | Herramienta | Versión / Acceso | Rol en esta práctica |
 |---|---|---|
-| Microsoft Word Online | Evergreen (servicio web, abril 2025) — https://www.office.com | Crear tabla de justificación y documento de análisis |
-| Microsoft PowerPoint Online | Evergreen (servicio web, abril 2025) — https://www.office.com | Crear diagrama de microflujo (alternativa: Word Online) |
-| Microsoft Copilot Chat básico | Evergreen (servicio en la nube) — https://copilot.microsoft.com | Apoyo transversal para validar selecciones |
-| OneDrive for Business | Evergreen (servicio en la nube) — https://onedrive.live.com | Almacenamiento en `/CierreOperativo/Semana1/` |
+| Microsoft Word Online | Evergreen (servicio web, abril 2025) — https://m365.cloud.microsoft | Crear tabla de justificación y documento de análisis |
+| Microsoft PowerPoint Online | Evergreen (servicio web, abril 2025) — https://m365.cloud.microsoft | Crear diagrama de microflujo (alternativa: Word Online) |
+| Microsoft Copilot Chat básico | Evergreen (servicio en la nube) — https://m365.cloud.microsoft/chat | Apoyo transversal para validar selecciones |
+| OneDrive for Business | Evergreen (servicio en la nube) — https://m365.cloud.microsoft | Almacenamiento en `/CierreOperativo/Semana1/` |
 | Navegador web | Microsoft Edge 134.0.3124.72+ o Google Chrome 134.0.6998.89+ | Acceso a todos los servicios |
 
 ### Estructura de archivos esperada al inicio
@@ -62,6 +64,8 @@ OneDrive for Business/
 ```
 
 ### Tarjetas de incidentes del cierre mensual
+
+> 📥 **Descarga:** las cinco tarjetas, con una tabla para anotar la herramienta y su justificación, están en [Tarjetas_Incidentes_CierreMensual.docx](recursos/Tarjetas_Incidentes_CierreMensual.docx).
 
 Los cinco incidentes que resolverás son los siguientes. Cópialos al documento que crearás en el Paso 2.
 
@@ -91,7 +95,7 @@ Los cinco incidentes que resolverás son los siguientes. Cópialos al documento 
 
 **Objetivo:** Confirmar que la carpeta de trabajo y los archivos previos existen antes de crear nuevos artefactos.
 
-1. Abre el navegador e ingresa a https://www.office.com con tu cuenta institucional.
+1. Abre el navegador e ingresa a https://m365.cloud.microsoft con tu cuenta institucional.
 2. Haz clic en **OneDrive** en el lanzador de aplicaciones (cuadrícula de 9 puntos).
 3. Navega a **Mis archivos > CierreOperativo > Semana1**.
 4. Confirma que existen al menos estos archivos:
@@ -340,8 +344,8 @@ SECCIÓN 2: TABLA DE SELECCIÓN Y JUSTIFICACIÓN
 
 **Objetivo:** Usar Copilot Chat básico como herramienta transversal de apoyo para contrastar tus decisiones con criterios adicionales.
 
-1. Abre una nueva pestaña del navegador e ingresa a https://copilot.microsoft.com con tu cuenta institucional.
-2. Confirma que aparece el indicador de **protección de datos comerciales** (icono de escudo verde junto al campo de texto).
+1. Abre una nueva pestaña del navegador e ingresa a https://m365.cloud.microsoft/chat con tu cuenta institucional.
+2. Confirma que aparece el indicador de **protección de datos empresariales** (icono de escudo verde junto al campo de texto).
 3. Escribe el siguiente prompt en el campo de chat:
 
 ```
@@ -586,7 +590,7 @@ Para cada incidente, verifica que la justificación responde a estas tres pregun
 
 ### Prueba 4: Contraste con Copilot — Caso adversarial
 
-Regresa a https://copilot.microsoft.com y envía el siguiente prompt para probar una situación contradictoria:
+Regresa a https://m365.cloud.microsoft/chat y envía el siguiente prompt para probar una situación contradictoria:
 
 ```
 Necesito publicar el informe final del cierre mensual con control de versiones, permisos de solo lectura para la mayoría del equipo y disponibilidad para auditorías. Un compañero sugiere usar Microsoft Forms para esto. ¿Es adecuado? Explica por qué sí o por qué no.
@@ -611,17 +615,17 @@ Ejemplo: El Incidente 3 (coordinar revisión) podría resolverse parcialmente co
 
 ## Solución de Problemas
 
-### Problema 1: Copilot Chat no muestra el icono de protección comercial
+### Problema 1: Copilot Chat no muestra el icono de protección de datos empresariales
 
-**Síntoma:** Al abrir https://copilot.microsoft.com con la cuenta institucional, no aparece el icono de escudo verde y el mensaje indica «Copilot» sin mención de protección de datos comerciales.
+**Síntoma:** Al abrir https://m365.cloud.microsoft/chat con la cuenta institucional, no aparece el icono de escudo verde y el mensaje indica «Copilot» sin mención de protección de datos empresariales.
 
-**Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos comerciales para tu cuenta, o has iniciado sesión con una cuenta personal en lugar de la institucional.
+**Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos empresariales para tu cuenta, o has iniciado sesión con una cuenta personal en lugar de la institucional.
 
 **Solución:**
 1. Cierra sesión en Copilot haciendo clic en tu avatar → **Cerrar sesión**.
 2. Cierra todas las pestañas del navegador y abre una nueva ventana en modo **InPrivate** (Edge) o **Incógnito** (Chrome).
-3. Ingresa a https://copilot.microsoft.com e inicia sesión explícitamente con tu correo institucional (formato `usuario@institucion.edu` o similar).
-4. Si el icono de protección comercial sigue sin aparecer, notifica al instructor. El instructor debe escalar con el área de TI para habilitar el servicio. Mientras tanto, completa los Pasos 5–9 sin Copilot y marca el Paso 10 como «pendiente por configuración del tenant».
+3. Ingresa a https://m365.cloud.microsoft/chat e inicia sesión explícitamente con tu correo institucional (formato `usuario@institucion.edu` o similar).
+4. Si el icono de protección de datos empresariales sigue sin aparecer, notifica al instructor. El instructor debe escalar con el área de TI para habilitar el servicio. Mientras tanto, completa los Pasos 5–9 sin Copilot y marca el Paso 10 como «pendiente por configuración del tenant».
 
 ### Problema 2: PowerPoint Online no permite insertar formas ni tablas
 
@@ -666,7 +670,7 @@ En esta práctica aplicaste los conceptos del Módulo 2 (ecosistema Microsoft 36
 
 ### Recursos adicionales
 
-- [Elegir la herramienta de colaboración adecuada en Microsoft 365](https://learn.microsoft.com/es-es/microsoft-365/enterprise/collaborate-in-microsoft-365)
+- [Elegir la herramienta de colaboración adecuada en Microsoft 365](https://learn.microsoft.com/es-es/microsoft-365/enterprise/microsoft-365-overview)
 - [Introducción a Microsoft Teams como centro de trabajo en equipo](https://learn.microsoft.com/es-es/microsoftteams/teams-overview)
 - [Descripción general de SharePoint en Microsoft 365](https://learn.microsoft.com/es-es/sharepoint/introduction)
 - [Introducción a Microsoft Planner](https://learn.microsoft.com/es-es/office365/planner/planner-for-admins)

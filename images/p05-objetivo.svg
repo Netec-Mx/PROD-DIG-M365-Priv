@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" font-family="Segoe UI, Arial, sans-serif">
+<rect width="900" height="300" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7f"/></marker></defs>
+<text x="20" y="32" font-size="18" font-weight="700" fill="#0b2e59">Práctica 5. Misión «Cero errores de captura»</text>
+<text x="20" y="56" font-size="12.5" fill="#5b6b7f">Situación: tres solicitudes administrativo-financieras con información faltante.</text>
+<rect x="20.0" y="92" width="133.3" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="30.0" y="114" font-size="12" font-weight="700" fill="#1f4e78">1. Diagnosticar</text>
+<text x="30.0" y="136" font-size="12" fill="#0b2e59">Campos faltantes en</text>
+<text x="30.0" y="151" font-size="12" fill="#0b2e59">las solicitudes A,</text>
+<text x="30.0" y="166" font-size="12" fill="#0b2e59">B y C</text>
+<line x1="154.3" y1="177" x2="163.3" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="165.3" y="92" width="133.3" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="175.3" y="114" font-size="12" font-weight="700" fill="#1f4e78">2. Diseñar</text>
+<text x="175.3" y="136" font-size="12" fill="#0b2e59">Formulario con</text>
+<text x="175.3" y="151" font-size="12" fill="#0b2e59">campos obligatorios</text>
+<text x="175.3" y="166" font-size="12" fill="#0b2e59">y validaciones</text>
+<line x1="299.7" y1="177" x2="308.7" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="310.7" y="92" width="133.3" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="320.7" y="114" font-size="12" font-weight="700" fill="#1f4e78">3. Probar</text>
+<text x="320.7" y="136" font-size="12" fill="#0b2e59">Respuestas</text>
+<text x="320.7" y="151" font-size="12" fill="#0b2e59">completas,</text>
+<text x="320.7" y="166" font-size="12" fill="#0b2e59">bloqueadas e</text>
+<text x="320.7" y="181" font-size="12" fill="#0b2e59">inconsistentes</text>
+<line x1="445.0" y1="177" x2="454.0" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="456.0" y="92" width="133.3" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="466.0" y="114" font-size="12" font-weight="700" fill="#1f4e78">4. Analizar</text>
+<text x="466.0" y="136" font-size="12" fill="#0b2e59">Resultados en Excel</text>
+<text x="466.0" y="151" font-size="12" fill="#0b2e59">y tabla dinámica</text>
+<line x1="590.3" y1="177" x2="599.3" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="601.3" y="92" width="133.3" height="170" rx="10" fill="#fff8e1" stroke="#b26a00" stroke-width="1.5"/>
+<text x="611.3" y="114" font-size="12" font-weight="700" fill="#b26a00">Comprobación</text>
+<text x="611.3" y="136" font-size="12" fill="#0b2e59">Identificar datos</text>
+<text x="611.3" y="151" font-size="12" fill="#0b2e59">incompletos y</text>
+<text x="611.3" y="166" font-size="12" fill="#0b2e59">mostrar que sirven</text>
+<text x="611.3" y="181" font-size="12" fill="#0b2e59">para Power BI</text>
+<line x1="735.7" y1="177" x2="744.7" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="746.7" y="92" width="133.3" height="170" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="756.7" y="114" font-size="12" font-weight="700" fill="#2e7d32">Entregable</text>
+<text x="756.7" y="136" font-size="12" fill="#0b2e59">Formulario y</text>
+<text x="756.7" y="151" font-size="12" fill="#0b2e59">Resultados_Solicitudes</text>
+<text x="756.7" y="166" font-size="12" fill="#0b2e59">(.xlsx)</text>
+<text x="20" y="288" font-size="12" fill="#5b6b7f">Misión Productividad 365 · Cierre operativo de abril 2025 · Duración: 42 min</text>
+</svg>

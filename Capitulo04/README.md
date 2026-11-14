@@ -22,6 +22,8 @@ El participante recibirá un sitio SharePoint con 8-10 archivos intencionalmente
 - [ ] Revisar el historial de versiones de un documento en SharePoint e identificar la versión vigente correcta.
 - [ ] Ajustar permisos básicos en la biblioteca (heredados vs. únicos) para controlar el acceso de revisores y editores.
 
+<img src="../images/p04-objetivo.svg" alt="Diagrama de la Práctica 4. Misión «El archivo perdido»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 ### Conocimientos previos
@@ -52,22 +54,24 @@ El participante recibirá un sitio SharePoint con 8-10 archivos intencionalmente
 
 ### Archivos problema provistos por el instructor
 
+> 📥 **Descarga (instructor):** los 10 archivos están en [Archivos_Problema_P4.zip](recursos/Archivos_Problema_P4.zip). El estado real de cada informe está escrito dentro del archivo.
+
 El instructor debe cargar los siguientes archivos en la biblioteca **Documentos** (predeterminada) del sitio `CierreOperativo-Practica` **antes** de la sesión. Los nombres incluyen errores intencionados de nomenclatura y duplicación:
 
 ```
-Informe_CierreOp_Mar2025_v1.xlsx
-Informe_CierreOp_Mar2025_final.xlsx
-Informe_CierreOp_Mar2025_DEFINITIVO.xlsx
-Informe_CierreOp_Mar2025_revisado_JM.xlsx
-Conciliacion_Bancaria_Mar2025.xlsx
-Control_Presupuesto_Mar2025.pdf
+Informe_CierreOp_Abr2025_v1.xlsx
+Informe_CierreOp_Abr2025_final.xlsx
+Informe_CierreOp_Abr2025_DEFINITIVO.xlsx
+Informe_CierreOp_Abr2025_revisado_JM.xlsx
+Conciliacion_Bancaria_Abr2025.xlsx
+Control_Presupuesto_Abr2025.pdf
 Soporte_Factura_8832.pdf
 Soporte_Factura_8833.pdf
 ListaVerificacion_sinclasificar.xlsx
 Notas_reunion_borrador.docx
 ```
 
-> **Nota para el instructor:** Suba al menos 3 versiones del archivo `Informe_CierreOp_Mar2025_v1.xlsx` (editando y guardando cambios menores entre cada versión) para que el historial de versiones contenga un mínimo de 3 entradas. Además, rompa la herencia de permisos del archivo `Notas_reunion_borrador.docx` y otórguele permisos de **Edición** a "Todos excepto usuarios externos" para simular permisos excesivamente abiertos.
+> **Nota para el instructor:** Suba al menos 3 versiones del archivo `Informe_CierreOp_Abr2025_v1.xlsx` (editando y guardando cambios menores entre cada versión) para que el historial de versiones contenga un mínimo de 3 entradas. Además, rompa la herencia de permisos del archivo `Notas_reunion_borrador.docx` y otórguele permisos de **Edición** a "Todos excepto usuarios externos" para simular permisos excesivamente abiertos.
 
 ## Instrucciones Paso a Paso
 
@@ -104,19 +108,19 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica
    - **Nomenclatura inconsistente:** Algunos archivos usan guiones bajos, otros no; algunos incluyen fecha, otros no.
    - **Permisos potencialmente incorrectos:** No es visible aún, pero se verificará más adelante.
 
-2. Haga clic derecho en el archivo `Informe_CierreOp_Mar2025_v1.xlsx` → **Historial de versiones** (o haga clic en los tres puntos `⋮` → **Historial de versiones**).
+2. Haga clic derecho en el archivo `Informe_CierreOp_Abr2025_v1.xlsx` → **Historial de versiones** (o haga clic en los tres puntos `⋮` → **Historial de versiones**).
 
 3. Observe cuántas versiones existen en el historial.
 
 4. Redacte un breve diagnóstico (3-5 líneas) con los problemas encontrados. Guárdelo como referencia para la comprobación final.
 
-**Resultado esperado:** El historial de versiones del archivo `Informe_CierreOp_Mar2025_v1.xlsx` muestra al menos 3 versiones. El diagnóstico identifica: duplicación de nombres, ausencia de metadatos personalizados, falta de estructura de clasificación.
+**Resultado esperado:** El historial de versiones del archivo `Informe_CierreOp_Abr2025_v1.xlsx` muestra al menos 3 versiones. El diagnóstico identifica: duplicación de nombres, ausencia de metadatos personalizados, falta de estructura de clasificación.
 
 **Verificación:** Su diagnóstico debe mencionar al menos 3 de los 4 tipos de problema listados en la instrucción 1.
 
 ---
 
-### Paso 3: Crear la biblioteca de documentos «Documentos-CierreOperativo»
+### Paso 3: Crear la biblioteca de documentos «Documentos-CierreOperativo-[Apellido]»
 
 **Objetivo:** Crear una nueva biblioteca de documentos con el nombre estandarizado donde se organizará la información del cierre.
 
@@ -127,7 +131,7 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica
 3. En el cuadro de diálogo, ingrese:
 
 ```
-Nombre: Documentos-CierreOperativo
+Nombre: Documentos-CierreOperativo-[Apellido]
 Descripción: Biblioteca principal del cierre operativo mensual con metadatos de trazabilidad.
 ```
 
@@ -135,7 +139,7 @@ Descripción: Biblioteca principal del cierre operativo mensual con metadatos de
 
 5. Confirme que la nueva biblioteca aparece en el menú lateral izquierdo del sitio.
 
-**Resultado esperado:** La biblioteca `Documentos-CierreOperativo` se crea exitosamente y aparece en la navegación del sitio. Inicialmente está vacía y solo muestra las columnas predeterminadas.
+**Resultado esperado:** La biblioteca `Documentos-CierreOperativo-[Apellido]` se crea exitosamente y aparece en la navegación del sitio. Inicialmente está vacía y solo muestra las columnas predeterminadas.
 
 **Verificación:** Haga clic en la biblioteca en el menú lateral. Debe abrirse mostrando el mensaje "Arrastre archivos aquí" o una vista vacía.
 
@@ -145,7 +149,7 @@ Descripción: Biblioteca principal del cierre operativo mensual con metadatos de
 
 **Objetivo:** Crear la primera columna personalizada para registrar el periodo del documento.
 
-1. Dentro de la biblioteca `Documentos-CierreOperativo`, haga clic en **+ Agregar columna** (en la barra de encabezados de columna, a la derecha de las columnas existentes).
+1. Dentro de la biblioteca `Documentos-CierreOperativo-[Apellido]`, haga clic en **+ Agregar columna** (en la barra de encabezados de columna, a la derecha de las columnas existentes).
 
 2. Seleccione el tipo **Fecha y hora**.
 
@@ -246,7 +250,7 @@ Permitir selección múltiple: No
 
 **Objetivo:** Activar el versionado de documentos para mantener historial de cambios.
 
-1. Dentro de la biblioteca `Documentos-CierreOperativo`, haga clic en el icono de engranaje (**⚙**) en la esquina superior derecha → **Configuración de la biblioteca**.
+1. Dentro de la biblioteca `Documentos-CierreOperativo-[Apellido]`, haga clic en el icono de engranaje (**⚙**) en la esquina superior derecha → **Configuración de la biblioteca**.
 
 2. Haga clic en **Configuración de versiones**.
 
@@ -287,13 +291,13 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica/Shared Documents
 
 4. Extraiga el ZIP en una carpeta local temporal.
 
-5. Regrese a la pestaña de la biblioteca `Documentos-CierreOperativo`.
+5. Regrese a la pestaña de la biblioteca `Documentos-CierreOperativo-[Apellido]`.
 
 6. Haga clic en **Cargar** → **Archivos** y seleccione todos los archivos extraídos. Alternativamente, arrástrelos desde el explorador de archivos a la biblioteca.
 
 7. Espere a que la carga se complete (barra de progreso al 100%).
 
-**Resultado esperado:** Los 8-10 archivos aparecen en la biblioteca `Documentos-CierreOperativo`. Las columnas de metadatos personalizados (`Periodo`, `TipoDocumento`, `Estado`, `Responsable`) están vacías para todos los archivos.
+**Resultado esperado:** Los 8-10 archivos aparecen en la biblioteca `Documentos-CierreOperativo-[Apellido]`. Las columnas de metadatos personalizados (`Periodo`, `TipoDocumento`, `Estado`, `Responsable`) están vacías para todos los archivos.
 
 **Verificación:** Cuente los archivos en la nueva biblioteca. Deben coincidir con los de la biblioteca original.
 
@@ -310,16 +314,16 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica/Shared Documents
 ```
 Archivo                                    | Periodo    | TipoDocumento | Estado      | Responsable
 -------------------------------------------|------------|---------------|-------------|------------------
-Informe_CierreOp_Mar2025_v1.xlsx           | 01/03/2025 | Informe       | Obsoleto    | [Su nombre]
-Informe_CierreOp_Mar2025_final.xlsx        | 01/03/2025 | Informe       | Obsoleto    | [Su nombre]
-Informe_CierreOp_Mar2025_DEFINITIVO.xlsx   | 01/03/2025 | Informe       | Vigente     | [Su nombre]
-Informe_CierreOp_Mar2025_revisado_JM.xlsx  | 01/03/2025 | Informe       | En revisión | [Su nombre]
-Conciliacion_Bancaria_Mar2025.xlsx         | 01/03/2025 | Conciliación  | Vigente     | [Su nombre]
-Control_Presupuesto_Mar2025.pdf            | 01/03/2025 | Control       | Vigente     | [Su nombre]
-Soporte_Factura_8832.pdf                   | 01/03/2025 | Soporte       | Vigente     | [Su nombre]
-Soporte_Factura_8833.pdf                   | 01/03/2025 | Soporte       | Vigente     | [Su nombre]
-ListaVerificacion_sinclasificar.xlsx       | 01/03/2025 | Control       | Borrador    | [Su nombre]
-Notas_reunion_borrador.docx                | 01/03/2025 | Soporte       | Borrador    | [Su nombre]
+Informe_CierreOp_Abr2025_v1.xlsx           | 01/04/2025 | Informe       | Obsoleto    | [Su nombre]
+Informe_CierreOp_Abr2025_final.xlsx        | 01/04/2025 | Informe       | Obsoleto    | [Su nombre]
+Informe_CierreOp_Abr2025_DEFINITIVO.xlsx   | 01/04/2025 | Informe       | Vigente     | [Su nombre]
+Informe_CierreOp_Abr2025_revisado_JM.xlsx  | 01/04/2025 | Informe       | En revisión | [Su nombre]
+Conciliacion_Bancaria_Abr2025.xlsx         | 01/04/2025 | Conciliación  | Vigente     | [Su nombre]
+Control_Presupuesto_Abr2025.pdf            | 01/04/2025 | Control       | Vigente     | [Su nombre]
+Soporte_Factura_8832.pdf                   | 01/04/2025 | Soporte       | Vigente     | [Su nombre]
+Soporte_Factura_8833.pdf                   | 01/04/2025 | Soporte       | Vigente     | [Su nombre]
+ListaVerificacion_sinclasificar.xlsx       | 01/04/2025 | Control       | Borrador    | [Su nombre]
+Notas_reunion_borrador.docx                | 01/04/2025 | Soporte       | Borrador    | [Su nombre]
 ```
 
 3. Para cada archivo, tras completar los campos en el panel de detalles, cierre el panel o pase al siguiente archivo. Los cambios se guardan automáticamente.
@@ -336,7 +340,7 @@ Notas_reunion_borrador.docx                | 01/03/2025 | Soporte       | Borrad
 
 **Objetivo:** Crear una vista que muestre únicamente los documentos vigentes, ordenados por periodo descendente.
 
-1. En la biblioteca `Documentos-CierreOperativo`, haga clic en el menú de vista actual (generalmente dice **Todos los documentos** en la parte superior derecha de la vista) → **Crear nueva vista**.
+1. En la biblioteca `Documentos-CierreOperativo-[Apellido]`, haga clic en el menú de vista actual (generalmente dice **Todos los documentos** en la parte superior derecha de la vista) → **Crear nueva vista**.
 
 2. Configure la vista:
 
@@ -405,7 +409,7 @@ Orden: Ascendente
 
 1. Cambie a la vista **Todos los documentos** desde el selector de vistas.
 
-2. Localice el archivo `Informe_CierreOp_Mar2025_v1.xlsx` (el que el instructor subió con múltiples versiones).
+2. Localice el archivo `Informe_CierreOp_Abr2025_v1.xlsx` (el que el instructor subió con múltiples versiones).
 
 3. Haga clic en los tres puntos (`⋮`) junto al nombre del archivo → **Historial de versiones**.
 
@@ -431,7 +435,7 @@ Orden: Ascendente
 
 **Objetivo:** Verificar los permisos de la biblioteca e identificar configuraciones excesivamente abiertas.
 
-1. Dentro de la biblioteca `Documentos-CierreOperativo`, haga clic en el icono de engranaje (**⚙**) → **Configuración de la biblioteca**.
+1. Dentro de la biblioteca `Documentos-CierreOperativo-[Apellido]`, haga clic en el icono de engranaje (**⚙**) → **Configuración de la biblioteca**.
 
 2. Haga clic en **Permisos de esta biblioteca de documentos** (en la sección "Permisos y administración").
 
@@ -440,6 +444,8 @@ Orden: Ascendente
 4. Revise la lista de usuarios y grupos con acceso. Identifique si algún usuario o grupo tiene un nivel de permisos superior al necesario.
 
 5. Ahora regrese a la biblioteca **Documentos** (predeterminada) y localice el archivo `Notas_reunion_borrador.docx`.
+
+> **Nota para el instructor:** si varios participantes comparten el sitio, el primero que corrija el permiso lo resolverá para todos. Prepare una copia por participante (`Notas_reunion_borrador_[Apellido].docx`) con el mismo permiso abierto; cada participante corrige la suya (ver [SETUP_GUIDE.md](../SETUP_GUIDE.md)).
 
 6. Haga clic en los tres puntos (`⋮`) → **Administrar acceso**.
 
@@ -463,19 +469,19 @@ Después: "Todos excepto usuarios externos" → Puede ver (Lector)
 
 **Objetivo:** Demostrar que la biblioteca estructurada con metadatos, vistas y control de versiones resuelve los problemas de trazabilidad diagnosticados al inicio.
 
-1. En la biblioteca `Documentos-CierreOperativo`, seleccione la vista **Por estado**.
+1. En la biblioteca `Documentos-CierreOperativo-[Apellido]`, seleccione la vista **Por estado**.
 
-2. Identifique el documento de tipo **Informe** con estado **Vigente**. Debe ser `Informe_CierreOp_Mar2025_DEFINITIVO.xlsx`.
+2. Identifique el documento de tipo **Informe** con estado **Vigente**. Debe ser `Informe_CierreOp_Abr2025_DEFINITIVO.xlsx`.
 
-3. Abra el historial de versiones de `Informe_CierreOp_Mar2025_v1.xlsx` (el archivo con múltiples versiones del sistema).
+3. Abra el historial de versiones de `Informe_CierreOp_Abr2025_v1.xlsx` (el archivo con múltiples versiones del sistema).
 
 4. Redacte una justificación de 5-8 líneas (en un archivo de texto, en el canal `Pendientes-y-Acuerdos` de Teams, o en papel) que responda:
 
 ```
 JUSTIFICACIÓN DE TRAZABILIDAD
 ==============================
-a) ¿Cuál es la versión vigente del informe de cierre de marzo 2025?
-   → [Respuesta: Informe_CierreOp_Mar2025_DEFINITIVO.xlsx, Estado = Vigente]
+a) ¿Cuál es la versión vigente del informe de cierre de abril 2025?
+   → [Respuesta: Informe_CierreOp_Abr2025_DEFINITIVO.xlsx, Estado = Vigente]
 
 b) ¿Cómo se identificó sin ambigüedad?
    → [Respuesta: Mediante la vista "Por estado" filtrada por Estado = Vigente
@@ -494,7 +500,7 @@ d) ¿Qué problema de permisos se detectó y cómo se corrigió?
 
 5. Si el instructor lo solicita, comparta su justificación publicándola como mensaje en el canal **Pendientes-y-Acuerdos** del equipo Teams `CierreOperativo-[Apellido]`.
 
-**Resultado esperado:** El participante localiza correctamente `Informe_CierreOp_Mar2025_DEFINITIVO.xlsx` como la versión vigente, explica el método de localización (vista + metadatos), describe la capacidad de restauración de versiones y documenta la corrección de permisos.
+**Resultado esperado:** El participante localiza correctamente `Informe_CierreOp_Abr2025_DEFINITIVO.xlsx` como la versión vigente, explica el método de localización (vista + metadatos), describe la capacidad de restauración de versiones y documenta la corrección de permisos.
 
 **Verificación:** La justificación responde las cuatro preguntas (a-d) con referencias específicas a las funcionalidades de SharePoint utilizadas: vistas, metadatos, historial de versiones y gestión de permisos.
 
@@ -504,7 +510,7 @@ Realice las siguientes verificaciones para confirmar que la práctica se complet
 
 ### Verificación 1: Estructura de la biblioteca
 
-Navegue a `Documentos-CierreOperativo` y confirme:
+Navegue a `Documentos-CierreOperativo-[Apellido]` y confirme:
 
 ```
 Columnas visibles:
@@ -538,7 +544,7 @@ Configuración de versiones:
   ✓ Versiones principales y secundarias habilitadas
   ✓ Límite: 10 principales, 5 borradores
 
-Historial de Informe_CierreOp_Mar2025_v1.xlsx:
+Historial de Informe_CierreOp_Abr2025_v1.xlsx:
   ✓ Al menos 3 versiones registradas
   ✓ Cada versión muestra fecha, autor y posibilidad de restauración
 ```
@@ -555,12 +561,12 @@ Archivo Notas_reunion_borrador.docx:
 
 Esta verificación evalúa el pensamiento crítico del participante:
 
-Considere el siguiente escenario: un colega le envía por correo un archivo llamado `Informe_CierreOp_Mar2025_FINAL_FINAL_v3.xlsx` y le dice que "esta es la versión buena". ¿Cómo determina si realmente es la versión vigente?
+Considere el siguiente escenario: un colega le envía por correo un archivo llamado `Informe_CierreOp_Abr2025_FINAL_FINAL_v3.xlsx` y le dice que "esta es la versión buena". ¿Cómo determina si realmente es la versión vigente?
 
 ```
 Respuesta esperada:
   ✗ NO se acepta el archivo por su nombre o por la afirmación del colega.
-  ✓ Se verifica en la biblioteca Documentos-CierreOperativo usando la vista
+  ✓ Se verifica en la biblioteca Documentos-CierreOperativo-[Apellido] usando la vista
     "Por estado" filtrada por Estado = Vigente y TipoDocumento = Informe.
   ✓ Se compara el contenido con la versión vigente registrada en SharePoint.
   ✓ Si es una versión nueva legítima, se sube a la biblioteca, se le asignan
@@ -608,9 +614,9 @@ Respuesta esperada:
 
 Al finalizar la práctica, realice las siguientes acciones para mantener el entorno ordenado:
 
-1. **Conserve la biblioteca `Documentos-CierreOperativo`** — será referenciada en la Práctica 5 cuando los resultados del formulario Forms se exporten a Excel y se vinculen a este repositorio.
+1. **Conserve la biblioteca `Documentos-CierreOperativo-[Apellido]`** — será referenciada en la Práctica 5 cuando los resultados del formulario Forms se exporten a Excel y se vinculen a este repositorio.
 
-2. **No elimine los archivos** de la biblioteca `Documentos-CierreOperativo` ni sus metadatos.
+2. **No elimine los archivos** de la biblioteca `Documentos-CierreOperativo-[Apellido]` ni sus metadatos.
 
 3. **Opcional:** Si el instructor lo indica, elimine los archivos duplicados de la biblioteca **Documentos** (predeterminada) para evitar confusión futura, ya que los archivos organizados ya están en la nueva biblioteca.
 
@@ -621,12 +627,12 @@ Al finalizar la práctica, realice las siguientes acciones para mantener el ento
 En esta práctica se completó el ciclo completo de organización documental en SharePoint Online para un escenario de cierre mensual:
 
 - **Diagnóstico:** Se identificaron problemas reales de trazabilidad: versiones duplicadas con nombres inconsistentes, ausencia de metadatos, falta de control de versiones y permisos excesivamente abiertos.
-- **Construcción:** Se creó la biblioteca `Documentos-CierreOperativo` con cuatro columnas de metadatos personalizados (`Periodo`, `TipoDocumento`, `Estado`, `Responsable`) que reemplazan la dependencia de carpetas y nombres de archivo como mecanismo de organización.
+- **Construcción:** Se creó la biblioteca `Documentos-CierreOperativo-[Apellido]` con cuatro columnas de metadatos personalizados (`Periodo`, `TipoDocumento`, `Estado`, `Responsable`) que reemplazan la dependencia de carpetas y nombres de archivo como mecanismo de organización.
 - **Vistas:** Se configuraron dos vistas personalizadas (`Por estado` y `Por responsable`) que permiten localizar documentos por criterios de negocio sin navegar manualmente.
 - **Versiones:** Se habilitó el control de versiones principales y secundarias, demostrando que el historial de SharePoint elimina la necesidad de crear archivos duplicados (`v1`, `final`, `DEFINITIVO`).
 - **Permisos:** Se identificó y corrigió un archivo con permisos excesivamente abiertos, aplicando el principio de menor privilegio.
 
-**Conexión con la Práctica 5:** La biblioteca `Documentos-CierreOperativo` y su estructura de metadatos serán el repositorio de referencia cuando se diseñe el formulario en Microsoft Forms y se exporten sus resultados a Excel.
+**Conexión con la Práctica 5:** La biblioteca `Documentos-CierreOperativo-[Apellido]` y su estructura de metadatos serán el repositorio de referencia cuando se diseñe el formulario en Microsoft Forms y se exporten sus resultados a Excel.
 
 ### Recursos adicionales
 
@@ -636,4 +642,4 @@ En esta práctica se completó el ciclo completo de organización documental en 
 | Tipos de columnas en SharePoint | https://support.microsoft.com/es-es/office/tipos-de-columnas-y-opciones-de-columna-en-listas-y-bibliotecas-de-sharepoint-0d8ddb7b-7dc7-414d-a283-ee9dca891df7 |
 | Habilitar y configurar versiones en una biblioteca | https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-en-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37 |
 | Administrar permisos en SharePoint | https://learn.microsoft.com/es-es/sharepoint/understanding-permission-levels |
-| Crear una vista en SharePoint | https://support.microsoft.com/es-es/office/crear-cambiar-o-eliminar-una-vista-de-una-lista-o-biblioteca-27ae65b8-bc1b-4c27-b36c-d7e3b5a3e3a4 |
+| Crear una vista en SharePoint | https://support.microsoft.com/es-es/sharepoint |

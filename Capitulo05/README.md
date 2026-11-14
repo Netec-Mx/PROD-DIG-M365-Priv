@@ -12,7 +12,7 @@
 
 Recibir solicitudes administrativo-financieras con información faltante; crear en Forms un formulario de captura estandarizada con campos pertinentes y validaciones disponibles, registrar respuestas de prueba y revisar su salida en Excel. Comprobación individual: identificar datos incompletos y demostrar que los resultados sirven para un reporte posterior, incluso en Power BI.
 
-Esta práctica cierra el ciclo del cierre operativo mensual iniciado en la Práctica 1, atacando el problema de origen: las solicitudes que llegan con datos incompletos y generan reprocesos. El formulario estandarizado que crearás se integrará con la biblioteca SharePoint `Documentos-CierreOperativo` y el equipo de Teams configurado en prácticas anteriores.
+Esta práctica cierra el ciclo del cierre operativo mensual iniciado en la Práctica 1, atacando el problema de origen: las solicitudes que llegan con datos incompletos y generan reprocesos. El formulario estandarizado que crearás se integrará con la biblioteca SharePoint `Documentos-CierreOperativo-[Apellido]` y el equipo de Teams configurado en prácticas anteriores.
 
 ## Objetivos de Aprendizaje
 
@@ -20,6 +20,8 @@ Esta práctica cierra el ciclo del cierre operativo mensual iniciado en la Prác
 - [ ] Diseñar y crear un formulario en Microsoft Forms con tipos de pregunta pertinentes (texto, opción múltiple, fecha, número, escala) y validaciones nativas (obligatorio, límites numéricos, formato de texto).
 - [ ] Registrar al menos cinco respuestas de prueba y exportar los resultados a Excel Online, identificando registros con datos incompletos o inconsistentes.
 - [ ] Demostrar que el conjunto de datos exportado desde Forms puede conectarse a Power BI o, como alternativa, analizarse mediante tabla dinámica en Excel para generar un reporte básico.
+
+<img src="../images/p05-objetivo.svg" alt="Diagrama de la Práctica 5. Misión «Cero errores de captura»: situación, acciones, comprobación y entregable" width="760"/>
 
 ## Prerrequisitos
 
@@ -34,13 +36,13 @@ Esta práctica cierra el ciclo del cierre operativo mensual iniciado en la Prác
 | Recurso | Detalle |
 |---|---|
 | Cuenta Microsoft 365 | Licencia institucional activa con acceso a Forms, Excel Online, SharePoint Online y Teams |
-| Microsoft Forms | Accesible en `https://forms.microsoft.com` con la cuenta institucional |
+| Microsoft Forms | Accesible en `https://forms.office.com` con la cuenta institucional |
 | Microsoft Excel Online | Integrado en Microsoft 365 (servicio Evergreen, abril 2025) |
 | Excel de escritorio (opcional) | Versión 2504 (build 18730.20144), canal Current Channel |
 | Power BI Desktop (demostración) | Versión 2.128.751.0 (marzo 2025) — en equipo del instructor o del participante. Descarga: `https://www.microsoft.com/es-es/download/details.aspx?id=58494` |
 | Power BI Service (alternativa) | `https://app.powerbi.com` con cuenta institucional |
 | Navegador web | Microsoft Edge 134.0.3124.72+ (recomendado) o Google Chrome 134.0.6998.89+ |
-| Biblioteca SharePoint | `Documentos-CierreOperativo` en `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
+| Biblioteca SharePoint | `Documentos-CierreOperativo-[Apellido]` en `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
 | Equipo de Teams | `CierreOperativo-[Apellido]` con canal `Informe-Mensual` |
 
 ## Entorno de Laboratorio
@@ -51,10 +53,12 @@ Esta práctica cierra el ciclo del cierre operativo mensual iniciado en la Prác
 |---|---|
 | Directorio de trabajo OneDrive | `/CierreOperativo/Semana1/` |
 | Sitio SharePoint | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
-| Biblioteca con metadatos | `Documentos-CierreOperativo` (columnas: Periodo, TipoDocumento, Estado, Responsable) |
+| Biblioteca con metadatos | `Documentos-CierreOperativo-[Apellido]` (columnas: Periodo, TipoDocumento, Estado, Responsable) |
 | Equipo de Teams | `CierreOperativo-[Apellido]` con canales General, Informe-Mensual, Pendientes-y-Acuerdos |
 
 **Solicitudes de ejemplo proporcionadas por el instructor:**
+
+> 📥 **Descarga:** [Solicitudes_Ejemplo_P5.docx](recursos/Solicitudes_Ejemplo_P5.docx) (solicitudes A y B) y [Solicitud_C_Digitalizada.pdf](recursos/Solicitud_C_Digitalizada.pdf) (solicitud C).
 
 El instructor entrega (vía Teams o en pantalla) tres solicitudes con información faltante. A continuación se reproduce el contenido textual de cada una para que el participante las analice:
 
@@ -87,13 +91,13 @@ Solicitante: J. Pérez
 Área: (en blanco)
 Concepto: Tóner y papelería
 Monto: Varios
-Fecha: marzo
+Fecha: abril
 Aprobado por: (sin firma)
 ```
 
 **Verificación inicial del entorno (antes de comenzar):**
 
-1. Abre `https://forms.microsoft.com` e inicia sesión con tu cuenta institucional.
+1. Abre `https://forms.office.com` e inicia sesión con tu cuenta institucional.
 2. Verifica que aparece tu nombre y la organización en la esquina superior derecha.
 3. Confirma que puedes ver el botón **+ Nuevo formulario**.
 
@@ -120,7 +124,7 @@ Descripción del concepto |     ✓       |    ✓ (*)    |    ✓
 Documento de soporte     |     ✗       |    ✗        |    ✗
 ```
 
-> (*) Notas: Solicitud A tiene nombre pero no área; monto es aproximado. Solicitud B usa nombre parcial "Carlos R." sin apellido completo. Solicitud C usa inicial "J. Pérez" y "marzo" sin año ni día. El monto dice "Varios" (texto, no número).
+> (*) Notas: Solicitud A tiene nombre pero no área; monto es aproximado. Solicitud B usa nombre parcial "Carlos R." sin apellido completo. Solicitud C usa inicial "J. Pérez" y "abril" sin año ni día. El monto dice "Varios" (texto, no número).
 
 3. Confirma que los **siete campos** listados son los mínimos necesarios para una captura estandarizada sin ambigüedades.
 
@@ -136,7 +140,7 @@ Documento de soporte     |     ✗       |    ✗        |    ✗
 
 **Instrucciones:**
 
-1. Navega a `https://forms.microsoft.com`.
+1. Navega a `https://forms.office.com`.
 2. Haz clic en **+ Nuevo formulario** (no en "Nuevo cuestionario", ya que no se requiere calificación automática).
 3. Haz clic en el título **"Formulario sin título"** y reemplázalo por:
 
@@ -443,7 +447,7 @@ Lista de verificación del formulario:
 Nombre:       María Elena López García
 Área:         Administración y Finanzas
 Tipo:         Reembolso
-Periodo:      15/03/2025
+Periodo:      15/04/2025
 Monto:        4500
 Descripción:  Reembolso de viáticos por visita a sede norte, transporte y alimentación.
 Soporte:      (adjuntar cualquier archivo PDF de prueba o dejar vacío)
@@ -467,7 +471,7 @@ Soporte:      (dejar vacío — es anticipo sin factura previa)
 Nombre:       Javier Pérez Mendoza
 Área:         Tecnología de la Información
 Tipo:         Compra
-Periodo:      20/03/2025
+Periodo:      20/04/2025
 Monto:        3200
 Descripción:  Compra de tóner HP 58A y resma de papel bond tamaño carta.
 Soporte:      (adjuntar cualquier archivo de prueba o dejar vacío)
@@ -536,7 +540,7 @@ Soporte:      (dejar vacío)
 1. En la pestaña **Respuestas**, haz clic en **Abrir en Excel** (botón verde con ícono de Excel).
 2. Se descargará un archivo `.xlsx` o se abrirá directamente en Excel Online (dependiendo de la configuración del navegador).
 3. Si se descargó, ábrelo en Excel Online subiendo el archivo a OneDrive:
-   - Navega a `https://onedrive.com` → carpeta `/CierreOperativo/Semana1/`.
+   - Navega a `https://m365.cloud.microsoft` → carpeta `/CierreOperativo/Semana1/`.
    - Sube el archivo y ábrelo desde allí.
 4. Observa la estructura de la tabla generada:
 
@@ -682,7 +686,7 @@ Celda A14: Nota: Demostración de reporte realizada con tabla dinámica en Excel
 
 ### Paso 18: Guardar el Excel en la biblioteca SharePoint
 
-**Objetivo:** Almacenar el archivo de resultados en la biblioteca `Documentos-CierreOperativo` con los metadatos correspondientes, integrando el artefacto con el repositorio del curso.
+**Objetivo:** Almacenar el archivo de resultados en la biblioteca `Documentos-CierreOperativo-[Apellido]` con los metadatos correspondientes, integrando el artefacto con el repositorio del curso.
 
 **Instrucciones:**
 
@@ -695,7 +699,7 @@ Resultados_Solicitudes_CierreMensual_Abr2025.xlsx
 > Ajusta el mes/año según lo indicado por el instructor.
 
 2. Navega a `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica`.
-3. Abre la biblioteca **Documentos-CierreOperativo**.
+3. Abre la biblioteca **Documentos-CierreOperativo-[Apellido]**.
 4. Sube el archivo Excel.
 5. Edita los metadatos del archivo recién subido:
 
@@ -735,7 +739,7 @@ Se completó la captura estandarizada de solicitudes administrativo-financieras.
 - Monto total solicitado: $19,701
 
 📎 El archivo de resultados está disponible en la biblioteca
-   Documentos-CierreOperativo de SharePoint.
+   Documentos-CierreOperativo-[Apellido] de SharePoint.
 
 🔗 Enlace al formulario: [pegar enlace de compartir del formulario]
 ```
@@ -760,7 +764,7 @@ Completa la siguiente lista de verificación para confirmar que todos los objeti
 | 5 | El Excel exportado tiene la estructura correcta | Archivo con 4+ filas de datos y columnas correspondientes a cada pregunta del formulario | ☐ |
 | 6 | Se identificaron datos inconsistentes en Excel | Hoja `Hallazgos` documenta al menos 5 problemas en el registro de "Ana M." | ☐ |
 | 7 | Se generó un reporte analítico | Tabla dinámica en Excel o gráfico de barras en Power BI mostrando montos por tipo de solicitud | ☐ |
-| 8 | El archivo se almacenó en SharePoint con metadatos | Archivo visible en biblioteca `Documentos-CierreOperativo` con Periodo, TipoDocumento, Estado y Responsable | ☐ |
+| 8 | El archivo se almacenó en SharePoint con metadatos | Archivo visible en biblioteca `Documentos-CierreOperativo-[Apellido]` con Periodo, TipoDocumento, Estado y Responsable | ☐ |
 | 9 | Se publicó el resumen en Teams | Mensaje en canal `Informe-Mensual` con resumen cuantitativo y enlace al formulario | ☐ |
 
 **Caso adverso (validación de limitaciones):**
@@ -804,7 +808,7 @@ Al finalizar la práctica, realiza las siguientes acciones de orden:
 1. **No elimines el formulario** — será referenciado en la comprobación final del curso.
 2. **Desactiva las notificaciones por correo** si no deseas seguir recibiendo avisos: ve a Configuración del formulario → desmarca "Notificación de cada respuesta por correo electrónico".
 3. **Cierra las pestañas** de Forms, Excel Online y Power BI que hayas abierto durante la práctica.
-4. **Verifica** que el archivo `Resultados_Solicitudes_CierreMensual_Abr2025.xlsx` permanece en la biblioteca SharePoint `Documentos-CierreOperativo` con sus metadatos correctos.
+4. **Verifica** que el archivo `Resultados_Solicitudes_CierreMensual_Abr2025.xlsx` permanece en la biblioteca SharePoint `Documentos-CierreOperativo-[Apellido]` con sus metadatos correctos.
 
 > **No desactives** la opción "Aceptar respuestas" del formulario todavía; el instructor puede solicitar respuestas adicionales en sesiones posteriores.
 
@@ -829,5 +833,5 @@ En esta práctica completaste el ciclo integral del cierre operativo mensual:
 **Recursos adicionales:**
 
 - Documentación oficial de Microsoft Forms: `https://support.microsoft.com/es-es/forms`
-- Tipos de preguntas en Microsoft Forms: `https://support.microsoft.com/es-es/office/elegir-un-tipo-de-pregunta-en-microsoft-forms-1a6a5f8d-7c4b-4e2a-9c5e-0e7c2d4b3f1a`
+- Tipos de preguntas en Microsoft Forms: `https://support.microsoft.com/es-es/office/crear-un-formulario-con-microsoft-forms-4ffb64cc-7d5d-402f-b82e-b1d49418fd9d`
 - Obtener datos en Power BI Desktop desde Excel: `https://learn.microsoft.com/es-es/power-bi/connect-data/desktop-connect-excel`

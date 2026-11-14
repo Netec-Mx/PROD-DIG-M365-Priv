@@ -15,9 +15,11 @@ En esta práctica inaugural recibirás una lista desordenada de 12 tareas del ci
 ## Objetivos de Aprendizaje
 
 - [ ] Aplicar criterios de priorización (urgencia, impacto, dependencia) a un conjunto de tareas operativas reales del cierre mensual.
-- [ ] Utilizar Copilot Chat básico (https://copilot.microsoft.com) con prompts estructurados para transformar una lista de tareas desordenadas en un plan semanal con fechas y responsables.
+- [ ] Utilizar Copilot Chat básico (https://m365.cloud.microsoft/chat) con prompts estructurados para transformar una lista de tareas desordenadas en un plan semanal con fechas y responsables.
 - [ ] Construir una lista de verificación digital en Excel Online que garantice que ninguna entrega crítica del cierre mensual quede sin fecha asignada.
 - [ ] Articular y justificar las tres prioridades seleccionadas con base en criterios de urgencia e impacto operativo.
+
+<img src="../images/p01-objetivo.svg" alt="Diagrama de la Práctica 1. Misión «Rescata tu semana»: situación, acciones, comprobación y entregable" width="760"/>
 
 ## Prerrequisitos
 
@@ -32,11 +34,11 @@ En esta práctica inaugural recibirás una lista desordenada de 12 tareas del ci
 | Requisito | Detalle |
 |---|---|
 | Cuenta Microsoft 365 | Licencia institucional activa con acceso a OneDrive for Business, Excel Online y Word Online |
-| Copilot Chat básico | Acceso confirmado en https://copilot.microsoft.com con cuenta institucional (protección de datos comerciales habilitada). **No** se requiere licencia de Microsoft 365 Copilot (SKU adicional). |
+| Copilot Chat básico | Acceso confirmado en https://m365.cloud.microsoft/chat con cuenta institucional (protección de datos empresariales habilitada). **No** se requiere licencia de Microsoft 365 Copilot (SKU adicional). |
 | Navegador | Microsoft Edge 134.0.3124.72+ (recomendado) o Google Chrome 134.0.6998.89+ |
 | Conectividad | Conexión a Internet estable para acceder a los servicios en la nube |
 
-> **⚠️ Importante:** Si al iniciar sesión en https://copilot.microsoft.com no aparece el indicador «Protegido por tu organización» (o equivalente en inglés «Protected by your organization»), contacta al instructor antes de continuar. Esto indica que Copilot Chat con protección comercial no está habilitado en tu tenant.
+> **⚠️ Importante:** Si al iniciar sesión en https://m365.cloud.microsoft/chat no aparece el indicador «Protegido por tu organización» (o equivalente en inglés «Protected by your organization»), contacta al instructor antes de continuar. Esto indica que Copilot Chat con protección de datos empresariales no está habilitado en tu tenant.
 
 ## Entorno de Laboratorio
 
@@ -54,23 +56,25 @@ OneDrive for Business/
 
 ### Insumo proporcionado: Lista de tareas del cierre operativo
 
+> 📥 **Descarga:** la misma lista está en [Lista_Tareas_CierreOperativo_Abr2025.docx](recursos/Lista_Tareas_CierreOperativo_Abr2025.docx).
+
 A continuación se presenta la lista de 12 tareas que constituye el escenario de trabajo. **Copia este bloque completo**; lo necesitarás en los pasos 5 y 7.
 
 ```text
-LISTA DE TAREAS — CIERRE OPERATIVO MENSUAL (JUNIO 2025)
+LISTA DE TAREAS — CIERRE OPERATIVO MENSUAL (ABRIL 2025)
 =========================================================
-1. Revisar controles internos de caja chica — Fecha límite: 02/jul — Depende de: ninguna — Responsable: Analista financiero
-2. Actualizar hoja Excel de conciliación bancaria — Fecha límite: 03/jul — Depende de: Tarea 1 — Responsable: Asistente contable
-3. Elaborar informe de gestión mensual — Fecha límite: 04/jul — Depende de: Tareas 1 y 2 — Responsable: Coordinador operativo
-4. Enviar recordatorio a proveedores con facturas pendientes — Fecha límite: 30/jun — Depende de: ninguna — Responsable: Asistente administrativo
-5. Consolidar reporte de horas extra del personal — Fecha límite: 01/jul — Depende de: ninguna — Responsable: Recursos Humanos
-6. Verificar estado de contratos por vencer — Fecha límite: 03/jul — Depende de: ninguna — Responsable: Área legal
-7. Archivar comprobantes de pago del mes — Fecha límite: 04/jul — Depende de: Tarea 2 — Responsable: Asistente contable
-8. Preparar presentación de resultados para dirección — Fecha límite: 07/jul — Depende de: Tarea 3 — Responsable: Coordinador operativo
-9. Revisar y aprobar solicitudes de viáticos pendientes — Fecha límite: 30/jun — Depende de: ninguna — Responsable: Jefe de área
-10. Actualizar inventario de activos fijos — Fecha límite: 05/jul — Depende de: ninguna — Responsable: Encargado de activos
-11. Generar respaldo de base de datos de facturación — Fecha límite: 01/jul — Depende de: ninguna — Responsable: Soporte TI
-12. Solicitar firma de actas de entrega de equipos — Fecha límite: 03/jul — Depende de: Tarea 10 — Responsable: Encargado de activos
+1. Revisar controles internos de caja chica — Fecha límite: 07/may — Depende de: ninguna — Responsable: Analista financiero
+2. Actualizar hoja Excel de conciliación bancaria — Fecha límite: 08/may — Depende de: Tarea 1 — Responsable: Asistente contable
+3. Elaborar informe de gestión mensual — Fecha límite: 09/may — Depende de: Tareas 1 y 2 — Responsable: Coordinador operativo
+4. Enviar recordatorio a proveedores con facturas pendientes — Fecha límite: 05/may — Depende de: ninguna — Responsable: Asistente administrativo
+5. Consolidar reporte de horas extra del personal — Fecha límite: 06/may — Depende de: ninguna — Responsable: Recursos Humanos
+6. Verificar estado de contratos por vencer — Fecha límite: 08/may — Depende de: ninguna — Responsable: Área legal
+7. Archivar comprobantes de pago del mes — Fecha límite: 09/may — Depende de: Tarea 2 — Responsable: Asistente contable
+8. Preparar presentación de resultados para dirección — Fecha límite: 12/may — Depende de: Tarea 3 — Responsable: Coordinador operativo
+9. Revisar y aprobar solicitudes de viáticos pendientes — Fecha límite: 05/may — Depende de: ninguna — Responsable: Jefe de área
+10. Actualizar inventario de activos fijos — Fecha límite: 10/may — Depende de: ninguna — Responsable: Encargado de activos
+11. Generar respaldo de base de datos de facturación — Fecha límite: 06/may — Depende de: ninguna — Responsable: Soporte TI
+12. Solicitar firma de actas de entrega de equipos — Fecha límite: 08/may — Depende de: Tarea 10 — Responsable: Encargado de activos
 ```
 
 ## Instrucciones Paso a Paso
@@ -79,7 +83,7 @@ LISTA DE TAREAS — CIERRE OPERATIVO MENSUAL (JUNIO 2025)
 
 **Objetivo:** Establecer el directorio de trabajo estándar del curso para almacenar todos los artefactos.
 
-1. Abre el navegador e ingresa a https://onedrive.live.com o accede a OneDrive desde el portal https://www.office.com con tu cuenta institucional.
+1. Abre el navegador e ingresa a https://m365.cloud.microsoft o accede a OneDrive desde el portal https://m365.cloud.microsoft con tu cuenta institucional.
 2. En la raíz de tu OneDrive, haz clic en **+ Nuevo** → **Carpeta**.
 3. Nombra la carpeta:
 
@@ -105,9 +109,9 @@ Semana1
 
 **Objetivo:** Tener el insumo listo para el análisis manual y para el prompt de Copilot Chat.
 
-1. Regresa a este documento de instrucciones y localiza el bloque de texto titulado **«LISTA DE TAREAS — CIERRE OPERATIVO MENSUAL (JUNIO 2025)»** en la sección «Entorno de Laboratorio».
+1. Regresa a este documento de instrucciones y localiza el bloque de texto titulado **«LISTA DE TAREAS — CIERRE OPERATIVO MENSUAL (ABRIL 2025)»** en la sección «Entorno de Laboratorio».
 2. Selecciona todo el bloque de texto (desde la línea `1. Revisar controles internos…` hasta `12. Solicitar firma de actas…`) y cópialo al portapapeles (`Ctrl + C`).
-3. Abre una pestaña nueva en el navegador, ingresa a https://www.office.com y abre **Word Online**.
+3. Abre una pestaña nueva en el navegador, ingresa a https://m365.cloud.microsoft y abre **Word Online**.
 4. Crea un documento en blanco y pégalo (`Ctrl + V`).
 5. Guarda el documento con el nombre:
 
@@ -133,14 +137,14 @@ Borrador_Tareas_CierreOperativo.docx
 ## ANÁLISIS DE PRIORIZACIÓN
 ```
 
-2. Identifica las tareas con **fecha límite más cercana** (30/jun y 01/jul). Escribe debajo del título:
+2. Identifica las tareas con **fecha límite más cercana** (05/may y 06/may). Escribe debajo del título:
 
 ```
-URGENTES (vencen 30/jun - 01/jul):
-- Tarea 4: Enviar recordatorio a proveedores (30/jun) — Sin dependencia
-- Tarea 9: Revisar solicitudes de viáticos (30/jun) — Sin dependencia
-- Tarea 5: Consolidar reporte de horas extra (01/jul) — Sin dependencia
-- Tarea 11: Generar respaldo de base de datos (01/jul) — Sin dependencia
+URGENTES (vencen 05/may - 06/may):
+- Tarea 4: Enviar recordatorio a proveedores (05/may) — Sin dependencia
+- Tarea 9: Revisar solicitudes de viáticos (05/may) — Sin dependencia
+- Tarea 5: Consolidar reporte de horas extra (06/may) — Sin dependencia
+- Tarea 11: Generar respaldo de base de datos (06/may) — Sin dependencia
 ```
 
 3. Identifica las tareas que son **dependencia de otras** (bloquean el avance de tareas posteriores). Escribe:
@@ -156,9 +160,9 @@ TAREAS BLOQUEANTES (otras dependen de ellas):
 
 ```
 TOP 3 PRIORIDADES (urgencia + impacto + dependencias):
-1. Tarea 1: Revisar controles internos de caja chica (02/jul) — CRÍTICA: bloquea conciliación e informe
-2. Tarea 2: Actualizar hoja Excel de conciliación bancaria (03/jul) — CRÍTICA: bloquea informe y archivo
-3. Tarea 3: Elaborar informe de gestión mensual (04/jul) — CRÍTICA: bloquea presentación a dirección
+1. Tarea 1: Revisar controles internos de caja chica (07/may) — CRÍTICA: bloquea conciliación e informe
+2. Tarea 2: Actualizar hoja Excel de conciliación bancaria (08/may) — CRÍTICA: bloquea informe y archivo
+3. Tarea 3: Elaborar informe de gestión mensual (09/may) — CRÍTICA: bloquea presentación a dirección
 ```
 
 5. Guarda el documento (`Ctrl + S`).
@@ -169,18 +173,18 @@ TOP 3 PRIORIDADES (urgencia + impacto + dependencias):
 
 ---
 
-### Paso 4: Acceder a Copilot Chat básico y verificar la protección comercial
+### Paso 4: Acceder a Copilot Chat básico y verificar la protección de datos empresariales
 
-**Objetivo:** Confirmar que Copilot Chat está disponible con protección de datos comerciales antes de enviar información institucional.
+**Objetivo:** Confirmar que Copilot Chat está disponible con protección de datos empresariales antes de enviar información institucional.
 
 1. Abre una pestaña nueva e ingresa a:
 
 ```
-https://copilot.microsoft.com
+https://m365.cloud.microsoft/chat
 ```
 
 2. Si se te solicita, inicia sesión con tu **cuenta institucional** de Microsoft 365 (no con una cuenta personal).
-3. Busca el indicador de protección comercial. Debe aparecer un texto como:
+3. Busca el indicador de protección de datos empresariales. Debe aparecer un texto como:
 
 ```
 "Tu información personal y de la empresa está protegida en este chat"
@@ -190,7 +194,7 @@ https://copilot.microsoft.com
 
 4. Si el indicador **no aparece**, cierra sesión, borra la caché del navegador y vuelve a intentar. Si persiste, notifica al instructor.
 
-**Resultado esperado:** Copilot Chat cargado con la cuenta institucional y el indicador de protección comercial visible.
+**Resultado esperado:** Copilot Chat cargado con la cuenta institucional y el indicador de protección de datos empresariales visible.
 
 **Verificación:** Captura mental (o captura de pantalla opcional) del indicador de protección. Confirma que el avatar o nombre de usuario corresponde a tu cuenta institucional.
 
@@ -203,27 +207,27 @@ https://copilot.microsoft.com
 1. En la ventana de Copilot Chat, escribe el siguiente prompt **completo**. Antes de enviarlo, reemplaza `[Tu nombre]` por tu nombre real:
 
 ```
-Actúa como un asistente de planificación operativa. Te proporcionaré una lista de 12 tareas del cierre operativo mensual de junio 2025 con fechas límite, dependencias y responsables.
+Actúa como un asistente de planificación operativa. Te proporcionaré una lista de 12 tareas del cierre operativo mensual de abril 2025 con fechas límite, dependencias y responsables.
 
-Necesito que generes un plan semanal estructurado del lunes 30 de junio al viernes 4 de julio de 2025, distribuyendo las tareas día a día. Reglas:
+Necesito que generes un plan semanal estructurado del lunes 5 al viernes 9 de mayo de 2025, distribuyendo las tareas día a día. Reglas:
 - Respeta las fechas límite: cada tarea debe programarse al menos un día antes de su fecha límite o el mismo día si no hay margen.
 - Respeta las dependencias: una tarea dependiente no puede programarse antes de que se complete la tarea de la que depende.
 - Formato de salida: tabla con columnas Día, Tarea, Responsable, Fecha límite, Prioridad (Alta/Media/Baja).
 - Marca con prioridad Alta las tareas que bloquean a otras o que tienen fecha límite inmediata.
 
 Lista de tareas:
-1. Revisar controles internos de caja chica — Fecha límite: 02/jul — Depende de: ninguna — Responsable: Analista financiero
-2. Actualizar hoja Excel de conciliación bancaria — Fecha límite: 03/jul — Depende de: Tarea 1 — Responsable: Asistente contable
-3. Elaborar informe de gestión mensual — Fecha límite: 04/jul — Depende de: Tareas 1 y 2 — Responsable: Coordinador operativo
-4. Enviar recordatorio a proveedores con facturas pendientes — Fecha límite: 30/jun — Depende de: ninguna — Responsable: Asistente administrativo
-5. Consolidar reporte de horas extra del personal — Fecha límite: 01/jul — Depende de: ninguna — Responsable: Recursos Humanos
-6. Verificar estado de contratos por vencer — Fecha límite: 03/jul — Depende de: ninguna — Responsable: Área legal
-7. Archivar comprobantes de pago del mes — Fecha límite: 04/jul — Depende de: Tarea 2 — Responsable: Asistente contable
-8. Preparar presentación de resultados para dirección — Fecha límite: 07/jul — Depende de: Tarea 3 — Responsable: Coordinador operativo
-9. Revisar y aprobar solicitudes de viáticos pendientes — Fecha límite: 30/jun — Depende de: ninguna — Responsable: Jefe de área
-10. Actualizar inventario de activos fijos — Fecha límite: 05/jul — Depende de: ninguna — Responsable: Encargado de activos
-11. Generar respaldo de base de datos de facturación — Fecha límite: 01/jul — Depende de: ninguna — Responsable: Soporte TI
-12. Solicitar firma de actas de entrega de equipos — Fecha límite: 03/jul — Depende de: Tarea 10 — Responsable: Encargado de activos
+1. Revisar controles internos de caja chica — Fecha límite: 07/may — Depende de: ninguna — Responsable: Analista financiero
+2. Actualizar hoja Excel de conciliación bancaria — Fecha límite: 08/may — Depende de: Tarea 1 — Responsable: Asistente contable
+3. Elaborar informe de gestión mensual — Fecha límite: 09/may — Depende de: Tareas 1 y 2 — Responsable: Coordinador operativo
+4. Enviar recordatorio a proveedores con facturas pendientes — Fecha límite: 05/may — Depende de: ninguna — Responsable: Asistente administrativo
+5. Consolidar reporte de horas extra del personal — Fecha límite: 06/may — Depende de: ninguna — Responsable: Recursos Humanos
+6. Verificar estado de contratos por vencer — Fecha límite: 08/may — Depende de: ninguna — Responsable: Área legal
+7. Archivar comprobantes de pago del mes — Fecha límite: 09/may — Depende de: Tarea 2 — Responsable: Asistente contable
+8. Preparar presentación de resultados para dirección — Fecha límite: 12/may — Depende de: Tarea 3 — Responsable: Coordinador operativo
+9. Revisar y aprobar solicitudes de viáticos pendientes — Fecha límite: 05/may — Depende de: ninguna — Responsable: Jefe de área
+10. Actualizar inventario de activos fijos — Fecha límite: 10/may — Depende de: ninguna — Responsable: Encargado de activos
+11. Generar respaldo de base de datos de facturación — Fecha límite: 06/may — Depende de: ninguna — Responsable: Soporte TI
+12. Solicitar firma de actas de entrega de equipos — Fecha límite: 08/may — Depende de: Tarea 10 — Responsable: Encargado de activos
 
 Genera el plan ahora. Participante: [Tu nombre].
 ```
@@ -231,10 +235,10 @@ Genera el plan ahora. Participante: [Tu nombre].
 2. Presiona **Enter** o el botón de enviar para ejecutar el prompt.
 3. Espera a que Copilot Chat genere la respuesta completa.
 
-**Resultado esperado:** Copilot Chat devuelve una tabla con las 12 tareas distribuidas entre el lunes 30 de junio y el viernes 4 de julio (o hasta el lunes 7 de julio para la Tarea 8), respetando dependencias y fechas límite.
+**Resultado esperado:** Copilot Chat devuelve una tabla con las 12 tareas distribuidas entre el lunes 5 y el viernes 9 de mayo (o hasta el lunes 12 de mayo para la Tarea 8), respetando dependencias y fechas límite.
 
 **Verificación:** Confirma visualmente que:
-- Las tareas 4 y 9 están programadas el lunes 30/jun (fecha límite inmediata).
+- Las tareas 4 y 9 están programadas el lunes 05/may (fecha límite inmediata).
 - La Tarea 1 aparece antes de la Tarea 2, y la Tarea 2 antes de la Tarea 3.
 - La Tarea 10 aparece antes de la Tarea 12.
 
@@ -248,12 +252,12 @@ Genera el plan ahora. Participante: [Tu nombre].
 2. Verifica los siguientes criterios (marca mentalmente cada uno):
 
 ```
-[ ] ¿Las tareas 4 y 9 están en el día 30/jun? (urgencia inmediata)
+[ ] ¿Las tareas 4 y 9 están en el día 05/may? (urgencia inmediata)
 [ ] ¿La Tarea 1 se programa antes que la Tarea 2? (dependencia)
 [ ] ¿La Tarea 2 se programa antes que las Tareas 3 y 7? (dependencia)
 [ ] ¿La Tarea 10 se programa antes que la Tarea 12? (dependencia)
 [ ] ¿Las 12 tareas aparecen en la tabla? (completitud)
-[ ] ¿La Tarea 8 está programada el 07/jul o antes? (fecha límite)
+[ ] ¿La Tarea 8 está programada el 12/may o antes? (fecha límite)
 [ ] ¿Las prioridades Alta coinciden con las tareas bloqueantes?
 ```
 
@@ -304,12 +308,12 @@ Ordena la tabla por fecha programada de forma ascendente. Asegúrate de que las 
 
 **Objetivo:** Documentar el plan semanal como artefacto formal del curso con la convención de nombres establecida.
 
-1. Ve a la pestaña de Office (https://www.office.com) y abre **Word Online**.
+1. Ve a la pestaña de Office (https://m365.cloud.microsoft) y abre **Word Online**.
 2. Crea un documento en blanco.
 3. Escribe el siguiente encabezado:
 
 ```
-PLAN SEMANAL — CIERRE OPERATIVO JUNIO 2025
+PLAN SEMANAL — CIERRE OPERATIVO ABRIL 2025
 Participante: [Tu nombre y apellido]
 Fecha de elaboración: [Fecha de hoy en formato AAAA-MM-DD]
 ```
@@ -349,11 +353,11 @@ PlanSemanal_CierreOperativo_[Apellido].docx
 
 **Objetivo:** Construir la lista de verificación digital en formato de hoja de cálculo con estructura funcional.
 
-1. Desde https://www.office.com, abre **Excel Online** y crea un libro en blanco.
+1. Desde https://m365.cloud.microsoft, abre **Excel Online** y crea un libro en blanco.
 2. En la celda **A1**, escribe el título:
 
 ```
-Lista de Verificación — Cierre Operativo Junio 2025
+Lista de Verificación — Cierre Operativo Abril 2025
 ```
 
 3. En la fila **3**, escribe los encabezados de columna (una celda por columna, de A3 a H3):
@@ -433,16 +437,16 @@ Verificación completada por: [Tu nombre] — Fecha: [Hoy AAAA-MM-DD] — Los 4 
 
 **Objetivo:** Evaluar las limitaciones de Copilot Chat ante información contradictoria, aplicando supervisión humana.
 
-1. Regresa a la pestaña de Copilot Chat (https://copilot.microsoft.com). Inicia una **nueva conversación** (haz clic en «Nuevo chat» o «New chat»).
+1. Regresa a la pestaña de Copilot Chat (https://m365.cloud.microsoft/chat). Inicia una **nueva conversación** (haz clic en «Nuevo chat» o «New chat»).
 2. Envía el siguiente prompt que contiene información deliberadamente contradictoria:
 
 ```
-Tengo una tarea de cierre operativo: "Elaborar informe de gestión mensual". Su fecha límite es el 04 de julio, pero depende de la tarea "Actualizar conciliación bancaria" cuya fecha límite es el 08 de julio. ¿Puedo programar el informe para el 03 de julio?
+Tengo una tarea de cierre operativo: "Elaborar informe de gestión mensual". Su fecha límite es el 09 de mayo, pero depende de la tarea "Actualizar conciliación bancaria" cuya fecha límite es el 13 de mayo. ¿Puedo programar el informe para el 08 de mayo?
 ```
 
 3. Lee la respuesta de Copilot Chat. Analiza:
    - ¿Detectó la contradicción? (El informe depende de una tarea que vence después de él.)
-   - ¿Sugirió que es imposible cumplir la fecha del informe si la dependencia se completa el 08/jul?
+   - ¿Sugirió que es imposible cumplir la fecha del informe si la dependencia se completa el 13/may?
    - ¿Ofreció una respuesta sin cuestionar la inconsistencia?
 
 4. En tu documento de Word Online (`PlanSemanal_CierreOperativo_[Apellido].docx`), añade al final:
@@ -478,7 +482,7 @@ Conclusión: La supervisión humana es necesaria porque [completa con tu anális
 
 ```
 Tarea 1 — Revisar controles internos de caja chica:
-- Urgencia: Vence el 02/jul, es la segunda fecha más cercana después de las tareas del 30/jun.
+- Urgencia: Vence el 07/may, es la segunda fecha más cercana después de las tareas del 05/may.
 - Impacto: Sin esta revisión, la conciliación bancaria (Tarea 2) no puede iniciar, lo que a su vez bloquea el informe de gestión (Tarea 3) y el archivo de comprobantes (Tarea 7).
 - Dependencia: Es el primer eslabón de la cadena crítica más larga del cierre (Tarea 1 → 2 → 3 → 8), que culmina en la presentación a dirección.
 ```
@@ -528,7 +532,7 @@ Utiliza la siguiente rúbrica para autoevaluar tu trabajo antes de entregarlo al
 | 7 | Las tres justificaciones mencionan urgencia, impacto y dependencia con datos específicos | Lectura del documento Word | ☐ |
 | 8 | La prueba adversarial está documentada con los 4 elementos (prompt, respuesta, evaluación, conclusión) | Lectura de la sección en el documento Word | ☐ |
 | 9 | Los nombres de archivo siguen la convención establecida | Verificar en OneDrive | ☐ |
-| 10 | Copilot Chat se usó con protección comercial (cuenta institucional) | Indicador visible durante la sesión | ☐ |
+| 10 | Copilot Chat se usó con protección de datos empresariales (cuenta institucional) | Indicador visible durante la sesión | ☐ |
 
 **Criterio de aprobación:** Mínimo 8 de 10 criterios cumplidos, incluyendo obligatoriamente los criterios 3, 4, 5 y 7.
 
@@ -541,16 +545,16 @@ El Paso 12 constituye la prueba adversarial requerida. En él se envió a Copilo
 
 ## Solución de Problemas
 
-### Problema 1: Copilot Chat no muestra el indicador de protección comercial
+### Problema 1: Copilot Chat no muestra el indicador de protección de datos empresariales
 
-**Síntoma:** Al acceder a https://copilot.microsoft.com con la cuenta institucional, no aparece el texto «Tu información personal y de la empresa está protegida en este chat» ni el icono de escudo.
+**Síntoma:** Al acceder a https://m365.cloud.microsoft/chat con la cuenta institucional, no aparece el texto «Tu información personal y de la empresa está protegida en este chat» ni el icono de escudo.
 
-**Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos comerciales para los usuarios estándar, o el navegador está usando una sesión de cuenta personal en lugar de la institucional.
+**Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos empresariales para los usuarios estándar, o el navegador está usando una sesión de cuenta personal en lugar de la institucional.
 
 **Solución:**
 1. Cierra todas las ventanas del navegador.
 2. Abre una ventana **InPrivate** (Edge) o **Incógnito** (Chrome).
-3. Navega a https://copilot.microsoft.com e inicia sesión explícitamente con tu correo institucional.
+3. Navega a https://m365.cloud.microsoft/chat e inicia sesión explícitamente con tu correo institucional.
 4. Si el indicador sigue sin aparecer, verifica en https://myaccount.microsoft.com que la sesión activa corresponde a la cuenta institucional.
 5. Si el problema persiste, notifica al instructor, quien debe escalar con el área de TI. Como alternativa temporal, el instructor puede demostrar el uso de Copilot Chat en pantalla compartida mientras se resuelve el acceso.
 
@@ -597,6 +601,6 @@ Los artefactos generados (plan semanal y lista de verificación) constituyen el 
 
 ### Recursos adicionales
 
-- [Microsoft — Guía de inicio de Copilot Chat](https://support.microsoft.com/es-es/topic/inicio-r%C3%A1pido-de-microsoft-copilot-0b6e4f4a-4b8e-4b8e-8b0e-0b6e4f4a4b8e)
+- [Microsoft — Guía de inicio de Copilot Chat](https://learn.microsoft.com/es-es/copilot/overview)
 - [Microsoft — Mejores prácticas de productividad personal con Microsoft 365](https://adoption.microsoft.com/es-es/productivity-library/)
 - [Allen, D. — Getting Things Done: principios de organización del trabajo](https://gettingthingsdone.com/what-is-gtd/)

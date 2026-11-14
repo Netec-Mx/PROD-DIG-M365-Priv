@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" font-family="Segoe UI, Arial, sans-serif">
+<rect width="900" height="300" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7f"/></marker></defs>
+<text x="20" y="32" font-size="18" font-weight="700" fill="#0b2e59">Práctica 6. Misión «Operación contrarreloj»</text>
+<text x="20" y="56" font-size="12.5" fill="#5b6b7f">Situación: cierre con actividades atrasadas y responsables indefinidos (referencia: 30 de abril).</text>
+<rect x="20.0" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="30.0" y="114" font-size="12" font-weight="700" fill="#1f4e78">1. Analizar</text>
+<text x="30.0" y="136" font-size="12" fill="#0b2e59">Atrasadas, sin</text>
+<text x="30.0" y="151" font-size="12" fill="#0b2e59">responsable y actividad</text>
+<text x="30.0" y="166" font-size="12" fill="#0b2e59">crítica</text>
+<line x1="183.4" y1="177" x2="192.4" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="194.4" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="204.4" y="114" font-size="12" font-weight="700" fill="#1f4e78">2. Organizar</text>
+<text x="204.4" y="136" font-size="12" fill="#0b2e59">Plan en Planner con</text>
+<text x="204.4" y="151" font-size="12" fill="#0b2e59">cubos, prioridades,</text>
+<text x="204.4" y="166" font-size="12" fill="#0b2e59">fechas, etiquetas y</text>
+<text x="204.4" y="181" font-size="12" fill="#0b2e59">evidencias</text>
+<line x1="357.8" y1="177" x2="366.8" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="368.8" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="378.8" y="114" font-size="12" font-weight="700" fill="#1f4e78">3. Reajustar</text>
+<text x="378.8" y="136" font-size="12" fill="#0b2e59">Tarea imprevista y</text>
+<text x="378.8" y="151" font-size="12" fill="#0b2e59">cambio de fecha en</text>
+<text x="378.8" y="166" font-size="12" fill="#0b2e59">cascada</text>
+<line x1="532.2" y1="177" x2="541.2" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="543.2" y="92" width="162.4" height="170" rx="10" fill="#fff8e1" stroke="#b26a00" stroke-width="1.5"/>
+<text x="553.2" y="114" font-size="12" font-weight="700" fill="#b26a00">Comprobación</text>
+<text x="553.2" y="136" font-size="12" fill="#0b2e59">Detectar el pendiente</text>
+<text x="553.2" y="151" font-size="12" fill="#0b2e59">de mayor riesgo y</text>
+<text x="553.2" y="166" font-size="12" fill="#0b2e59">documentar la acción</text>
+<text x="553.2" y="181" font-size="12" fill="#0b2e59">correctiva</text>
+<line x1="706.6" y1="177" x2="715.6" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="717.6" y="92" width="162.4" height="170" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="727.6" y="114" font-size="12" font-weight="700" fill="#2e7d32">Entregable</text>
+<text x="727.6" y="136" font-size="12" fill="#0b2e59">Plan</text>
+<text x="727.6" y="151" font-size="12" fill="#0b2e59">CierreMensual_[Apellido]</text>
+<text x="727.6" y="166" font-size="12" fill="#0b2e59">y evidencias</text>
+<text x="20" y="288" font-size="12" fill="#5b6b7f">Misión Productividad 365 · Cierre operativo de abril 2025 · Duración: 42 min</text>
+</svg>

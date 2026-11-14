@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" font-family="Segoe UI, Arial, sans-serif">
+<rect width="900" height="300" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7f"/></marker></defs>
+<text x="20" y="32" font-size="18" font-weight="700" fill="#0b2e59">Práctica 1. Misión «Rescata tu semana»</text>
+<text x="20" y="56" font-size="12.5" fill="#5b6b7f">Situación: agenda desordenada con 12 tareas del cierre, fechas y dependencias.</text>
+<rect x="20.0" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="30.0" y="114" font-size="12" font-weight="700" fill="#1f4e78">1. Analizar</text>
+<text x="30.0" y="136" font-size="12" fill="#0b2e59">Urgencias, dependencias</text>
+<text x="30.0" y="151" font-size="12" fill="#0b2e59">y fechas límite de las</text>
+<text x="30.0" y="166" font-size="12" fill="#0b2e59">12 tareas</text>
+<line x1="183.4" y1="177" x2="192.4" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="194.4" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="204.4" y="114" font-size="12" font-weight="700" fill="#1f4e78">2. Planear</text>
+<text x="204.4" y="136" font-size="12" fill="#0b2e59">Plan semanal día a día</text>
+<text x="204.4" y="151" font-size="12" fill="#0b2e59">con Copilot Chat básico</text>
+<line x1="357.8" y1="177" x2="366.8" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="368.8" y="92" width="162.4" height="170" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="378.8" y="114" font-size="12" font-weight="700" fill="#1f4e78">3. Verificar</text>
+<text x="378.8" y="136" font-size="12" fill="#0b2e59">Lista de verificación</text>
+<text x="378.8" y="151" font-size="12" fill="#0b2e59">en Excel; ninguna</text>
+<text x="378.8" y="166" font-size="12" fill="#0b2e59">entrega crítica sin</text>
+<text x="378.8" y="181" font-size="12" fill="#0b2e59">fecha</text>
+<line x1="532.2" y1="177" x2="541.2" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="543.2" y="92" width="162.4" height="170" rx="10" fill="#fff8e1" stroke="#b26a00" stroke-width="1.5"/>
+<text x="553.2" y="114" font-size="12" font-weight="700" fill="#b26a00">Comprobación</text>
+<text x="553.2" y="136" font-size="12" fill="#0b2e59">Explicar las 3</text>
+<text x="553.2" y="151" font-size="12" fill="#0b2e59">prioridades y probar a</text>
+<text x="553.2" y="166" font-size="12" fill="#0b2e59">Copilot con un caso</text>
+<text x="553.2" y="181" font-size="12" fill="#0b2e59">adversarial</text>
+<line x1="706.6" y1="177" x2="715.6" y2="177" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="717.6" y="92" width="162.4" height="170" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="727.6" y="114" font-size="12" font-weight="700" fill="#2e7d32">Entregable</text>
+<text x="727.6" y="136" font-size="12" fill="#0b2e59">PlanSemanal (.docx) y</text>
+<text x="727.6" y="151" font-size="12" fill="#0b2e59">ListaVerificacion</text>
+<text x="727.6" y="166" font-size="12" fill="#0b2e59">(.xlsx) en OneDrive</text>
+<text x="20" y="288" font-size="12" fill="#5b6b7f">Misión Productividad 365 · Cierre operativo de abril 2025 · Duración: 42 min</text>
+</svg>

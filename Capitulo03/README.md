@@ -21,6 +21,8 @@ Esta práctica implementa en Microsoft Teams el espacio de trabajo cuyo diseño 
 - [ ] Usar Copilot Chat básico para redactar un mensaje de seguimiento estructurado (con acciones, responsables y fechas) a partir de notas desorganizadas proporcionadas por el instructor.
 - [ ] Verificar que el mensaje de seguimiento generado cumpla los criterios de claridad: acción específica, responsable nombrado y fecha comprometida.
 
+<img src="../images/p03-objetivo.svg" alt="Diagrama de la Práctica 3. Misión «Comunicación bajo control»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 ### Conocimientos previos
@@ -32,7 +34,7 @@ Esta práctica implementa en Microsoft Teams el espacio de trabajo cuyo diseño 
 ### Acceso y artefactos requeridos
 
 - Cuenta institucional Microsoft 365 activa con acceso a Microsoft Teams.
-- Acceso a Copilot Chat básico (con protección de datos comerciales) en `https://copilot.microsoft.com` con cuenta institucional. **No** se requiere la licencia Microsoft 365 Copilot (SKU adicional de pago).
+- Acceso a Copilot Chat básico (con protección de datos empresariales) en `https://m365.cloud.microsoft/chat` con cuenta institucional. **No** se requiere la licencia Microsoft 365 Copilot (SKU adicional de pago).
 - Permisos para crear equipos en Teams **o** equipo de práctica preconfigurado por el instructor.
 - Los siguientes archivos disponibles en OneDrive for Business (`/CierreOperativo/Semana1/`):
   - `PlanSemanal_CierreOperativo_[Apellido].docx`
@@ -46,11 +48,13 @@ Esta práctica implementa en Microsoft Teams el espacio de trabajo cuyo diseño 
 | Herramienta | Versión | Acceso |
 |---|---|---|
 | Microsoft Teams | 2.1 (build 24285.x.x o superior) — cliente de escritorio o web | `https://teams.microsoft.com` |
-| Copilot Chat básico (protección comercial) | Evergreen (servicio en la nube) | `https://copilot.microsoft.com` |
-| OneDrive for Business | Evergreen (servicio en la nube) | `https://onedrive.com` o integrado en Teams |
+| Copilot Chat básico (protección de datos empresariales) | Evergreen (servicio en la nube) | `https://m365.cloud.microsoft/chat` |
+| OneDrive for Business | Evergreen (servicio en la nube) | `https://m365.cloud.microsoft` o integrado en Teams |
 | Microsoft Edge | 134.0.3124.72 o superior | Navegador recomendado |
 
 ### Material proporcionado por el instructor
+
+> 📥 **Descarga:** [Informe_Mensual_CierreOperativo_Plantilla.docx](recursos/Informe_Mensual_CierreOperativo_Plantilla.docx) (Recurso A) y [Notas_Reunion_Desorganizadas.docx](recursos/Notas_Reunion_Desorganizadas.docx) (Recurso B).
 
 Antes de iniciar, el instructor entregará dos recursos que se usarán a lo largo de la práctica:
 
@@ -68,7 +72,7 @@ Antes del Paso 1, confirma que puedes acceder a Teams y a tu carpeta de OneDrive
 
 1. Abre Microsoft Teams (escritorio o `https://teams.microsoft.com`).
 2. Verifica que tu sesión corresponde a tu cuenta institucional (tu nombre aparece en la esquina superior derecha).
-3. En otra pestaña del navegador, abre `https://copilot.microsoft.com` e inicia sesión con la misma cuenta institucional. Confirma que aparece el indicador **Protegido** o **Protección de datos empresariales** en la interfaz.
+3. En otra pestaña del navegador, abre `https://m365.cloud.microsoft/chat` e inicia sesión con la misma cuenta institucional. Confirma que aparece el indicador **Protegido** o **Protección de datos empresariales** en la interfaz.
 
 ## Instrucciones Paso a Paso
 
@@ -384,7 +388,7 @@ Nota: Estas acciones se formalizarán en un mensaje de seguimiento a continuaci�
 
 ---
 
-### Paso 10: Abrir Copilot Chat básico y verificar protección comercial
+### Paso 10: Abrir Copilot Chat básico y verificar protección de datos empresariales
 
 **Objetivo:** Acceder a Copilot Chat con la cuenta institucional, confirmando que la sesión tiene protección de datos empresariales.
 
@@ -394,16 +398,16 @@ Nota: Estas acciones se formalizarán en un mensaje de seguimiento a continuaci�
 2. Navega a:
 
 ```
-https://copilot.microsoft.com
+https://m365.cloud.microsoft/chat
 ```
 
 3. Si no has iniciado sesión, hazlo con tu cuenta institucional Microsoft 365.
-4. Busca el indicador de **protección comercial**. Según la versión de la interfaz, puede aparecer como:
+4. Busca el indicador de **protección de datos empresariales**. Según la versión de la interfaz, puede aparecer como:
    - Un icono de escudo verde con el texto **"Protegido"** o **"Protected"**.
    - El texto **"Sus datos están protegidos"** en la parte inferior del chat.
    - Tu nombre institucional visible en la esquina superior.
 
-> **Importante:** Si no ves el indicador de protección comercial, cierra sesión, borra la caché del navegador y vuelve a iniciar sesión con tu cuenta institucional. Si el problema persiste, consulta al instructor.
+> **Importante:** Si no ves el indicador de protección de datos empresariales, cierra sesión, borra la caché del navegador y vuelve a iniciar sesión con tu cuenta institucional. Si el problema persiste, consulta al instructor.
 
 **Resultado esperado:** Copilot Chat está abierto con tu cuenta institucional y muestra el indicador de protección de datos empresariales.
 
@@ -592,7 +596,7 @@ LISTA DE VERIFICACIÓN DEL MENSAJE DE SEGUIMIENTO:
 
 Para validar la supervisión humana sobre la salida de IA, realiza la siguiente prueba:
 
-1. Regresa a Copilot Chat (`https://copilot.microsoft.com`).
+1. Regresa a Copilot Chat (`https://m365.cloud.microsoft/chat`).
 2. Escribe el siguiente prompt que incluye una **nota contradictoria** no presente en las notas originales:
 
 ```
@@ -682,11 +686,11 @@ En esta práctica aplicaste los conceptos de la Lección 3.1 (equipos, canales y
 
 ### Conexión con la siguiente práctica
 
-En la **Práctica 4**, los archivos organizados en el canal Informe-Mensual se migrarán a una biblioteca de SharePoint (`Documentos-CierreOperativo`) donde se les añadirán metadatos (Periodo, TipoDocumento, Estado, Responsable), vistas personalizadas y control de versiones. La estructura de Teams creada aquí seguirá siendo el espacio de coordinación, mientras que SharePoint se convertirá en el repositorio documental con trazabilidad avanzada.
+En la **Práctica 4**, los archivos organizados en el canal Informe-Mensual se migrarán a una biblioteca de SharePoint (`Documentos-CierreOperativo-[Apellido]`) donde se les añadirán metadatos (Periodo, TipoDocumento, Estado, Responsable), vistas personalizadas y control de versiones. La estructura de Teams creada aquí seguirá siendo el espacio de coordinación, mientras que SharePoint se convertirá en el repositorio documental con trazabilidad avanzada.
 
 ### Recursos adicionales
 
 - [Crear un equipo en Microsoft Teams](https://support.microsoft.com/es-es/office/crear-un-equipo-desde-cero-en-microsoft-teams-174adf5f-846b-4780-b765-de1a0a737e2b)
 - [Organizar archivos en canales de Teams](https://support.microsoft.com/es-es/office/compartir-archivos-en-microsoft-teams-0c4d34ee-5dd8-46d5-ab35-0d227b5e6eb5)
-- [Copilot Chat con protección de datos comerciales](https://learn.microsoft.com/es-es/copilot/manage)
+- [Copilot Chat con protección de datos empresariales](https://learn.microsoft.com/es-es/copilot/manage)
 - [Mejores prácticas para organizar equipos en Microsoft Teams](https://learn.microsoft.com/es-es/microsoftteams/best-practices-organizing)

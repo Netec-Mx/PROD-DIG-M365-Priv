@@ -19,6 +19,8 @@ En esta práctica identificarás dos tareas repetitivas del cierre mensual (un r
 - [ ] Construir y configurar en Power Automate un flujo de nube automatizado usando exclusivamente conectores estándar autorizados (Planner, SharePoint, Outlook, Teams, Office 365 Users).
 - [ ] Ejecutar una prueba del flujo, verificar la entrada y salida, y documentar al menos tres pasos manuales eliminados.
 
+<img src="../images/p07-objetivo.svg" alt="Diagrama de la Práctica 7. Misión «Automatiza y gana tiempo»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 **Conocimiento previo:**
@@ -41,7 +43,7 @@ En esta práctica identificarás dos tareas repetitivas del cierre mensual (un r
 | Herramienta | Versión / Build | URL de acceso |
 |---|---|---|
 | Microsoft Power Automate | Servicio en la nube, release de servicio abril 2025 | https://make.powerautomate.com |
-| Microsoft Planner | Experiencia unificada, Evergreen abril 2025 | https://planner.microsoft.com |
+| Microsoft Planner | Experiencia unificada, Evergreen abril 2025 | https://planner.cloud.microsoft |
 | SharePoint Online | Interfaz moderna, Evergreen abril 2025 | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
 | Microsoft Edge | 134.0.3124.72 o superior | Instalado localmente |
 | Office 365 Outlook | Conector estándar integrado en Power Automate | N/A |
@@ -73,7 +75,7 @@ OneDrive for Business
 
 **Instrucciones:**
 
-1. Abra el navegador y acceda a https://planner.microsoft.com con su cuenta institucional.
+1. Abra el navegador y acceda a https://planner.cloud.microsoft con su cuenta institucional.
 2. Localice el plan `CierreMensual_[Apellido]` creado en la Práctica 6.
 3. Revise las 14 tareas configuradas y responda mentalmente para cada una las tres preguntas de identificación:
    - ¿Con qué frecuencia ocurre esta actividad en un cierre real?
@@ -91,11 +93,13 @@ TAREA DE REGISTRO (automatización A):
   Ejemplo concreto: Tarea 04 "Cierre de nómina quincenal" → Pedro Salinas → 2025-04-26
 
 TAREA DE NOTIFICACIÓN (automatización B):
-  Evento: Cuando una tarea se mueve al cubo "En progreso"
-  Acción deseada: Enviar correo electrónico al responsable asignado
-    indicando que su tarea ha iniciado y recordando la fecha límite
-  Ejemplo concreto: Tarea 08 "Inventario de activos fijos" → Roberto Díaz → correo con fecha límite 2025-04-28
+  Evento: El mismo evento de la automatización A (tarea marcada como "Completado")
+  Acción deseada: Enviar correo electrónico al responsable confirmando
+    que su tarea quedó registrada en la lista del cierre
+  Ejemplo concreto: Tarea 08 "Inventario de activos fijos" → Roberto Díaz → correo de confirmación
 ```
+
+> **Importante:** el conector estándar de Planner ofrece los desencadenadores *Cuando se crea una tarea*, *Cuando se me asigna una tarea* y *Cuando se completa una tarea*; no detecta el cambio de cubo. Por eso, el registro (A) y la notificación (B) se resuelven en un solo flujo que inicia al completar una tarea.
 
 **Resultado esperado:** Dos procesos repetitivos claramente identificados con su evento disparador, acción esperada y ejemplo concreto.
 
@@ -478,7 +482,7 @@ Sistema de Cierre Operativo
 1. En el diseñador del flujo, haga clic en **Probar** (esquina superior derecha).
 2. Seleccione **Manualmente** y haga clic en **Probar**.
 3. Power Automate mostrará el mensaje: "El flujo se está ejecutando. Realice la acción del disparador."
-4. **Sin cerrar la pestaña de Power Automate**, abra una nueva pestaña y navegue a https://planner.microsoft.com.
+4. **Sin cerrar la pestaña de Power Automate**, abra una nueva pestaña y navegue a https://planner.cloud.microsoft.
 5. En el plan `CierreMensual_[Apellido]`, localice una tarea que esté en el cubo **Pendiente**. Use la tarea:
 
 ```

@@ -20,6 +20,8 @@ Recibir el expediente del cierre mensual con archivos, registros y datos tabular
 - [ ] Estructurar los datos tabulares corregidos en Excel con formato de tabla y nombres de columna normalizados, listos para análisis posterior en Power BI.
 - [ ] Reflexionar y documentar al menos tres mejoras de productividad aplicables al trabajo propio del estudiante, basadas en los aprendizajes de las prácticas anteriores.
 
+<img src="../images/p08-objetivo.svg" alt="Diagrama de la Práctica 8. Misión «Auditoría de productividad»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 ### Conocimientos previos
@@ -37,7 +39,7 @@ Recibir el expediente del cierre mensual con archivos, registros y datos tabular
 |---|---|
 | SharePoint — Biblioteca `CierreMensual_Practicas` | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica/CierreMensual_Practicas` |
 | Archivo del instructor | `Expediente_CierreMensual_P8.zip` publicado en la biblioteca anterior. |
-| Copilot Chat (protección de datos comerciales) | `https://microsoft365.com/chat` con cuenta institucional. |
+| Copilot Chat (protección de datos empresariales) | `https://m365.cloud.microsoft/chat` con cuenta institucional. |
 | Microsoft Teams — Canal `Prácticas M6-M8` | Dentro del equipo `CierreOperativo-[Apellido]` o `CierreOperativo-Practica-[GrupoN]`. |
 | OneDrive for Business | Carpeta `/CierreOperativo/Semana1/` (creada en prácticas anteriores). |
 
@@ -49,13 +51,15 @@ Recibir el expediente del cierre mensual con archivos, registros y datos tabular
 |---|---|---|
 | Microsoft SharePoint Online | Evergreen (interfaz moderna, tenant en anillo estándar, abril 2025) | Gestión de biblioteca, versiones y metadatos. |
 | Microsoft Excel | Web (Evergreen, abril 2025) o escritorio versión 2504 (build 18730.20144) | Normalización de datos tabulares. |
-| Microsoft Copilot Chat | Evergreen (servicio en la nube, abril 2025) — `https://microsoft365.com/chat` | **Solo Copilot Chat básico con EDP**. NO Microsoft 365 Copilot (SKU adicional). |
+| Microsoft Copilot Chat | Evergreen (servicio en la nube, abril 2025) — `https://m365.cloud.microsoft/chat` | **Solo Copilot Chat básico con EDP**. NO Microsoft 365 Copilot (SKU adicional). |
 | Microsoft Teams | Teams 2.1, versión mínima 24285.x.x o web `https://teams.microsoft.com` | Entrega de comprobación individual. |
 | Microsoft OneDrive for Business | Evergreen (integrado en Microsoft 365, abril 2025) | Almacenamiento intermedio de archivos. |
 | Navegador web | Microsoft Edge 134.0.3124.72+ o Google Chrome 134.0.6998.89+ | Acceso a todos los servicios web. |
 | Microsoft Power BI Desktop | 2.128.751.0 (marzo 2025) | **Solo referencia**: se valida que los datos estén listos para importación; no se opera en esta práctica. |
 
 ### Estructura de archivos del expediente proporcionado por el instructor
+
+> 📥 **Descarga (instructor):** [Expediente_CierreMensual_P8.zip](recursos/Expediente_CierreMensual_P8.zip), con los 7 archivos y los errores intencionados descritos en esta sección.
 
 El archivo `Expediente_CierreMensual_P8.zip` contiene intencionalmente los siguientes archivos con errores:
 
@@ -234,7 +238,7 @@ Abril/ (raíz)         → 20250430_General_RegistrosCierre_v1.xlsx
 
 1. Navegue a la biblioteca `CierreMensual_Practicas` en la vista raíz.
 
-2. Verifique que las columnas de metadatos de la biblioteca `Documentos-CierreOperativo` estén disponibles. Si la biblioteca `CierreMensual_Practicas` no tiene estas columnas, agréguelas:
+2. Verifique que las columnas de metadatos de la biblioteca `Documentos-CierreOperativo-[Apellido]` estén disponibles. Si la biblioteca `CierreMensual_Practicas` no tiene estas columnas, agréguelas:
    - **Periodo** — Tipo: Fecha
    - **TipoDocumento** — Tipo: Opción (`Informe | Control | Conciliación | Soporte`)
    - **Estado** — Tipo: Opción (`Borrador | En revisión | Vigente | Obsoleto`)
@@ -454,10 +458,10 @@ Total: 12 errores en 7 registros
 1. Abra Copilot Chat en el navegador:
 
 ```
-https://microsoft365.com/chat
+https://m365.cloud.microsoft/chat
 ```
 
-2. Inicie sesión con su cuenta institucional de Microsoft 365. Verifique que aparece el icono de protección de datos comerciales (escudo verde o indicador "Protegido").
+2. Inicie sesión con su cuenta institucional de Microsoft 365. Verifique que aparece el icono de protección de datos empresariales (escudo verde o indicador "Protegido").
 
 3. Escriba el siguiente prompt, pegando su tabla de auditoría donde se indica:
 
@@ -694,7 +698,7 @@ Utilice la siguiente lista de comprobación para validar que su práctica está 
 
 **Síntoma**: Al intentar editar las propiedades de un archivo en `CierreMensual_Practicas`, las columnas `Periodo`, `TipoDocumento`, `Estado` y `Responsable` no aparecen en el panel de detalles.
 
-**Causa**: Las columnas de metadatos no fueron creadas en la biblioteca `CierreMensual_Practicas` sino en otra biblioteca (como `Documentos-CierreOperativo`). Cada biblioteca de SharePoint gestiona sus propias columnas de forma independiente.
+**Causa**: Las columnas de metadatos no fueron creadas en la biblioteca `CierreMensual_Practicas` sino en otra biblioteca (como `Documentos-CierreOperativo-[Apellido]`). Cada biblioteca de SharePoint gestiona sus propias columnas de forma independiente.
 
 **Solución**:
 1. Navegue a la biblioteca `CierreMensual_Practicas` → icono de engranaje ⚙️ → **Configuración de la biblioteca**.
@@ -710,12 +714,12 @@ Utilice la siguiente lista de comprobación para validar que su práctica está 
 
 ### Problema 2: Copilot Chat no está disponible o muestra error de acceso
 
-**Síntoma**: Al acceder a `https://microsoft365.com/chat` con la cuenta institucional, aparece un mensaje de error como "Esta característica no está disponible para su organización" o se redirige a la página principal de Microsoft 365 sin abrir el chat.
+**Síntoma**: Al acceder a `https://m365.cloud.microsoft/chat` con la cuenta institucional, aparece un mensaje de error como "Esta característica no está disponible para su organización" o se redirige a la página principal de Microsoft 365 sin abrir el chat.
 
-**Causa**: El administrador del tenant no ha habilitado Copilot Chat con protección de datos comerciales (EDP) para los usuarios estándar, o la licencia del usuario no incluye acceso al servicio.
+**Causa**: El administrador del tenant no ha habilitado Copilot Chat con protección de datos empresariales (EDP) para los usuarios estándar, o la licencia del usuario no incluye acceso al servicio.
 
 **Solución**:
-1. Intente acceder directamente a `https://copilot.microsoft.com` como alternativa, iniciando sesión con la misma cuenta institucional.
+1. Intente acceder directamente a `https://m365.cloud.microsoft/chat` como alternativa, iniciando sesión con la misma cuenta institucional.
 2. Si tampoco funciona, verifique con el instructor si hay una URL alternativa habilitada en el tenant.
 3. **Solución alternativa si Copilot Chat no está disponible**: Complete los Pasos 11 y 12 de forma manual:
    - Redacte usted mismo la lista de comprobación de auditoría basándose en los errores encontrados, organizándola en las 5 categorías indicadas.

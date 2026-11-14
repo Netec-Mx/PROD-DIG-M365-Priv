@@ -21,6 +21,8 @@ Esta práctica simula un escenario realista donde el estudiante recibe un expedi
 - [ ] Simular un evento de cambio (modificación de fecha o tarea imprevista) y reajustar el plan en Planner documentando el impacto.
 - [ ] Aplicar criterios de priorización para identificar el pendiente de mayor riesgo y redactar una acción correctiva estructurada.
 
+<img src="../images/p06-objetivo.svg" alt="Diagrama de la Práctica 6. Misión «Operación contrarreloj»: situación, acciones, comprobación y entregable" width="760"/>
+
 ## Prerrequisitos
 
 **Conocimientos previos:**
@@ -43,13 +45,15 @@ Esta práctica simula un escenario realista donde el estudiante recibe un expedi
 
 | Herramienta | Versión / Acceso | Uso en esta práctica |
 |---|---|---|
-| Microsoft Planner (New Planner) | Servicio en la nube, Evergreen, abril 2025. Acceso: `https://planner.microsoft.com` o pestaña en Teams | Creación del plan, cubos, tareas, vistas |
+| Microsoft Planner (New Planner) | Servicio en la nube, Evergreen, abril 2025. Acceso: `https://planner.cloud.microsoft` o pestaña en Teams | Creación del plan, cubos, tareas, vistas |
 | Microsoft SharePoint Online | Servicio en la nube, interfaz moderna, Evergreen | Descarga del archivo de escenario |
 | Microsoft OneDrive for Business | Servicio en la nube, Evergreen | Almacenamiento de evidencias y capturas |
 | Microsoft Teams | Teams 2.1, build 24285.x.x o superior; o `https://teams.microsoft.com` | Entrega de comprobación individual |
 | Navegador web | Microsoft Edge 134.0.3124.72+ (recomendado) o Google Chrome 134.0.6998.89+ | Acceso a todos los servicios |
 
 **Archivo de escenario proporcionado por el instructor:**
+
+> 📥 **Descarga:** [Escenario_CierreMensual_P6.pdf](recursos/Escenario_CierreMensual_P6.pdf). El instructor lo publica también en la biblioteca `CierreMensual_Practicas`.
 
 El documento `Escenario_CierreMensual_P6.pdf` contiene la tabla de actividades del cierre mensual. Si el instructor aún no lo ha publicado, utilice el escenario embebido en el Paso 2 de esta guía como respaldo controlado.
 
@@ -65,14 +69,14 @@ Si el archivo PDF no está disponible en SharePoint, utilice la siguiente tabla 
 | 2 | Conciliación bancaria cuenta secundaria | Finanzas | Laura Méndez | 2025-04-25 | Atrasada | Act. 1 |
 | 3 | Registro de facturas pendientes | Finanzas | *Sin asignar* | 2025-04-27 | Atrasada | Ninguna |
 | 4 | Cierre de nómina quincenal | RR. HH. | Pedro Salinas | 2025-04-26 | Completada | Ninguna |
-| 5 | Cálculo de provisiones laborales | RR. HH. | *Sin asignar* | 2025-04-28 | Pendiente | Act. 4 |
-| 6 | Reporte de gastos de viaje | Administración | Ana Torres | 2025-04-29 | En progreso | Ninguna |
+| 5 | Cálculo de provisiones laborales | RR. HH. | *Sin asignar* | 2025-04-30 | Pendiente | Act. 4 |
+| 6 | Reporte de gastos de viaje | Administración | Ana Torres | 2025-05-01 | En progreso | Ninguna |
 | 7 | Verificación de pólizas de seguro | Jurídico | *Sin asignar* | 2025-04-30 | Pendiente | Ninguna |
-| 8 | Inventario de activos fijos | Operaciones | Roberto Díaz | 2025-04-28 | En progreso | Ninguna |
+| 8 | Inventario de activos fijos | Operaciones | Roberto Díaz | 2025-04-30 | En progreso | Ninguna |
 | 9 | Conciliación de cuentas por cobrar | Finanzas | Laura Méndez | 2025-04-26 | Atrasada | Act. 1 |
-| 10 | Generación de estados financieros preliminares | Finanzas | Carlos Ruiz | 2025-05-02 | Pendiente | Acts. 1, 2, 3, 9 |
+| 10 | Generación de estados financieros preliminares | Finanzas | Carlos Ruiz | 2025-05-01 | Pendiente | Acts. 1, 2, 3, 9 |
 | 11 | Revisión de contratos vigentes | Jurídico | Marta Vega | 2025-05-01 | Pendiente | Ninguna |
-| 12 | Actualización del presupuesto operativo | Dirección | *Sin asignar* | 2025-04-30 | Pendiente | Act. 10 |
+| 12 | Actualización del presupuesto operativo | Dirección | *Sin asignar* | 2025-05-02 | Pendiente | Act. 10 |
 | 13 | Envío de reporte a Dirección General | Dirección | Carlos Ruiz | 2025-05-03 | Pendiente | Acts. 10, 12 |
 | 14 | Archivo de soportes documentales | Administración | Ana Torres | 2025-05-04 | Pendiente | Todas las anteriores |
 
@@ -120,7 +124,7 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica
 1. Acceda a Microsoft Planner en el navegador:
 
 ```
-https://planner.microsoft.com
+https://planner.cloud.microsoft
 ```
 
 2. Haga clic en **+ Nuevo plan** (o **+ New plan** si su interfaz está en inglés).
@@ -274,14 +278,14 @@ Tarea 01: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-25 | 
 Tarea 02: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-25 | Etiqueta=Finanzas (Rosa)
 Tarea 03: Responsable=[Su nombre]  | Prioridad=Importante | Fecha=2025-04-27 | Etiqueta=Finanzas (Rosa)
 Tarea 04: Responsable=Pedro Salinas| Prioridad=Baja       | Fecha=2025-04-26 | Etiqueta=RR. HH. (Rojo)
-Tarea 05: Responsable=[Su nombre]  | Prioridad=Media      | Fecha=2025-04-28 | Etiqueta=RR. HH. (Rojo)
-Tarea 06: Responsable=Ana Torres   | Prioridad=Media      | Fecha=2025-04-29 | Etiqueta=Administración (Amarillo)
+Tarea 05: Responsable=[Su nombre]  | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=RR. HH. (Rojo)
+Tarea 06: Responsable=Ana Torres   | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Administración (Amarillo)
 Tarea 07: Responsable=[Su nombre]  | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=Jurídico (Azul)
-Tarea 08: Responsable=Roberto Díaz | Prioridad=Media      | Fecha=2025-04-28 | Etiqueta=Operaciones (Verde)
+Tarea 08: Responsable=Roberto Díaz | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=Operaciones (Verde)
 Tarea 09: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-26 | Etiqueta=Finanzas (Rosa)
-Tarea 10: Responsable=Carlos Ruiz  | Prioridad=Urgente    | Fecha=2025-05-02 | Etiqueta=Finanzas (Rosa)
+Tarea 10: Responsable=Carlos Ruiz  | Prioridad=Urgente    | Fecha=2025-05-01 | Etiqueta=Finanzas (Rosa)
 Tarea 11: Responsable=Marta Vega   | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Jurídico (Azul)
-Tarea 12: Responsable=[Su nombre]  | Prioridad=Importante | Fecha=2025-04-30 | Etiqueta=Dirección (Morado)
+Tarea 12: Responsable=[Su nombre]  | Prioridad=Importante | Fecha=2025-05-02 | Etiqueta=Dirección (Morado)
 Tarea 13: Responsable=Carlos Ruiz  | Prioridad=Importante | Fecha=2025-05-03 | Etiqueta=Dirección (Morado)
 Tarea 14: Responsable=Ana Torres   | Prioridad=Baja       | Fecha=2025-05-04 | Etiqueta=Administración (Amarillo)
 ```
@@ -379,14 +383,14 @@ para completar las tareas 01, 02 y 09.
 3. **Modificar fecha límite de tarea crítica:** Abra la tarea `10 - Generación de estados financieros preliminares` y cambie la fecha límite:
 
 ```
-Fecha límite original: 2025-05-02
-Fecha límite nueva:    2025-05-05
+Fecha límite original: 2025-05-01
+Fecha límite nueva:    2025-05-04
 ```
 
 4. En la sección de **Comentarios** de la tarea 10, escriba:
 
 ```
-CAMBIO DE FECHA: La fecha límite se extiende 3 días (de 02/05 a 05/05)
+CAMBIO DE FECHA: La fecha límite se extiende 3 días (de 01/05 a 04/05)
 debido a la incorporación de la tarea imprevista 15 (Revisión extraordinaria
 de conciliación) que consume recursos del área de Finanzas.
 Impacto: Las tareas 12 y 13 también se retrasan proporcionalmente.
@@ -395,7 +399,7 @@ Impacto: Las tareas 12 y 13 también se retrasan proporcionalmente.
 5. Abra las tareas **12** y **13** y actualice sus fechas límite sumando 3 días:
 
 ```
-Tarea 12: Fecha nueva = 2025-05-03
+Tarea 12: Fecha nueva = 2025-05-05
 Tarea 13: Fecha nueva = 2025-05-06
 ```
 
@@ -463,7 +467,7 @@ imprevista 15 sobre la tarea 10 de la cual depende esta actividad.
 
 **Resultado esperado:** La vista Programación muestra claramente las tareas 01, 02, 03 y 09 en fechas pasadas. La tarea 10 aparece como el cuello de botella principal porque bloquea a 12 y 13 (y transitivamente a 14).
 
-**Verificación:** Las tareas atrasadas son visibles en el calendario en fechas anteriores al 30 de abril. La tarea 10, aunque tiene fecha 05/05, está en el cubo Bloqueado y es identificable como el punto de mayor riesgo.
+**Verificación:** Las tareas atrasadas son visibles en el calendario en fechas anteriores al 30 de abril. La tarea 10, aunque tiene fecha 04/05, está en el cubo Bloqueado y es identificable como el punto de mayor riesgo.
 
 ---
 
@@ -506,7 +510,7 @@ Responsable de la acción correctiva:
 [Su nombre completo]
 
 Fecha de resolución propuesta:
-2025-05-05
+2025-05-04
 ═══════════════════════════════════════════════
 ```
 
@@ -628,7 +632,7 @@ Utilice la siguiente lista de comprobación para validar que la práctica se com
 
 | N.º | Criterio de validación | Resultado esperado | ¿Cumple? |
 |-----|------------------------|-------------------|-----------|
-| 1 | El plan existe en Planner con el nombre `CierreMensual_[Apellido]` | Plan visible en `planner.microsoft.com` | ☐ |
+| 1 | El plan existe en Planner con el nombre `CierreMensual_[Apellido]` | Plan visible en `planner.cloud.microsoft` | ☐ |
 | 2 | Existen exactamente 4 cubos: Pendiente, En progreso, Completado, Bloqueado | 4 columnas visibles en vista Tablero | ☐ |
 | 3 | El plan contiene exactamente 15 tareas | Contar tareas en todos los cubos = 15 | ☐ |
 | 4 | Todas las tareas tienen responsable asignado (ninguna sin responsable) | Abrir 5 tareas al azar y verificar avatar | ☐ |
@@ -639,7 +643,7 @@ Utilice la siguiente lista de comprobación para validar que la práctica se com
 | 9 | La tarea 10 tiene acción correctiva con 5 campos en Notas | Abrir tarea 10 > Notas > verificar campos | ☐ |
 | 10 | La tarea 10 tiene checklist con 8 elementos (0/8) | Abrir tarea 10 > verificar indicador 0/8 | ☐ |
 | 11 | La tarea 15 (imprevista) existe con prioridad Urgente y documentación | Abrir tarea 15 > verificar notas y prioridad | ☐ |
-| 12 | Las tareas 10, 12 y 13 tienen fechas actualizadas (+3 días) | Verificar fechas: 05/05, 03/05, 06/05 | ☐ |
+| 12 | Las tareas 10, 12 y 13 tienen fechas actualizadas (+3 días) | Verificar fechas: 04/05, 05/05, 06/05 | ☐ |
 | 13 | Los comentarios de tareas 10, 12, 13 documentan el motivo del cambio | Abrir cada tarea > sección Comentarios | ☐ |
 | 14 | Al menos 4 tareas Urgente tienen archivo adjunto | Verificar ícono de clip en tareas 01, 02, 09, 10 | ☐ |
 | 15 | Las 5 evidencias están en OneDrive `/CierreOperativo/Semana1/` | Navegar a la carpeta y contar archivos | ☐ |
@@ -652,7 +656,7 @@ Abra su plan y verifique el siguiente escenario contradictorio: la tarea 04 (Cie
 
 **Problema 1: No aparece la opción "Nuevo plan" o no se puede vincular al grupo del curso**
 
-- **Síntoma:** Al acceder a `planner.microsoft.com`, no aparece el botón "+ Nuevo plan", o al intentar crear el plan no se muestra el grupo `CierreOperativo-Practica` en la lista de grupos disponibles.
+- **Síntoma:** Al acceder a `planner.cloud.microsoft`, no aparece el botón "+ Nuevo plan", o al intentar crear el plan no se muestra el grupo `CierreOperativo-Practica` en la lista de grupos disponibles.
 - **Causa:** El administrador del tenant no ha habilitado New Planner para los usuarios, o el estudiante no es miembro del grupo de Microsoft 365 asociado al equipo del curso.
 - **Solución:**
   1. Verifique que puede acceder a Planner desde Teams: abra Teams > haga clic en el ícono de **Planner** (o **Tasks by Planner**) en la barra lateral izquierda. Si aparece allí, úselo desde Teams.
@@ -664,7 +668,7 @@ Abra su plan y verifique el siguiente escenario contradictorio: la tarea 04 (Cie
 - **Síntoma:** Después de renombrar las etiquetas (Rosa = Finanzas, Rojo = RR. HH., etc.), al abrir otra tarea las etiquetas siguen mostrando solo el color sin el nombre asignado.
 - **Causa:** Las etiquetas de categoría en Planner son específicas de cada plan, pero a veces la interfaz tarda en sincronizar los nombres si se navega rápidamente entre tareas. También puede ocurrir si se usó la versión móvil de Planner, que tiene un comportamiento de sincronización diferente.
 - **Solución:**
-  1. Cierre completamente la pestaña del navegador y vuelva a abrir `planner.microsoft.com`.
+  1. Cierre completamente la pestaña del navegador y vuelva a abrir `planner.cloud.microsoft`.
   2. Abra cualquier tarea y verifique que los nombres aparecen al hacer clic en la sección de Etiquetas.
   3. Si persiste el problema, renombre las etiquetas nuevamente desde una tarea diferente. Los nombres se guardan a nivel del plan, no de la tarea individual.
   4. Asegúrese de usar el navegador de escritorio (Edge o Chrome), no la aplicación móvil, para esta práctica.

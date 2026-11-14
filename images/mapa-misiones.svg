@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" font-family="Segoe UI, Arial, sans-serif">
+<rect width="900" height="330" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7f"/></marker></defs>
+<text x="20" y="32" font-size="18" font-weight="700" fill="#0b2e59">Misión Productividad 365: ocho retos sobre el cierre operativo de abril 2025</text>
+<rect x="20" y="60" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="32" y="84" font-size="13" font-weight="700" fill="#1f4e78">Misión 1 · 42 min</text>
+<text x="32" y="106" font-size="13" fill="#0b2e59">Rescata tu semana</text>
+<text x="32" y="148" font-size="12" fill="#2e7d32">Copilot Chat</text>
+<line x1="222" y1="110" x2="238" y2="110" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="240" y="60" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="252" y="84" font-size="13" font-weight="700" fill="#1f4e78">Misión 2 · 42 min</text>
+<text x="252" y="106" font-size="13" fill="#0b2e59">Elige la herramienta</text>
+<text x="252" y="148" font-size="12" fill="#2e7d32">Microsoft 365</text>
+<line x1="442" y1="110" x2="458" y2="110" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="460" y="60" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="472" y="84" font-size="13" font-weight="700" fill="#1f4e78">Misión 3 · 42 min</text>
+<text x="472" y="106" font-size="13" fill="#0b2e59">Comunicación bajo control</text>
+<text x="472" y="148" font-size="12" fill="#2e7d32">Teams</text>
+<line x1="662" y1="110" x2="678" y2="110" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="680" y="60" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="692" y="84" font-size="13" font-weight="700" fill="#1f4e78">Misión 4 · 42 min</text>
+<text x="692" y="106" font-size="13" fill="#0b2e59">El archivo perdido</text>
+<text x="692" y="148" font-size="12" fill="#2e7d32">SharePoint</text>
+<rect x="20" y="210" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="32" y="234" font-size="13" font-weight="700" fill="#1f4e78">Misión 5 · 42 min</text>
+<text x="32" y="256" font-size="13" fill="#0b2e59">Cero errores de captura</text>
+<text x="32" y="298" font-size="12" fill="#2e7d32">Forms</text>
+<line x1="222" y1="260" x2="238" y2="260" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="240" y="210" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="252" y="234" font-size="13" font-weight="700" fill="#1f4e78">Misión 6 · 42 min</text>
+<text x="252" y="256" font-size="13" fill="#0b2e59">Operación contrarreloj</text>
+<text x="252" y="298" font-size="12" fill="#2e7d32">Planner</text>
+<line x1="442" y1="260" x2="458" y2="260" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="460" y="210" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="472" y="234" font-size="13" font-weight="700" fill="#1f4e78">Misión 7 · 42 min</text>
+<text x="472" y="256" font-size="13" fill="#0b2e59">Automatiza y gana tiempo</text>
+<text x="472" y="298" font-size="12" fill="#2e7d32">Power Automate</text>
+<line x1="662" y1="260" x2="678" y2="260" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="680" y="210" width="200" height="100" rx="10" fill="#e8f0fb" stroke="#1f4e78" stroke-width="1.5"/>
+<text x="692" y="234" font-size="13" font-weight="700" fill="#1f4e78">Misión 8 · 42 min</text>
+<text x="692" y="256" font-size="13" fill="#0b2e59">Auditoría de productividad</text>
+<text x="692" y="298" font-size="12" fill="#2e7d32">Excel + Copilot</text>
+<path d="M780.0,162 V185 H120.0 V208" fill="none" stroke="#5b6b7f" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="316" font-size="12" fill="#5b6b7f">Cada misión: situación → acción práctica → comprobación individual. Copilot Chat básico se usa de forma transversal.</text>
+</svg>
