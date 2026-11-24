@@ -29,7 +29,7 @@ Personal operativo que participa en actividades administrativas, financieras, co
 
 ## El caso: Misión Productividad 365
 
-Las ocho misiones ocurren en el **cierre operativo de abril de 2025** de una institución ficticia. Cada misión plantea una situación del cierre, una acción práctica con Microsoft 365 y una comprobación individual del resultado. Los artefactos de una misión se reutilizan en las siguientes.
+Las ocho misiones ocurren en el **cierre operativo de abril de 2025** de una institución ficticia. Cada misión plantea una situación del cierre, una acción práctica con Microsoft 365 y una comprobación individual del resultado. Los laboratorios indican explícitamente qué artefactos y recursos se reutilizan; algunos conjuntos de archivos se publican por separado y no se migran automáticamente entre prácticas.
 
 
 ## Lista de laboratorios
