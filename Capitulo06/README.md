@@ -45,11 +45,11 @@ Esta práctica simula un escenario realista donde el estudiante recibe un expedi
 
 | Herramienta | Versión / Acceso | Uso en esta práctica |
 |---|---|---|
-| Microsoft Planner (New Planner) | Servicio en la nube, Evergreen, abril 2025. Acceso: `https://planner.cloud.microsoft` o pestaña en Teams | Creación del plan, cubos, tareas, vistas |
-| Microsoft SharePoint Online | Servicio en la nube, interfaz moderna, Evergreen | Descarga del archivo de escenario |
-| Microsoft OneDrive for Business | Servicio en la nube, Evergreen | Almacenamiento de evidencias y capturas |
-| Microsoft Teams | Teams 2.1, build 24285.x.x o superior; o `https://teams.microsoft.com` | Entrega de comprobación individual |
-| Navegador web | Microsoft Edge 134.0.3124.72+ (recomendado) o Google Chrome 134.0.6998.89+ | Acceso a todos los servicios |
+| Microsoft Planner | Servicio en la nube, interfaz disponible en el tenant. Acceso: `https://planner.cloud.microsoft` o pestaña en Teams | Creación del plan, cubos, tareas, vistas |
+| Microsoft SharePoint Online | Servicio en la nube, interfaz moderna vigente | Descarga del archivo de escenario |
+| Microsoft OneDrive for Business | Servicio en la nube, interfaz vigente | Almacenamiento de evidencias y capturas |
+| Microsoft Teams | Versión vigente de escritorio o web: `https://teams.microsoft.com` | Entrega de comprobación individual |
+| Navegador web | Microsoft Edge o Google Chrome estable y actualizado | Acceso a todos los servicios |
 
 **Archivo de escenario proporcionado por el instructor:**
 
@@ -202,7 +202,7 @@ Morado:    Dirección
 
 ### Paso 5: Crear las tareas del cierre mensual en el cubo correspondiente
 
-**Objetivo:** Trasladar las 14 actividades del escenario como tareas de Planner, ubicándolas en el cubo correcto según su estado actual.
+**Objetivo:** Trasladar las 14 actividades originales del escenario como tareas de Planner, ubicándolas en el cubo correcto según su estado actual.
 
 **Instrucciones:**
 
@@ -261,7 +261,7 @@ Cubo "Bloqueado":    (vacío por ahora; se usará en el Paso 8)
 
 1. Haga clic en cada tarea para abrir su panel de detalle y configure los campos según la tabla siguiente.
 
-2. **Responsable:** Para actividades con responsable definido en el escenario, escriba el nombre del responsable indicado. Para actividades *Sin asignar*, asígnese usted mismo como responsable provisional (su nombre aparecerá automáticamente al buscarlo).
+2. **Responsable:** Los nombres del escenario son ficticios y no necesariamente existen en el directorio del tenant. Busque y asigne usuarios reales del grupo que representen esos roles; conserve el nombre ficticio en el título o las notas de la tarea como referencia. Para actividades *Sin asignar*, asígnese usted mismo como responsable provisional y anótelo en las notas. Esto es obligatorio para la tarea 03 porque la Práctica 7 la usa para probar el flujo y la notificación.
 
 3. **Prioridad:** Aplique estos criterios:
    - **Urgente:** Actividades atrasadas CON dependencias que bloquean otras tareas.
@@ -274,25 +274,25 @@ Cubo "Bloqueado":    (vacío por ahora; se usará en el Paso 8)
 5. **Etiqueta de categoría:** Active la etiqueta de color correspondiente al área:
 
 ```
-Tarea 01: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-25 | Etiqueta=Finanzas (Rosa)
-Tarea 02: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-25 | Etiqueta=Finanzas (Rosa)
-Tarea 03: Responsable=[Su nombre]  | Prioridad=Importante | Fecha=2025-04-27 | Etiqueta=Finanzas (Rosa)
-Tarea 04: Responsable=Pedro Salinas| Prioridad=Baja       | Fecha=2025-04-26 | Etiqueta=RR. HH. (Rojo)
+Tarea 01: Responsable=[usuario real que representa a Laura Méndez] | Prioridad=Urgente    | Fecha=2025-04-25 | Etiqueta=Finanzas (Rosa)
+Tarea 02: Responsable=[usuario real que representa a Laura Méndez] | Prioridad=Urgente    | Fecha=2025-04-25 | Etiqueta=Finanzas (Rosa)
+Tarea 03: Responsable=[Su nombre; requerido para P7] | Prioridad=Importante | Fecha=2025-04-27 | Etiqueta=Finanzas (Rosa)
+Tarea 04: Responsable=[usuario real que representa a Pedro Salinas]| Prioridad=Baja       | Fecha=2025-04-26 | Etiqueta=RR. HH. (Rojo)
 Tarea 05: Responsable=[Su nombre]  | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=RR. HH. (Rojo)
-Tarea 06: Responsable=Ana Torres   | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Administración (Amarillo)
+Tarea 06: Responsable=[usuario real que representa a Ana Torres]   | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Administración (Amarillo)
 Tarea 07: Responsable=[Su nombre]  | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=Jurídico (Azul)
-Tarea 08: Responsable=Roberto Díaz | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=Operaciones (Verde)
-Tarea 09: Responsable=Laura Méndez | Prioridad=Urgente    | Fecha=2025-04-26 | Etiqueta=Finanzas (Rosa)
-Tarea 10: Responsable=Carlos Ruiz  | Prioridad=Urgente    | Fecha=2025-05-01 | Etiqueta=Finanzas (Rosa)
-Tarea 11: Responsable=Marta Vega   | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Jurídico (Azul)
+Tarea 08: Responsable=[usuario real que representa a Roberto Díaz] | Prioridad=Media      | Fecha=2025-04-30 | Etiqueta=Operaciones (Verde)
+Tarea 09: Responsable=[usuario real que representa a Laura Méndez] | Prioridad=Urgente    | Fecha=2025-04-26 | Etiqueta=Finanzas (Rosa)
+Tarea 10: Responsable=[usuario real que representa a Carlos Ruiz] | Prioridad=Urgente    | Fecha=2025-05-01 | Etiqueta=Finanzas (Rosa)
+Tarea 11: Responsable=[usuario real que representa a Marta Vega]  | Prioridad=Media      | Fecha=2025-05-01 | Etiqueta=Jurídico (Azul)
 Tarea 12: Responsable=[Su nombre]  | Prioridad=Importante | Fecha=2025-05-02 | Etiqueta=Dirección (Morado)
-Tarea 13: Responsable=Carlos Ruiz  | Prioridad=Importante | Fecha=2025-05-03 | Etiqueta=Dirección (Morado)
-Tarea 14: Responsable=Ana Torres   | Prioridad=Baja       | Fecha=2025-05-04 | Etiqueta=Administración (Amarillo)
+Tarea 13: Responsable=[usuario real que representa a Carlos Ruiz] | Prioridad=Importante | Fecha=2025-05-03 | Etiqueta=Dirección (Morado)
+Tarea 14: Responsable=[usuario real que representa a Ana Torres]  | Prioridad=Baja       | Fecha=2025-05-04 | Etiqueta=Administración (Amarillo)
 ```
 
 6. Para cada tarea, haga clic en **Guardar** o simplemente cierre el panel (Planner guarda automáticamente).
 
-**Resultado esperado:** Las 14 tareas tienen responsable asignado, nivel de prioridad, fecha límite y etiqueta de color. Las tareas sin responsable original ahora lo tienen asignado provisionalmente a usted.
+**Resultado esperado:** Las 14 tareas tienen responsable (los responsables de escenario se representan con usuarios reales y las asignaciones provisionales están anotadas), fecha límite, prioridad y etiqueta.
 
 **Verificación:** En la vista de tablero, cada tarjeta debe mostrar: el avatar del responsable, el indicador de color de prioridad (diamante rojo para Urgente, naranja para Importante), la fecha límite y la etiqueta de color del área. Verifique al menos 3 tareas abriendo su panel de detalle.
 
@@ -393,7 +393,8 @@ Fecha límite nueva:    2025-05-04
 CAMBIO DE FECHA: La fecha límite se extiende 3 días (de 01/05 a 04/05)
 debido a la incorporación de la tarea imprevista 15 (Revisión extraordinaria
 de conciliación) que consume recursos del área de Finanzas.
-Impacto: Las tareas 12 y 13 también se retrasan proporcionalmente.
+Impacto: Las tareas 12 y 13 se retrasan proporcionalmente; la tarea 14
+también debe conservar una fecha posterior a la tarea 13 de la que depende.
 ```
 
 5. Abra las tareas **12** y **13** y actualice sus fechas límite sumando 3 días:
@@ -403,16 +404,23 @@ Tarea 12: Fecha nueva = 2025-05-05
 Tarea 13: Fecha nueva = 2025-05-06
 ```
 
-6. En los comentarios de las tareas 12 y 13, agregue:
+6. La tarea 14 depende también de la tarea 13. Para que su fecha siga posterior a sus dependencias, actualice su fecha al **2025-05-07** y agregue el siguiente comentario:
+
+```
+AJUSTE EN CASCADA: Fecha actualizada al 07/05 para quedar después de la
+tarea 13, cuya fecha se extendió por el impacto de la tarea imprevista 15.
+```
+
+7. En los comentarios de las tareas 12 y 13, agregue:
 
 ```
 AJUSTE EN CASCADA: Fecha modificada (+3 días) por impacto de la tarea
 imprevista 15 sobre la tarea 10 de la cual depende esta actividad.
 ```
 
-**Resultado esperado:** El plan ahora tiene 15 tareas. Las tareas 10, 12 y 13 tienen fechas actualizadas. La tarea 15 aparece como Urgente en el cubo Pendiente. Todos los cambios están documentados en comentarios.
+**Resultado esperado:** El plan ahora tiene 15 tareas. Las tareas 10, 12, 13 y 14 tienen fechas actualizadas, con la tarea 14 posterior a su dependencia 13. La tarea 15 aparece como Urgente en el cubo Pendiente. Todos los cambios están documentados en comentarios.
 
-**Verificación:** Abra las tareas 10, 12, 13 y 15. Confirme que (a) las fechas son las nuevas, (b) los comentarios documentan el motivo del cambio, y (c) la tarea 15 tiene prioridad Urgente y etiqueta Finanzas.
+**Verificación:** Abra las tareas 10, 12, 13, 14 y 15. Confirme las fechas nuevas y comentarios; compruebe que la tarea 14 vence después de la tarea 13 y que la tarea 15 tiene prioridad Urgente y etiqueta Finanzas.
 
 ---
 
@@ -487,9 +495,10 @@ ACCIÓN CORRECTIVA — TAREA DE MAYOR RIESGO
 ═══════════════════════════════════════════════
 
 Riesgo identificado:
-La generación de estados financieros preliminares no puede iniciar
-porque depende de 4 tareas previas (01, 02, 03, 09), de las cuales
-3 están atrasadas y 1 no tenía responsable asignado. Adicionalmente,
+La generación de estados financieros preliminares depende de 4 tareas
+previas (01, 02, 03, 09), de las cuales 3 están atrasadas. El escenario
+original dejaba la tarea 03 sin responsable; se asignó provisionalmente
+un usuario del grupo para la práctica. Adicionalmente,
 la tarea imprevista 15 consume recursos del área de Finanzas.
 
 Impacto estimado:
@@ -643,7 +652,7 @@ Utilice la siguiente lista de comprobación para validar que la práctica se com
 | 9 | La tarea 10 tiene acción correctiva con 5 campos en Notas | Abrir tarea 10 > Notas > verificar campos | ☐ |
 | 10 | La tarea 10 tiene checklist con 8 elementos (0/8) | Abrir tarea 10 > verificar indicador 0/8 | ☐ |
 | 11 | La tarea 15 (imprevista) existe con prioridad Urgente y documentación | Abrir tarea 15 > verificar notas y prioridad | ☐ |
-| 12 | Las tareas 10, 12 y 13 tienen fechas actualizadas (+3 días) | Verificar fechas: 04/05, 05/05, 06/05 | ☐ |
+| 12 | Las tareas 10, 12, 13 y 14 tienen fechas actualizadas y respetan dependencias | Verificar fechas: 04/05, 05/05, 06/05 y 07/05 | ☐ |
 | 13 | Los comentarios de tareas 10, 12, 13 documentan el motivo del cambio | Abrir cada tarea > sección Comentarios | ☐ |
 | 14 | Al menos 4 tareas Urgente tienen archivo adjunto | Verificar ícono de clip en tareas 01, 02, 09, 10 | ☐ |
 | 15 | Las 5 evidencias están en OneDrive `/CierreOperativo/Semana1/` | Navegar a la carpeta y contar archivos | ☐ |
