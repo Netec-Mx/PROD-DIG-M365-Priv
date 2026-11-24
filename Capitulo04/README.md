@@ -12,7 +12,7 @@
 
 Investigar un conjunto de versiones duplicadas y documentos sin clasificación del cierre mensual; construir en SharePoint una biblioteca o lista con metadatos de periodo, tipo, estado y responsable, crear vistas y revisar versiones y permisos básicos. Comprobación individual: localizar la versión vigente y justificar cómo se recupera la trazabilidad.
 
-El participante recibirá un sitio SharePoint con 8-10 archivos intencionalmente desordenados que simulan un cierre mensual caótico. Deberá diagnosticar los problemas, construir una biblioteca con metadatos estructurados, configurar vistas, verificar versiones y ajustar permisos, demostrando dominio de los temas 4.1 y 4.2.
+El participante recibirá un sitio SharePoint con 10 archivos fuente intencionalmente desordenados y una copia de notas personalizada por participante. Deberá diagnosticar los problemas, construir una biblioteca de trabajo con exactamente nueve archivos fuente más su copia personal de notas, configurar metadatos y vistas, verificar versiones y ajustar permisos, demostrando dominio de los temas 4.1 y 4.2.
 
 ## Objetivos de Aprendizaje
 
@@ -40,7 +40,7 @@ El participante recibirá un sitio SharePoint con 8-10 archivos intencionalmente
 |---|---|
 | Cuenta institucional Microsoft 365 | Activa, con licencia que incluya SharePoint Online |
 | Sitio SharePoint de práctica | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` — con permisos de **Colaborador** o **Propietario** asignados por el instructor |
-| Archivos problema precargados | El instructor debe haber cargado los 8-10 archivos simulados en la biblioteca **Documentos** (por defecto) del sitio antes de iniciar la práctica |
+| Archivos problema precargados | El instructor carga los 10 archivos fuente del ZIP y una copia personalizada de notas por participante en la biblioteca **Documentos** antes de iniciar la práctica |
 
 ## Entorno de Laboratorio
 
@@ -48,13 +48,12 @@ El participante recibirá un sitio SharePoint con 8-10 archivos intencionalmente
 
 | Herramienta | Versión exacta | Acceso |
 |---|---|---|
-| Microsoft SharePoint Online | Servicio en la nube, Evergreen (interfaz moderna, tenant en anillo de actualización estándar, abril 2025) | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
-| Microsoft Edge | 134.0.3124.72 o superior | Navegador principal recomendado |
-| Google Chrome (alternativa) | 134.0.6998.89 o superior | Alternativa aceptable |
+| Microsoft SharePoint Online | Servicio en la nube con interfaz moderna vigente | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
+| Microsoft Edge o Google Chrome | Versión estable y actualizada | Navegador recomendado |
 
 ### Archivos problema provistos por el instructor
 
-> 📥 **Descarga (instructor):** los 10 archivos están en [Archivos_Problema_P4.zip](recursos/Archivos_Problema_P4.zip). El estado real de cada informe está escrito dentro del archivo.
+> 📥 **Descarga (instructor):** los 10 archivos fuente están en [Archivos_Problema_P4.zip](recursos/Archivos_Problema_P4.zip). El estado real de cada informe está escrito dentro del archivo. Además, prepare una copia personalizada de `Notas_reunion_borrador.docx` por participante.
 
 El instructor debe cargar los siguientes archivos en la biblioteca **Documentos** (predeterminada) del sitio `CierreOperativo-Practica` **antes** de la sesión. Los nombres incluyen errores intencionados de nomenclatura y duplicación:
 
@@ -71,7 +70,7 @@ ListaVerificacion_sinclasificar.xlsx
 Notas_reunion_borrador.docx
 ```
 
-> **Nota para el instructor:** Suba al menos 3 versiones del archivo `Informe_CierreOp_Abr2025_v1.xlsx` (editando y guardando cambios menores entre cada versión) para que el historial de versiones contenga un mínimo de 3 entradas. Además, rompa la herencia de permisos del archivo `Notas_reunion_borrador.docx` y otórguele permisos de **Edición** a "Todos excepto usuarios externos" para simular permisos excesivamente abiertos.
+> **Nota para el instructor:** Suba al menos 3 versiones del archivo `Informe_CierreOp_Abr2025_v1.xlsx` (editando y guardando cambios menores entre cada versión) para que el historial tenga un mínimo de 3 entradas. Para cada participante, cree `Notas_reunion_borrador_[Apellido].docx`, rompa la herencia de permisos y otórguele **Edición** a "Todos excepto usuarios externos"; esta copia personalizada es el objeto que corregirá el participante.
 
 ## Instrucciones Paso a Paso
 
@@ -89,11 +88,11 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-Practica
 
 3. En el menú lateral izquierdo, haga clic en **Documentos** para abrir la biblioteca predeterminada.
 
-4. Observe la lista de archivos cargados. Confirme que puede ver entre 8 y 10 archivos.
+4. Identifique los 10 archivos fuente y la copia `Notas_reunion_borrador_[Apellido].docx` asignada a usted; el total de la biblioteca aumenta según el número de participantes.
 
-**Resultado esperado:** Se muestra la biblioteca **Documentos** con los archivos problema visibles en una vista plana sin metadatos personalizados — solo las columnas predeterminadas (Nombre, Modificado, Modificado por).
+**Resultado esperado:** Se muestra la biblioteca **Documentos** con los 10 archivos fuente y las copias personalizadas visibles en una vista plana sin metadatos personalizados.
 
-**Verificación:** Cuente los archivos visibles. Debe haber al menos 8. Si ve menos, notifique al instructor.
+**Verificación:** Confirme que están los 10 archivos fuente y su copia personalizada. Si falta alguno, notifique al instructor.
 
 ---
 
@@ -285,21 +284,20 @@ Seguridad de elementos en borrador:
 https://[tenant].sharepoint.com/sites/CierreOperativo-Practica/Shared Documents
 ```
 
-2. Seleccione **todos los archivos** usando la casilla de verificación en el encabezado de la columna Nombre (o selecciónelos individualmente con Ctrl+clic).
+2. Seleccione los nueve archivos fuente que no sean `Notas_reunion_borrador.docx`. No seleccione las copias personalizadas de otros participantes.
 
-3. Haga clic en **Descargar** en la barra de comandos. Se descargará un archivo ZIP con todos los documentos.
+3. Haga clic en **Descargar** en la barra de comandos y extraiga el ZIP en una carpeta temporal.
 
-4. Extraiga el ZIP en una carpeta local temporal.
+4. Descargue también la copia personal `Notas_reunion_borrador_[Apellido].docx` asignada a usted.
+5. Regrese a la biblioteca `Documentos-CierreOperativo-[Apellido]`.
 
-5. Regrese a la pestaña de la biblioteca `Documentos-CierreOperativo-[Apellido]`.
-
-6. Haga clic en **Cargar** → **Archivos** y seleccione todos los archivos extraídos. Alternativamente, arrástrelos desde el explorador de archivos a la biblioteca.
+6. Haga clic en **Cargar** → **Archivos** y seleccione los nueve archivos extraídos más su copia personal de notas. Alternativamente, arrástrelos desde el explorador de archivos a la biblioteca.
 
 7. Espere a que la carga se complete (barra de progreso al 100%).
 
-**Resultado esperado:** Los 8-10 archivos aparecen en la biblioteca `Documentos-CierreOperativo-[Apellido]`. Las columnas de metadatos personalizados (`Periodo`, `TipoDocumento`, `Estado`, `Responsable`) están vacías para todos los archivos.
+**Resultado esperado:** Exactamente 10 archivos aparecen en `Documentos-CierreOperativo-[Apellido]`: nueve archivos fuente y la copia de notas del participante. Las columnas de metadatos personalizados están vacías.
 
-**Verificación:** Cuente los archivos en la nueva biblioteca. Deben coincidir con los de la biblioteca original.
+**Verificación:** Confirme que hay 10 archivos en la biblioteca personal, sin copias de notas pertenecientes a otros participantes.
 
 ---
 
@@ -323,7 +321,7 @@ Control_Presupuesto_Abr2025.pdf            | 01/04/2025 | Control       | Vigent
 Soporte_Factura_8832.pdf                   | 01/04/2025 | Soporte       | Vigente     | [Su nombre]
 Soporte_Factura_8833.pdf                   | 01/04/2025 | Soporte       | Vigente     | [Su nombre]
 ListaVerificacion_sinclasificar.xlsx       | 01/04/2025 | Control       | Borrador    | [Su nombre]
-Notas_reunion_borrador.docx                | 01/04/2025 | Soporte       | Borrador    | [Su nombre]
+Notas_reunion_borrador_[Apellido].docx     | 01/04/2025 | Soporte       | Borrador    | [Su nombre]
 ```
 
 3. Para cada archivo, tras completar los campos en el panel de detalles, cierre el panel o pase al siguiente archivo. Los cambios se guardan automáticamente.
@@ -399,7 +397,7 @@ Orden: Ascendente
 
 **Resultado esperado:** La vista `Por responsable` muestra todos los documentos agrupados bajo el nombre de cada responsable, con encabezados de grupo colapsables.
 
-**Verificación:** Debe ver al menos un grupo con su nombre y los 8-10 documentos agrupados debajo. Si hubiera otros responsables asignados, aparecerían como grupos separados.
+**Verificación:** Debe ver un grupo con su nombre y los 10 documentos agrupados debajo.
 
 ---
 
@@ -443,9 +441,9 @@ Orden: Ascendente
 
 4. Revise la lista de usuarios y grupos con acceso. Identifique si algún usuario o grupo tiene un nivel de permisos superior al necesario.
 
-5. Ahora regrese a la biblioteca **Documentos** (predeterminada) y localice el archivo `Notas_reunion_borrador.docx`.
+5. Regrese a la biblioteca **Documentos** del sitio compartido y localice la copia fuente `Notas_reunion_borrador_[Apellido].docx` preparada para usted.
 
-> **Nota para el instructor:** si varios participantes comparten el sitio, el primero que corrija el permiso lo resolverá para todos. Prepare una copia por participante (`Notas_reunion_borrador_[Apellido].docx`) con el mismo permiso abierto; cada participante corrige la suya (ver [SETUP_GUIDE.md](../SETUP_GUIDE.md)).
+> **Importante:** corrija el permiso de esta copia en la biblioteca compartida, donde el instructor configuró el acceso excesivo. La copia cargada en su biblioteca personal hereda los permisos de esa biblioteca y no conserva el permiso abierto del origen.
 
 6. Haga clic en los tres puntos (`⋮`) → **Administrar acceso**.
 
@@ -459,9 +457,9 @@ Después: "Todos excepto usuarios externos" → Puede ver (Lector)
          — o eliminar el acceso directo —
 ```
 
-**Resultado esperado:** El archivo `Notas_reunion_borrador.docx` ya no tiene permisos de edición para todos los usuarios. El acceso queda restringido según la herencia del sitio o al nivel de solo lectura.
+**Resultado esperado:** La copia fuente `Notas_reunion_borrador_[Apellido].docx` en **Documentos** ya no tiene permisos de edición para todos los usuarios. El acceso queda restringido según la herencia del sitio o al nivel de solo lectura.
 
-**Verificación:** Vuelva a hacer clic en **Administrar acceso** del archivo y confirme que "Todos excepto usuarios externos" ya no aparece con permisos de Edición.
+**Verificación:** En la biblioteca **Documentos**, vuelva a abrir **Administrar acceso** de la copia fuente y confirme que "Todos excepto usuarios externos" ya no aparece con permisos de Edición.
 
 ---
 
@@ -493,7 +491,7 @@ c) ¿Cómo se recupera una versión anterior si se detecta un error?
       de archivos duplicados con nombres como v1, final, DEFINITIVO]
 
 d) ¿Qué problema de permisos se detectó y cómo se corrigió?
-   → [Respuesta: El archivo Notas_reunion_borrador.docx tenía permisos
+   → [Respuesta: La copia Notas_reunion_borrador_[Apellido].docx en la biblioteca Documentos tenía permisos
       de edición para "Todos excepto usuarios externos". Se restringió
       a solo lectura / se eliminó el acceso directo]
 ```
@@ -521,7 +519,7 @@ Columnas visibles:
   ✓ Responsable      (tipo: Persona)
   ✓ Modificado        (sistema)
 
-Archivos cargados: 8–10 con todos los metadatos completados (sin celdas vacías)
+Archivos cargados: exactamente 10 (nueve fuentes comunes y la copia personal de notas), con todos los metadatos completados
 ```
 
 ### Verificación 2: Vistas personalizadas
@@ -552,7 +550,7 @@ Historial de Informe_CierreOp_Abr2025_v1.xlsx:
 ### Verificación 4: Permisos corregidos
 
 ```
-Archivo Notas_reunion_borrador.docx:
+Archivo Notas_reunion_borrador_[Apellido].docx:
   ✓ "Todos excepto usuarios externos" ya NO tiene permisos de Edición
   ✓ Acceso restringido a Puede ver (Lector) o eliminado
 ```
@@ -597,7 +595,7 @@ Respuesta esperada:
 
 ### Problema 2: La vista «Por estado» muestra todos los documentos en lugar de solo los vigentes
 
-**Síntoma:** Al seleccionar la vista `Por estado`, se muestran los 8-10 archivos sin filtrar. Documentos con estado `Borrador`, `Obsoleto` y `En revisión` siguen visibles.
+**Síntoma:** Al seleccionar la vista `Por estado`, se muestran los 10 archivos sin filtrar. Documentos con estado `Borrador`, `Obsoleto` y `En revisión` siguen visibles.
 
 **Causa:** El filtro no se configuró correctamente al crear la vista, o se guardó sin aplicar la condición de filtro. Esto puede ocurrir si el usuario hizo clic en **Aceptar** antes de desplazarse hasta la sección de filtros.
 
