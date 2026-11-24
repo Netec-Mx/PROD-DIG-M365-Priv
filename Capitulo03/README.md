@@ -34,7 +34,7 @@ Esta práctica implementa en Microsoft Teams el espacio de trabajo cuyo diseño 
 ### Acceso y artefactos requeridos
 
 - Cuenta institucional Microsoft 365 activa con acceso a Microsoft Teams.
-- Acceso a Copilot Chat básico (con protección de datos empresariales) en `https://m365.cloud.microsoft/chat` con cuenta institucional. **No** se requiere la licencia Microsoft 365 Copilot (SKU adicional de pago).
+- Acceso a Copilot Chat con cuenta institucional en [copilot.cloud.microsoft](https://copilot.cloud.microsoft). La disponibilidad de protección de datos y capacidades depende de la licencia y configuración del tenant.
 - Permisos para crear equipos en Teams **o** equipo de práctica preconfigurado por el instructor.
 - Los siguientes archivos disponibles en OneDrive for Business (`/CierreOperativo/Semana1/`):
   - `PlanSemanal_CierreOperativo_[Apellido].docx`
@@ -47,10 +47,10 @@ Esta práctica implementa en Microsoft Teams el espacio de trabajo cuyo diseño 
 
 | Herramienta | Versión | Acceso |
 |---|---|---|
-| Microsoft Teams | 2.1 (build 24285.x.x o superior) — cliente de escritorio o web | `https://teams.microsoft.com` |
-| Copilot Chat básico (protección de datos empresariales) | Evergreen (servicio en la nube) | `https://m365.cloud.microsoft/chat` |
+| Microsoft Teams | Versión vigente de escritorio o web | `https://teams.microsoft.com` |
+| Copilot Chat | Servicio en la nube | `https://copilot.cloud.microsoft` |
 | OneDrive for Business | Evergreen (servicio en la nube) | `https://m365.cloud.microsoft` o integrado en Teams |
-| Microsoft Edge | 134.0.3124.72 o superior | Navegador recomendado |
+| Microsoft Edge o Google Chrome | Versión estable y actualizada | Navegador recomendado |
 
 ### Material proporcionado por el instructor
 
@@ -72,7 +72,7 @@ Antes del Paso 1, confirma que puedes acceder a Teams y a tu carpeta de OneDrive
 
 1. Abre Microsoft Teams (escritorio o `https://teams.microsoft.com`).
 2. Verifica que tu sesión corresponde a tu cuenta institucional (tu nombre aparece en la esquina superior derecha).
-3. En otra pestaña del navegador, abre `https://m365.cloud.microsoft/chat` e inicia sesión con la misma cuenta institucional. Confirma que aparece el indicador **Protegido** o **Protección de datos empresariales** en la interfaz.
+3. En otra pestaña del navegador, abre [Copilot Chat](https://copilot.cloud.microsoft) e inicia sesión con la misma cuenta institucional. Confirma que el tenant muestra la protección de datos empresariales.
 
 ## Instrucciones Paso a Paso
 
@@ -138,16 +138,27 @@ Privacidad:   Estándar — Accesible para todos en el equipo
 
 6. Haz clic en **Agregar**.
 
-**Resultado esperado:** Tu equipo muestra tres canales en la barra lateral:
+7. Repite el proceso para crear el tercer canal:
+
+```
+Nombre:       Prácticas M6-M8
+Descripción:  Canal para compartir evidencias y coordinar las prácticas 6, 7 y 8.
+Privacidad:   Estándar — Accesible para todos en el equipo
+```
+
+8. Haz clic en **Agregar**.
+
+**Resultado esperado:** Tu equipo muestra cuatro canales en la barra lateral:
 
 ```
 CierreOperativo-[Apellido]
 ├── General
 ├── Informe-Mensual
-└── Pendientes-y-Acuerdos
+├── Pendientes-y-Acuerdos
+└── Prácticas M6-M8
 ```
 
-**Verificación:** Haz clic en cada canal y confirma que puedes ver la pestaña **Publicaciones** y la pestaña **Archivos** en cada uno.
+**Verificación:** Confirma que están los cuatro canales. En canales estándar, los archivos se consultan desde **Compartido** > **En la biblioteca**; si el tenant todavía muestra la pestaña heredada **Archivos**, también es válida.
 
 ---
 
@@ -229,8 +240,8 @@ Fecha de elaboración: [Fecha]
 **Instrucciones:**
 
 1. En tu equipo, navega al canal **Informe-Mensual**.
-2. Haz clic en la pestaña **Archivos** (parte superior del canal).
-3. Haz clic en **Cargar** → **Archivos**.
+2. Abre la pestaña **Compartido** y selecciona **En la biblioteca** para abrir la biblioteca del canal en SharePoint. Si la interfaz muestra la pestaña heredada **Archivos**, puedes abrir SharePoint desde esa pestaña.
+3. En la biblioteca de SharePoint, haz clic en **Cargar** → **Archivos**.
 4. Selecciona y sube los siguientes archivos desde tu carpeta local o desde `/CierreOperativo/Semana1/` en OneDrive:
 
 ```
@@ -242,17 +253,17 @@ AnalisisHerramientas_CierreOperativo_[Apellido].docx
 
 5. Espera a que la carga se complete (barra de progreso al 100 % para cada archivo).
 
-**Resultado esperado:** La pestaña Archivos del canal Informe-Mensual muestra los cuatro archivos:
+**Resultado esperado:** La biblioteca del canal Informe-Mensual muestra los cuatro archivos:
 
 ```
-Informe-Mensual / Archivos
+Informe-Mensual / Compartido / En la biblioteca
 ├── Informe_Mensual_CierreOperativo_Plantilla.docx
 ├── PlanSemanal_CierreOperativo_[Apellido].docx
 ├── ListaVerificacion_CierreOperativo_[Apellido].xlsx
 └── AnalisisHerramientas_CierreOperativo_[Apellido].docx
 ```
 
-**Verificación:** Haz clic en `Informe_Mensual_CierreOperativo_Plantilla.docx` y confirma que se abre en Word Online mostrando las secciones del informe. Regresa a la pestaña Archivos.
+**Verificación:** Haz clic en `Informe_Mensual_CierreOperativo_Plantilla.docx` y confirma que se abre en Word para la web mostrando las secciones del informe.
 
 ---
 
@@ -262,7 +273,7 @@ Informe-Mensual / Archivos
 
 **Instrucciones:**
 
-1. En la pestaña **Archivos** del canal **Informe-Mensual**, haz clic en **Abrir en SharePoint** (parte superior derecha, o menú de tres puntos → **Abrir en SharePoint**).
+1. En **Compartido** del canal **Informe-Mensual**, selecciona **En la biblioteca**. Si aparece la pestaña heredada **Archivos**, usa **Abrir en SharePoint** desde esa pestaña.
 2. Observa la URL en la barra de direcciones del navegador. Tendrá un formato similar a:
 
 ```
@@ -291,7 +302,7 @@ https://[tenant].sharepoint.com/sites/CierreOperativo-[Apellido]/Shared Document
 ```
 📁 Archivos del cierre operativo disponibles
 
-Se han cargado los siguientes documentos en la pestaña Archivos de este canal:
+Se han cargado los siguientes documentos en la biblioteca de este canal:
 
 1. Informe_Mensual_CierreOperativo_Plantilla.docx — Plantilla base del informe.
 2. PlanSemanal_CierreOperativo_[Apellido].docx — Plan semanal (Práctica 1).
@@ -398,7 +409,7 @@ Nota: Estas acciones se formalizarán en un mensaje de seguimiento a continuaci�
 2. Navega a:
 
 ```
-https://m365.cloud.microsoft/chat
+https://copilot.cloud.microsoft
 ```
 
 3. Si no has iniciado sesión, hazlo con tu cuenta institucional Microsoft 365.
@@ -539,15 +550,15 @@ a partir de las notas de reunión y verificado manualmente por [Tu Nombre].
 **Instrucciones:**
 
 1. Desde la vista de tu equipo en Teams, navega al canal **Informe-Mensual**.
-2. Haz clic en la pestaña **Archivos**.
+2. Abre **Compartido** > **En la biblioteca**. Si la interfaz muestra la pestaña heredada **Archivos**, también puedes usarla.
 3. Localiza el archivo `Informe_Mensual_CierreOperativo_Plantilla.docx`.
 4. Haz clic en los **tres puntos (⋯)** junto al archivo y selecciona **Abrir en** → **Word Online** (o haz clic directamente sobre el nombre del archivo).
 5. Confirma que el archivo se abre y muestra las secciones del informe (Resumen Ejecutivo, Indicadores Clave, etc.).
-6. Cierra la vista previa y regresa a la pestaña Archivos.
+6. Cierra la vista previa y regresa a la biblioteca del canal.
 
-**Resultado esperado:** El archivo principal se localiza en menos de 30 segundos desde la pestaña Archivos del canal correcto y se abre sin errores.
+**Resultado esperado:** El archivo principal se localiza en menos de 30 segundos desde la biblioteca del canal correcto y se abre sin errores.
 
-**Verificación:** El archivo se abre en Word Online mostrando el contenido de la plantilla. La ruta de navegación es: Equipo → Canal Informe-Mensual → Archivos → `Informe_Mensual_CierreOperativo_Plantilla.docx`.
+**Verificación:** El archivo se abre en Word para la web mostrando el contenido de la plantilla. La ruta de navegación es: Equipo → Canal Informe-Mensual → Compartido → En la biblioteca → `Informe_Mensual_CierreOperativo_Plantilla.docx`.
 
 ---
 
@@ -585,9 +596,9 @@ LISTA DE VERIFICACIÓN DEL MENSAJE DE SEGUIMIENTO:
 | # | Criterio | Evidencia requerida | Cumple |
 |---|----------|-------------------|--------|
 | 1 | Equipo creado con nombre correcto | El equipo `CierreOperativo-[Apellido]` aparece en la lista de equipos | ☐ |
-| 2 | Tres canales configurados | `General`, `Informe-Mensual` y `Pendientes-y-Acuerdos` visibles en el equipo | ☐ |
-| 3 | Cuatro archivos en el canal Informe-Mensual | La pestaña Archivos muestra los 4 archivos del Paso 5 | ☐ |
-| 4 | Archivo principal localizable en ≤ 30 segundos | Se navega a Informe-Mensual → Archivos → se abre la plantilla | ☐ |
+| 2 | Cuatro canales configurados | `General`, `Informe-Mensual`, `Pendientes-y-Acuerdos` y `Prácticas M6-M8` visibles | ☐ |
+| 3 | Cuatro archivos en el canal Informe-Mensual | La biblioteca del canal muestra los 4 archivos del Paso 5 | ☐ |
+| 4 | Archivo principal localizable en ≤ 30 segundos | Se navega a Informe-Mensual → Compartido → En la biblioteca → se abre la plantilla | ☐ |
 | 5 | Tabla de acuerdos publicada en Pendientes-y-Acuerdos | Publicación con tabla de ≥ 5 acciones con responsable y fecha | ☐ |
 | 6 | Mensaje de seguimiento formal publicado | Publicación con asunto, tabla de acciones, y nota de transparencia de Copilot | ☐ |
 | 7 | Cada acción del mensaje tiene: acción + responsable + fecha | Revisión fila por fila contra las notas originales | ☐ |
@@ -596,7 +607,7 @@ LISTA DE VERIFICACIÓN DEL MENSAJE DE SEGUIMIENTO:
 
 Para validar la supervisión humana sobre la salida de IA, realiza la siguiente prueba:
 
-1. Regresa a Copilot Chat (`https://m365.cloud.microsoft/chat`).
+1. Regresa a [Copilot Chat](https://copilot.cloud.microsoft).
 2. Escribe el siguiente prompt que incluye una **nota contradictoria** no presente en las notas originales:
 
 ```
@@ -610,10 +621,10 @@ La fecha de aprobación fue el 10 de marzo."
 
 3. Observa la respuesta de Copilot Chat.
 
-**Resultado esperado:** Copilot Chat debería indicar que no tiene contexto previo de esa información (ya que cada conversación en Copilot Chat básico no tiene memoria de sesiones anteriores) o que no puede confirmar el dato. **No debería validar información inventada como verdadera.**
+**Resultado esperado:** Si el dato no está en la conversación actual ni en el contenido que se le proporcionó, Copilot debería indicar que no puede confirmarlo. No se debe presuponer que Copilot Chat carece siempre de acceso a contenido organizacional: las capacidades dependen de la licencia, del tenant y del contexto compartido explícitamente.
 
 **Interpretación pedagógica:** Este ejercicio demuestra que:
-- Copilot Chat básico no retiene contexto entre conversaciones.
+- No debe asumirse memoria entre sesiones ni acceso automático a archivos; comprueba qué contexto está disponible en la sesión.
 - Siempre se debe verificar manualmente la salida de IA contra las fuentes originales.
 - Nunca se debe publicar un mensaje generado por IA sin revisión humana.
 
@@ -628,7 +639,7 @@ La fecha de aprobación fue el 10 de marzo."
 **Solución:**
 1. Notifica al instructor inmediatamente.
 2. El instructor debe proporcionar un equipo preconfigurado con el formato `CierreOperativo-Practica-[GrupoN]` y crear canales individuales o compartidos para los participantes afectados.
-3. Si el instructor no tiene un equipo preconfigurado, puede agregar al participante como miembro de un equipo existente y crear los canales `Informe-Mensual` y `Pendientes-y-Acuerdos` dentro de ese equipo.
+3. Si el instructor no tiene un equipo preconfigurado, puede agregar al participante como miembro de un equipo existente y crear los canales `Informe-Mensual`, `Pendientes-y-Acuerdos` y `Prácticas M6-M8` dentro de ese equipo.
 4. El participante continúa desde el Paso 2 dentro del equipo asignado.
 
 ### Problema 2: El formato de tabla no se preserva al pegar el mensaje de Copilot Chat en Teams
@@ -647,12 +658,12 @@ La fecha de aprobación fue el 10 de marzo."
 
 ## Limpieza
 
-> **No elimines el equipo ni los archivos.** Los artefactos de esta práctica se reutilizan en la Práctica 4 (organización documental en SharePoint).
+> **No elimines el equipo ni los archivos durante el curso.** El canal `Prácticas M6-M8` se reutiliza en las prácticas 6 a 8. La Práctica 4 usa un conjunto de archivos problema que el instructor publica por separado.
 
 Acciones de limpieza recomendadas:
 
 1. Cierra la pestaña de Copilot Chat en el navegador (no es necesario mantener la sesión abierta).
-2. Verifica que los cuatro archivos permanecen en la pestaña Archivos del canal **Informe-Mensual**.
+2. Verifica que los cuatro archivos permanecen en **Compartido** > **En la biblioteca** del canal **Informe-Mensual** (o en **Archivos** si esa interfaz heredada sigue habilitada).
 3. Confirma que las dos publicaciones (tabla de acuerdos y mensaje de seguimiento formal) permanecen en el canal **Pendientes-y-Acuerdos**.
 4. Si creaste archivos temporales en tu escritorio o carpeta de descargas durante la práctica, puedes eliminarlos; las versiones definitivas están en Teams/SharePoint.
 
@@ -663,7 +674,7 @@ Equipo Teams: CierreOperativo-[Apellido]
 ├── Canal: General
 │   └── Publicación: Propósito del equipo
 ├── Canal: Informe-Mensual
-│   ├── Archivos:
+│   ├── Biblioteca del canal (Compartido > En la biblioteca):
 │   │   ├── Informe_Mensual_CierreOperativo_Plantilla.docx
 │   │   ├── PlanSemanal_CierreOperativo_[Apellido].docx
 │   │   ├── ListaVerificacion_CierreOperativo_[Apellido].xlsx
@@ -678,19 +689,19 @@ Equipo Teams: CierreOperativo-[Apellido]
 
 En esta práctica aplicaste los conceptos de la Lección 3.1 (equipos, canales y criterios de organización) y la Lección 3.2 (archivos, comunicación y colaboración) para:
 
-1. **Crear un equipo privado** con un propósito definido (cierre operativo mensual) y tres canales temáticos alineados al flujo de trabajo: comunicaciones generales, documentos del informe y seguimiento de pendientes.
-2. **Organizar archivos** de prácticas anteriores en el canal correcto, comprobando que el almacenamiento subyacente es SharePoint (base para la Práctica 4).
+1. **Crear un equipo privado** con un propósito definido (cierre operativo mensual) y cuatro canales temáticos, incluido el canal de evidencias que se reutiliza en las prácticas 6 a 8.
+2. **Organizar archivos** de prácticas anteriores en el canal correcto y comprobar que el almacenamiento subyacente es SharePoint. La Práctica 4 usa un conjunto de archivos problema que el instructor publica por separado; estos archivos del canal no se migran automáticamente.
 3. **Extraer acuerdos** de notas desorganizadas y registrarlos de forma estructurada en el canal temático correspondiente.
 4. **Usar Copilot Chat básico** como herramienta de apoyo para la redacción, aplicando supervisión humana para detectar y corregir posibles alucinaciones.
 5. **Verificar la calidad** del mensaje de seguimiento contra criterios medibles: acción específica, responsable nombrado y fecha comprometida.
 
-### Conexión con la siguiente práctica
+### Conexión con las siguientes prácticas
 
-En la **Práctica 4**, los archivos organizados en el canal Informe-Mensual se migrarán a una biblioteca de SharePoint (`Documentos-CierreOperativo-[Apellido]`) donde se les añadirán metadatos (Periodo, TipoDocumento, Estado, Responsable), vistas personalizadas y control de versiones. La estructura de Teams creada aquí seguirá siendo el espacio de coordinación, mientras que SharePoint se convertirá en el repositorio documental con trazabilidad avanzada.
+La Práctica 4 continúa el trabajo de organización en SharePoint, pero utiliza un conjunto de archivos problema que el instructor publica en el sitio compartido; no migra automáticamente los cuatro archivos de este canal. El canal `Prácticas M6-M8` se reutiliza para compartir evidencias de las prácticas 6, 7 y 8.
 
 ### Recursos adicionales
 
 - [Crear un equipo en Microsoft Teams](https://support.microsoft.com/es-es/office/crear-un-equipo-desde-cero-en-microsoft-teams-174adf5f-846b-4780-b765-de1a0a737e2b)
-- [Organizar archivos en canales de Teams](https://support.microsoft.com/es-es/office/compartir-archivos-en-microsoft-teams-0c4d34ee-5dd8-46d5-ab35-0d227b5e6eb5)
-- [Copilot Chat con protección de datos empresariales](https://learn.microsoft.com/es-es/copilot/manage)
+- [Compartir archivos en Microsoft Teams](https://support.microsoft.com/es-es/teams/files/share-files-in-microsoft-teams)
+- [Protección de datos empresariales para Copilot Chat](https://learn.microsoft.com/es-es/copilot/plan/enterprise-data-protection)
 - [Mejores prácticas para organizar equipos en Microsoft Teams](https://learn.microsoft.com/es-es/microsoftteams/best-practices-organizing)
