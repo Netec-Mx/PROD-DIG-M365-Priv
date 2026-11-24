@@ -25,7 +25,7 @@ En esta práctica identificarás dos tareas repetitivas del cierre mensual (un r
 
 **Conocimiento previo:**
 
-- Haber completado la Práctica 6 y disponer del plan `CierreMensual_[Apellido]` en Planner con al menos 12 tareas configuradas.
+- Haber completado la Práctica 6 y disponer del plan `CierreMensual_[Apellido]` en Planner con 15 tareas. La tarea 03 debe estar asignada únicamente a la cuenta del participante para la prueba.
 - Comprensión del concepto disparador → acción → resultado (cubierto en la lección 7.1).
 - Familiaridad con SharePoint Online (listas, bibliotecas, columnas) de las Prácticas 4 y 5.
 
@@ -42,10 +42,10 @@ En esta práctica identificarás dos tareas repetitivas del cierre mensual (un r
 
 | Herramienta | Versión / Build | URL de acceso |
 |---|---|---|
-| Microsoft Power Automate | Servicio en la nube, release de servicio abril 2025 | https://make.powerautomate.com |
-| Microsoft Planner | Experiencia unificada, Evergreen abril 2025 | https://planner.cloud.microsoft |
-| SharePoint Online | Interfaz moderna, Evergreen abril 2025 | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
-| Microsoft Edge | 134.0.3124.72 o superior | Instalado localmente |
+| Microsoft Power Automate | Servicio en la nube, versión disponible en el tenant | https://make.powerautomate.com |
+| Microsoft Planner | Servicio en la nube, versión disponible en el tenant | https://planner.cloud.microsoft |
+| SharePoint Online | Interfaz moderna vigente | `https://[tenant].sharepoint.com/sites/CierreOperativo-Practica` |
+| Microsoft Edge o Google Chrome | Versión estable y actualizada | Navegador web |
 | Office 365 Outlook | Conector estándar integrado en Power Automate | N/A |
 
 **Estructura de archivos (de la Práctica 6, ya existente):**
@@ -77,7 +77,7 @@ OneDrive for Business
 
 1. Abra el navegador y acceda a https://planner.cloud.microsoft con su cuenta institucional.
 2. Localice el plan `CierreMensual_[Apellido]` creado en la Práctica 6.
-3. Revise las 14 tareas configuradas y responda mentalmente para cada una las tres preguntas de identificación:
+3. Revise las 15 tareas configuradas y responda mentalmente para cada una las tres preguntas de identificación:
    - ¿Con qué frecuencia ocurre esta actividad en un cierre real?
    - ¿Siempre sigue los mismos pasos?
    - ¿Requiere criterio humano en cada ejecución?
@@ -90,7 +90,7 @@ TAREA DE REGISTRO (automatización A):
     - Nombre de la tarea
     - Responsable
     - Fecha de completado
-  Ejemplo concreto: Tarea 04 "Cierre de nómina quincenal" → Pedro Salinas → 2025-04-26
+  Ejemplo concreto: Tarea 04 "Cierre de nómina quincenal" → usuario asignado en el tenant → fecha de finalización registrada por Planner
 
 TAREA DE NOTIFICACIÓN (automatización B):
   Evento: El mismo evento de la automatización A (tarea marcada como "Completado")
@@ -99,7 +99,7 @@ TAREA DE NOTIFICACIÓN (automatización B):
   Ejemplo concreto: Tarea 08 "Inventario de activos fijos" → Roberto Díaz → correo de confirmación
 ```
 
-> **Importante:** el conector estándar de Planner ofrece los desencadenadores *Cuando se crea una tarea*, *Cuando se me asigna una tarea* y *Cuando se completa una tarea*; no detecta el cambio de cubo. Por eso, el registro (A) y la notificación (B) se resuelven en un solo flujo que inicia al completar una tarea.
+> **Importante:** el conector estándar de Planner admite planes básicos y sondea el evento cada 360 segundos. El movimiento de una tarjeta al cubo «Completado» no equivale por sí mismo a completar la tarea: el disparador requiere que su porcentaje de finalización llegue al 100 %. Por eso, el registro (A) y la notificación (B) se resuelven en un solo flujo que inicia al completar una tarea.
 
 **Resultado esperado:** Dos procesos repetitivos claramente identificados con su evento disparador, acción esperada y ejemplo concreto.
 
@@ -124,10 +124,10 @@ TAREA DE NOTIFICACIÓN (automatización B):
 ║  DISPARADOR: "Cuando se completa una tarea" (Planner)        ║
 ║       │                                                      ║
 ║       ▼                                                      ║
-║  ACCIÓN 1: Obtener detalles de la tarea (Planner)            ║
+║  ACCIÓN 1: Obtener una tarea (Planner)                       ║
 ║       │                                                      ║
 ║       ▼                                                      ║
-║  ACCIÓN 2: Obtener perfil del usuario (Office 365 Users)     ║
+║  ACCIÓN 2: Obtener perfil del usuario asignado               ║
 ║       │                                                      ║
 ║       ▼                                                      ║
 ║  ACCIÓN 3: Crear elemento en lista SharePoint                ║
@@ -149,7 +149,7 @@ TAREA DE NOTIFICACIÓN (automatización B):
 
 ```
 Conectores estándar autorizados:
-  ✓ Microsoft Planner (disparador + obtener detalles)
+  ✓ Microsoft Planner (disparador + obtener una tarea)
   ✓ Office 365 Users (obtener perfil de usuario)
   ✓ SharePoint (crear elemento en lista)
   ✓ Office 365 Outlook (enviar correo)
@@ -282,9 +282,9 @@ CierreMensual_[Apellido]
 
 ---
 
-### Paso 6: Agregar la acción «Obtener detalles de la tarea»
+### Paso 6: Agregar la acción «Obtener una tarea»
 
-**Objetivo:** Recuperar todos los campos de la tarea completada (nombre, asignaciones, fechas) para usarlos en las acciones posteriores.
+**Objetivo:** Recuperar el título, la fecha de finalización y las asignaciones de la tarea que activó el flujo.
 
 **Instrucciones:**
 
@@ -295,7 +295,7 @@ CierreMensual_[Apellido]
 Planner obtener tarea
 ```
 
-3. Seleccione la acción **Obtener detalles de la tarea** (Get task details) del conector Microsoft Planner.
+3. Seleccione la acción **Obtener una tarea** (Get a task) del conector Microsoft Planner. No seleccione **Obtener detalles de la tarea**: esta última devuelve descripción, referencias y lista de comprobación, no los campos requeridos para el registro.
 4. Configure los campos:
 
 ```
@@ -304,15 +304,17 @@ Id. de tarea (Task Id):  [Contenido dinámico] → "Id. de tarea" (del disparado
 
 > **Importante:** Haga clic en el campo y seleccione el contenido dinámico del disparador (icono de rayo). No escriba texto estático.
 
-**Resultado esperado:** Bloque de acción "Obtener detalles de la tarea" configurado con el Id. de tarea dinámico del disparador.
+> **Si el diseñador muestra una colección `value`:** el esquema del disparador puede exponer las tareas en un arreglo. Si Power Automate agrega **Aplicar a cada uno**, consérvelo y use el Id. de la tarea del elemento actual; las acciones de recuperación, perfil, registro y correo deben quedar dentro de ese bucle.
+
+**Resultado esperado:** Bloque de acción "Obtener una tarea" configurado con el Id. de tarea dinámico del disparador.
 
 **Verificación:** Al hacer clic en el campo Task Id, debe aparecer una etiqueta dinámica con el texto "Id. de tarea" proveniente del paso anterior.
 
 ---
 
-### Paso 7: Agregar la acción «Crear elemento» en la lista de SharePoint
+### Paso 7: Resolver la identidad del responsable
 
-**Objetivo:** Registrar automáticamente los datos de la tarea completada en la lista `Registro_Cierre_[Apellido]`.
+**Objetivo:** Convertir el identificador de asignación de Planner en el nombre y correo del usuario real.
 
 **Instrucciones:**
 
@@ -320,72 +322,51 @@ Id. de tarea (Task Id):  [Contenido dinámico] → "Id. de tarea" (del disparado
 2. Busque:
 
 ```
-SharePoint crear elemento
+Office 365 Users obtener perfil
 ```
 
-3. Seleccione **Crear elemento** (Create item) del conector SharePoint.
-4. Configure los campos de conexión:
+3. Seleccione **Obtener perfil de usuario (V2)** del conector Office 365 Users.
+4. Configure **Usuario (UPN)** con el identificador del usuario asignado que devuelve **Obtener una tarea**.
+
+```
+Usuario (UPN): [Contenido dinámico] → Id. del usuario asignado
+```
+
+La tarea de prueba (tarea 03) debe estar asignada únicamente a la persona que ejecuta la práctica. Si Power Automate agrega **Aplicar a cada uno** porque las asignaciones son una colección, conserve el bucle y coloque dentro de él las acciones posteriores. No use una expresión que trate el objeto de asignaciones como una lista si el diseñador no muestra ese tipo de dato.
+
+**Resultado esperado:** La acción obtiene el perfil de la cuenta asignada y expone su nombre para mostrar y correo.
+
+**Verificación:** El perfil corresponde a la cuenta que se asignó a la tarea 03. Si no aparece un identificador de usuario, vuelva a Planner, asigne la tarea de prueba a la cuenta del participante y revise el resultado de **Obtener una tarea**.
+
+---
+
+### Paso 8: Agregar la acción «Crear elemento» en la lista de SharePoint
+
+**Objetivo:** Registrar automáticamente los datos de la tarea completada en la lista `Registro_Cierre_[Apellido]`.
+
+**Instrucciones:**
+
+1. Agregue **Crear elemento** (Create item) del conector SharePoint después de **Obtener perfil de usuario (V2)** (dentro de **Aplicar a cada uno**, si se generó).
+2. Configure los campos de conexión:
 
 ```
 Dirección del sitio: https://[tenant].sharepoint.com/sites/CierreOperativo-Practica
 Nombre de lista:     Registro_Cierre_[Apellido]
 ```
 
-5. Una vez seleccionada la lista, aparecerán los campos de las columnas. Mapéelos con contenido dinámico:
+3. Una vez seleccionada la lista, mapee los campos con el contenido dinámico:
 
 ```
-Título:           [Contenido dinámico] → "Título" (de Obtener detalles de la tarea)
-NombreTarea:      [Contenido dinámico] → "Título" (de Obtener detalles de la tarea)
-Responsable:      [Contenido dinámico] → "Asignado a" (de Obtener detalles de la tarea)
-FechaCompletado:  [Contenido dinámico] → "Fecha de finalización" (de Obtener detalles de la tarea)
+Título:           Título de "Obtener una tarea"
+NombreTarea:      Título de "Obtener una tarea"
+Responsable:      Nombre para mostrar de "Obtener perfil de usuario (V2)"
+FechaCompletado:  Fecha de finalización de "Obtener una tarea"
 CuboOrigen:       Completado
 ```
-
-> **Nota sobre el campo "Asignado a":** Planner devuelve un array de usuarios asignados. Si el campo muestra un error, Power Automate puede agregar automáticamente un bucle "Aplicar a cada uno". Esto es normal; dentro del bucle, use el elemento actual como valor del campo Responsable. Alternativamente, si la tarea solo tiene un responsable, puede usar la expresión:
-
-```
-first(body('Obtener_detalles_de_la_tarea')?['assignments'])
-```
-
-> Si el campo Responsable devuelve un ID en lugar de un nombre legible, no se preocupe en este momento; lo resolveremos opcionalmente con el conector Office 365 Users en el Paso 8.
 
 **Resultado esperado:** Bloque "Crear elemento" configurado con los cinco campos mapeados a contenido dinámico del paso anterior.
 
 **Verificación:** Todos los campos obligatorios (Título, NombreTarea, Responsable, FechaCompletado) deben mostrar etiquetas dinámicas (no texto estático).
-
----
-
-### Paso 8: (Opcional) Agregar la acción «Obtener perfil de usuario» para nombre legible
-
-**Objetivo:** Convertir el identificador del usuario asignado en un nombre legible usando el conector Office 365 Users.
-
-**Instrucciones:**
-
-1. Si en el Paso 7 el campo "Asignado a" devolvió un ID de usuario en lugar de un nombre, agregue un nuevo paso **antes** de "Crear elemento". Para ello, haga clic en el signo **+** entre "Obtener detalles de la tarea" y "Crear elemento", y seleccione **Agregar una acción**.
-2. Busque:
-
-```
-Office 365 Users obtener perfil
-```
-
-3. Seleccione **Obtener perfil de usuario (V2)** del conector Office 365 Users.
-4. Configure:
-
-```
-Usuario (UPN): [Contenido dinámico] → ID del usuario asignado del paso de Planner
-```
-
-5. Regrese al bloque "Crear elemento" y actualice el campo Responsable:
-
-```
-Responsable: [Contenido dinámico] → "Nombre para mostrar" (de Obtener perfil de usuario)
-```
-
-> **Nota:** Este paso es opcional. Si el campo Responsable ya muestra un nombre legible directamente desde Planner, puede omitirlo. El flujo funcionará con o sin este paso.
-
-**Resultado esperado:** Si se agregó, el bloque "Obtener perfil de usuario" aparece entre "Obtener detalles" y "Crear elemento", y el campo Responsable de la lista ahora usa el nombre para mostrar.
-
-**Verificación:** Confirme que la secuencia de bloques en el diseñador es: Disparador → Obtener detalles → (Obtener perfil) → Crear elemento.
 
 ---
 
@@ -395,7 +376,7 @@ Responsable: [Contenido dinámico] → "Nombre para mostrar" (de Obtener perfil 
 
 **Instrucciones:**
 
-1. Haga clic en **+ Nuevo paso** (después de "Crear elemento").
+1. Haga clic en **+ Nuevo paso** después de **Crear elemento**. Si Power Automate creó **Aplicar a cada uno**, agregue la acción de correo dentro del mismo bucle.
 2. Busque:
 
 ```
@@ -406,10 +387,10 @@ Outlook enviar correo
 4. Configure los campos:
 
 ```
-Para:    [Contenido dinámico] → "Correo" (de Obtener perfil de usuario)
-         O si no usó el Paso 8: escriba su propio correo institucional para la prueba
+Para:    Correo (Mail) del perfil obtenido en el Paso 7
+         Si Mail está vacío, use el UPN del mismo perfil, si es una dirección válida
 
-Asunto:  Tarea completada - [Contenido dinámico → "Título" de Obtener detalles]
+Asunto:  Tarea completada - [Contenido dinámico → "Título" de Obtener una tarea]
 
 Cuerpo:
 ```
@@ -421,8 +402,8 @@ Estimado/a [Contenido dinámico → "Nombre para mostrar"],
 
 La siguiente tarea del cierre mensual ha sido completada y registrada automáticamente:
 
-• Tarea: [Contenido dinámico → "Título"]
-• Fecha de completado: [Contenido dinámico → "Fecha de finalización"]
+• Tarea: [Contenido dinámico → "Título" de Obtener una tarea]
+• Fecha de completado: [Contenido dinámico → "Fecha de finalización" de Obtener una tarea]
 • Registrada en: Lista Registro_Cierre en SharePoint
 
 Este mensaje fue generado automáticamente por el flujo Automatizacion_Cierre.
@@ -431,7 +412,7 @@ Saludos,
 Sistema de Cierre Operativo
 ```
 
-> **Nota para la prueba:** Si no tiene acceso al correo de otros usuarios ficticios, use su propio correo institucional en el campo "Para". Esto es suficiente para validar que la notificación funciona.
+> La tarea de prueba debe estar asignada al participante, por lo que la notificación debe ir a la cuenta institucional del participante. No envíe a direcciones inventadas del escenario.
 
 **Resultado esperado:** Bloque "Enviar un correo electrónico (V2)" configurado con destinatario, asunto y cuerpo que incluyen contenido dinámico.
 
@@ -453,10 +434,10 @@ Sistema de Cierre Operativo
 [Disparador] Cuando se completa una tarea (Planner)
        │
        ▼
-[Acción 1] Obtener detalles de la tarea (Planner)
+[Acción 1] Obtener una tarea (Planner)
        │
        ▼
-[Acción 2] Obtener perfil de usuario V2 (Office 365 Users)  ← opcional
+[Acción 2] Obtener perfil de usuario V2 (Office 365 Users)
        │
        ▼
 [Acción 3] Crear elemento (SharePoint → Registro_Cierre_[Apellido])
@@ -467,7 +448,7 @@ Sistema de Cierre Operativo
 
 4. Si detecta errores (campos vacíos, conexiones rotas), corríjalos antes de continuar.
 
-**Resultado esperado:** Flujo guardado sin errores, con 4-5 bloques en secuencia correcta.
+**Resultado esperado:** Flujo guardado sin errores, con el perfil de usuario obligatorio y cuatro acciones en secuencia correcta (más el contenedor **Aplicar a cada uno** si el diseñador lo requiere).
 
 **Verificación:** El botón de guardar no muestra errores. En la parte superior del diseñador, el indicador de estado del flujo aparece como **Activado** (On).
 
@@ -483,18 +464,18 @@ Sistema de Cierre Operativo
 2. Seleccione **Manualmente** y haga clic en **Probar**.
 3. Power Automate mostrará el mensaje: "El flujo se está ejecutando. Realice la acción del disparador."
 4. **Sin cerrar la pestaña de Power Automate**, abra una nueva pestaña y navegue a https://planner.cloud.microsoft.
-5. En el plan `CierreMensual_[Apellido]`, localice una tarea que esté en el cubo **Pendiente**. Use la tarea:
+5. En el plan `CierreMensual_[Apellido]`, localice la tarea 03. Debe estar asignada únicamente a su cuenta y no estar completada.
 
 ```
 03 - Registro de facturas pendientes
 ```
 
-6. Haga clic en la tarea para abrirla.
-7. Cambie el cubo de **Pendiente** a **Completado** (arrastre la tarea o use el menú desplegable de cubo/bucket).
-8. Marque también la casilla de **Completada** (checkbox) en el detalle de la tarea si está disponible.
-9. Regrese a la pestaña de Power Automate y espere hasta 60 segundos. El flujo debería ejecutarse automáticamente.
+6. Abra el detalle de la tarea.
+7. Marque la tarea como **Completada** (porcentaje de finalización 100 %). Moverla a un cubo llamado **Completado** no basta para activar el flujo.
+8. Puede moverla al cubo **Completado** para mantener coherencia visual, pero este cambio de cubo no es el disparador.
+9. Regrese a la pestaña de Power Automate. Espere hasta 6 minutos para el sondeo documentado de Planner y hasta 1 minuto adicional para que termine el flujo.
 
-> **Nota:** El disparador "Cuando se completa una tarea" de Planner tiene un intervalo de sondeo (polling) que puede tardar entre 1 y 3 minutos. Si después de 3 minutos no se ejecuta, consulte la sección de Solución de Problemas.
+> **Nota:** El sondeo documentado del desencadenador es de 360 segundos. Si no hay ejecución después de 7 minutos, revise la conexión y la configuración del disparador en Solución de Problemas.
 
 **Resultado esperado:** El flujo se ejecuta y todos los bloques muestran una marca verde (✓) indicando éxito.
 
@@ -515,8 +496,8 @@ Sistema de Cierre Operativo
 ```
 Título:          03 - Registro de facturas pendientes
 NombreTarea:     03 - Registro de facturas pendientes
-Responsable:     [Su nombre]
-FechaCompletado: 2025-04-27 (o la fecha actual de la prueba)
+Responsable:     [Nombre para mostrar de su cuenta institucional]
+FechaCompletado: [fecha real de finalización registrada por Planner]
 CuboOrigen:      Completado
 ```
 
@@ -620,8 +601,8 @@ Verificar en cada bloque:
 
 ### 4. Tiempo estimado ahorrado por ejecución:
 - Manual: ~5-7 minutos por tarea completada
-- Automatizado: 0 minutos (ejecución automática en ~30 segundos)
-- Con 14 tareas en el cierre: ahorro de ~70-98 minutos por ciclo
+- Automatizado: 0 minutos de captura manual; el flujo procesa el evento después del sondeo de Planner (hasta 6 minutos) y de su tiempo de ejecución
+- Con 15 tareas en el cierre: ahorro estimado de ~75-105 minutos de trabajo manual por ciclo
 ```
 
 2. Adjunte al mensaje las capturas `Diagrama_Flujo_P7.png` y `Evidencia_Ejecucion_P7.png`.
@@ -684,23 +665,23 @@ Fecha límite: (ninguna)
 
 **Problema 1: El flujo no se dispara después de completar la tarea en Planner**
 
-- **Síntoma:** Después de marcar una tarea como completada en Planner y esperar más de 3 minutos, el flujo no aparece en el historial de ejecuciones. La prueba manual en Power Automate muestra "Esperando el disparador..."
-- **Causa:** El conector de Planner usa un mecanismo de sondeo (polling) con intervalos de 1 a 3 minutos. Además, si el plan seleccionado en el disparador no coincide exactamente con el plan donde se completó la tarea, el flujo nunca se activará. Otra causa frecuente es que la tarea se movió al cubo "Completado" pero no se marcó la casilla de completada en el detalle de la tarea — el disparador requiere que el campo `percentComplete` sea 100%.
+- **Síntoma:** Después de completar una tarea en Planner, el flujo no aparece en el historial tras esperar 7 minutos.
+- **Causa:** El conector de Planner sondea el evento cada 360 segundos. El flujo tampoco se activa si el plan seleccionado no coincide con el plan donde se completó la tarea o si la tarjeta solo se movió al cubo "Completado" sin llegar al 100 % de finalización.
 - **Solución:**
   1. Abra el flujo en modo edición y verifique que el Group Id y Plan Id del disparador corresponden exactamente a su grupo y plan.
   2. En Planner, abra la tarea y confirme que la casilla de completada está marcada (no solo que esté en el cubo Completado).
-  3. Espere hasta 5 minutos completos antes de asumir que hay un error.
+  3. Espere hasta 7 minutos para incluir el intervalo de sondeo y la ejecución del flujo.
   4. Si persiste, cancele la prueba, guarde el flujo nuevamente y reinicie la prueba con **Probar** → **Manualmente**.
 
 **Problema 2: El campo Responsable en la lista de SharePoint muestra un GUID en lugar de un nombre**
 
 - **Síntoma:** El elemento creado en la lista `Registro_Cierre_[Apellido]` muestra en el campo Responsable un valor como `a1b2c3d4-e5f6-7890-abcd-ef1234567890` en lugar del nombre de la persona.
-- **Causa:** El conector de Planner devuelve las asignaciones como un objeto JSON donde las claves son los IDs de usuario de Azure AD, no los nombres para mostrar. Si no se incluyó el paso "Obtener perfil de usuario (V2)" del conector Office 365 Users (Paso 8), el flujo registra el ID técnico directamente.
+- **Causa:** Planner devuelve identificadores de usuario en las asignaciones, no necesariamente nombres legibles. El perfil debe resolverse con **Obtener perfil de usuario (V2)** antes de crear el elemento.
 - **Solución:**
   1. Abra el flujo en modo edición.
-  2. Agregue la acción **Obtener perfil de usuario (V2)** del conector Office 365 Users entre "Obtener detalles de la tarea" y "Crear elemento".
-  3. En el campo Usuario (UPN), use la expresión para extraer el primer ID de usuario asignado. Si Power Automate creó un bucle "Aplicar a cada uno", use el elemento actual del bucle.
-  4. En "Crear elemento", cambie el campo Responsable para usar `[Contenido dinámico] → "Nombre para mostrar"` de la acción Obtener perfil.
+  2. Confirme que **Obtener una tarea** devuelve la asignación del usuario que completó la tarea.
+  3. Configure **Obtener perfil de usuario (V2)** con el identificador de esa cuenta. Si Power Automate creó **Aplicar a cada uno**, use el elemento actual y mantenga las acciones siguientes dentro del bucle.
+  4. En **Crear elemento**, use **Nombre para mostrar** de la acción Obtener perfil.
   5. Guarde y ejecute una nueva prueba con otra tarea (por ejemplo, la tarea 05).
 
 ## Limpieza
@@ -719,7 +700,7 @@ Al finalizar la práctica, realice las siguientes acciones de mantenimiento:
 └── Evidencia_Tablero_P6.png       ← (de la Práctica 6, ya existente)
 ```
 
-5. Confirme que la tarea 03 de Planner permanece en el cubo **Completado** (no la revierta).
+5. Confirme que la tarea 03 de Planner permanece marcada como **Completada**; puede permanecer también en el cubo **Completado**.
 
 ## Resumen
 
