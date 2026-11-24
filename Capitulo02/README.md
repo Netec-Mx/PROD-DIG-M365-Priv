@@ -36,7 +36,7 @@ En esta práctica recibirás cinco incidentes operativos del cierre mensual inst
 | Recurso | Verificación |
 |---|---|
 | Cuenta institucional Microsoft 365 | Inicia sesión en https://m365.cloud.microsoft y confirma acceso al portal |
-| Copilot Chat básico (protección de datos empresariales) | Abre https://m365.cloud.microsoft/chat con tu cuenta institucional; debe mostrar el icono de protección de datos empresariales (escudo verde) |
+| Copilot Chat | Abre https://copilot.cloud.microsoft con tu cuenta institucional y confirma el indicador de protección de datos que muestre el tenant |
 | Word Online / PowerPoint Online | Disponibles desde el lanzador de aplicaciones en office.com |
 | OneDrive for Business | Carpeta `/CierreOperativo/Semana1/` visible con los artefactos de la Práctica 1 |
 
@@ -46,11 +46,11 @@ En esta práctica recibirás cinco incidentes operativos del cierre mensual inst
 
 | Herramienta | Versión / Acceso | Rol en esta práctica |
 |---|---|---|
-| Microsoft Word Online | Evergreen (servicio web, abril 2025) — https://m365.cloud.microsoft | Crear tabla de justificación y documento de análisis |
-| Microsoft PowerPoint Online | Evergreen (servicio web, abril 2025) — https://m365.cloud.microsoft | Crear diagrama de microflujo (alternativa: Word Online) |
-| Microsoft Copilot Chat básico | Evergreen (servicio en la nube) — https://m365.cloud.microsoft/chat | Apoyo transversal para validar selecciones |
+| Microsoft Word para la web | Servicio web vigente — https://m365.cloud.microsoft | Crear tabla de justificación y documento de análisis |
+| Microsoft PowerPoint para la web | Servicio web vigente — https://m365.cloud.microsoft | Crear diagrama de microflujo (alternativa: Word para la web) |
+| Microsoft Copilot Chat | Servicio en la nube — https://copilot.cloud.microsoft | Apoyo transversal para validar selecciones |
 | OneDrive for Business | Evergreen (servicio en la nube) — https://m365.cloud.microsoft | Almacenamiento en `/CierreOperativo/Semana1/` |
-| Navegador web | Microsoft Edge 134.0.3124.72+ o Google Chrome 134.0.6998.89+ | Acceso a todos los servicios |
+| Navegador web | Microsoft Edge o Google Chrome estable y actualizado | Acceso a todos los servicios |
 
 ### Estructura de archivos esperada al inicio
 
@@ -344,7 +344,7 @@ SECCIÓN 2: TABLA DE SELECCIÓN Y JUSTIFICACIÓN
 
 **Objetivo:** Usar Copilot Chat básico como herramienta transversal de apoyo para contrastar tus decisiones con criterios adicionales.
 
-1. Abre una nueva pestaña del navegador e ingresa a https://m365.cloud.microsoft/chat con tu cuenta institucional.
+1. Abre una nueva pestaña del navegador e ingresa a https://copilot.cloud.microsoft con tu cuenta institucional.
 2. Confirma que aparece el indicador de **protección de datos empresariales** (icono de escudo verde junto al campo de texto).
 3. Escribe el siguiente prompt en el campo de chat:
 
@@ -373,7 +373,7 @@ Por favor, evalúa cada selección indicando: (a) si es adecuada, (b) una altern
 
 **Verificación:** La respuesta debe contener al menos una alternativa por incidente. Si Copilot da respuestas genéricas sin mencionar las herramientas específicas, reformula el prompt agregando más contexto del escenario.
 
-> **⚠️ Limitación de IA:** Copilot Chat básico no tiene acceso a tus archivos ni al contexto de tu organización. Sus sugerencias son genéricas y deben validarse contra tu situación real. No tomes las respuestas como verdad absoluta; úsalas como insumo para reflexionar.
+> **⚠️ Limitación de IA:** No presupongas que Copilot Chat tiene acceso automático a archivos o datos organizacionales. Sus respuestas dependen del contexto proporcionado, la configuración del tenant y las capacidades disponibles; valida cualquier sugerencia contra fuentes y requisitos reales.
 
 ---
 
@@ -590,7 +590,7 @@ Para cada incidente, verifica que la justificación responde a estas tres pregun
 
 ### Prueba 4: Contraste con Copilot — Caso adversarial
 
-Regresa a https://m365.cloud.microsoft/chat y envía el siguiente prompt para probar una situación contradictoria:
+Regresa a https://copilot.cloud.microsoft y envía el siguiente prompt para probar una situación contradictoria:
 
 ```
 Necesito publicar el informe final del cierre mensual con control de versiones, permisos de solo lectura para la mayoría del equipo y disponibilidad para auditorías. Un compañero sugiere usar Microsoft Forms para esto. ¿Es adecuado? Explica por qué sí o por qué no.
@@ -617,14 +617,14 @@ Ejemplo: El Incidente 3 (coordinar revisión) podría resolverse parcialmente co
 
 ### Problema 1: Copilot Chat no muestra el icono de protección de datos empresariales
 
-**Síntoma:** Al abrir https://m365.cloud.microsoft/chat con la cuenta institucional, no aparece el icono de escudo verde y el mensaje indica «Copilot» sin mención de protección de datos empresariales.
+**Síntoma:** Al abrir https://copilot.cloud.microsoft con la cuenta institucional, no aparece el indicador de protección de datos empresariales.
 
 **Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos empresariales para tu cuenta, o has iniciado sesión con una cuenta personal en lugar de la institucional.
 
 **Solución:**
 1. Cierra sesión en Copilot haciendo clic en tu avatar → **Cerrar sesión**.
 2. Cierra todas las pestañas del navegador y abre una nueva ventana en modo **InPrivate** (Edge) o **Incógnito** (Chrome).
-3. Ingresa a https://m365.cloud.microsoft/chat e inicia sesión explícitamente con tu correo institucional (formato `usuario@institucion.edu` o similar).
+3. Ingresa a https://copilot.cloud.microsoft e inicia sesión explícitamente con tu correo institucional.
 4. Si el icono de protección de datos empresariales sigue sin aparecer, notifica al instructor. El instructor debe escalar con el área de TI para habilitar el servicio. Mientras tanto, completa los Pasos 5–9 sin Copilot y marca el Paso 10 como «pendiente por configuración del tenant».
 
 ### Problema 2: PowerPoint Online no permite insertar formas ni tablas
