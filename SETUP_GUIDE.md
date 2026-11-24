@@ -8,12 +8,12 @@
 |---|---|
 | Clave del curso | PROD_DIG_M365 (Priv) |
 | Versión del documento | 1.0 |
-| Estado | BORRADOR: revisión documental completa; pendiente de validación en el tenant del cliente |
+| Estado | VERSIÓN FINAL|
 | Instructor responsable | Por asignar por Netec |
 | Fecha de elaboración | 2026-11-13 |
-| Fecha de última validación | 2026-11-13 (revisión de enlaces, recursos y coherencia con el temario) |
+| Fecha de última revisión documental | 2026-11-23 (contraste de instrucciones con documentación Microsoft vigente; sin acceso al tenant del cliente) |
 | Repositorio de laboratorios | https://github.com/Netec-Mx/PROD-DIG-M365-Priv |
-| Rama y revisión analizada | `changes_course` (basada en `main`, commit `43eff30`) |
+| Rama y revisión analizada | `main`, commit `eeff3c3` (estado inicial de esta revisión) |
 | Alcance revisado | 8 capítulos, 8 prácticas, 9 archivos de recursos, 9 diagramas, README principal y Setup Guide |
 | Modalidad del entorno | Web (Microsoft 365 institucional del cliente) |
 
@@ -38,23 +38,23 @@ Preparar, para cada participante, una cuenta institucional de Microsoft 365 con 
 
 | Sistema operativo | Edición y versión | Arquitectura | Condición de soporte o validación |
 |---|---|---|---|
-| Windows | 10 u 11 | x64 | Plataforma base; compatible según fabricante; pendiente de validar en el tenant del cliente |
-| macOS | 13 o posterior | Apple silicon o Intel | Compatible según fabricante para las aplicaciones web; Power BI Desktop no está disponible |
+| Windows | Versión actualmente compatible y con soporte de Microsoft | x64 | Plataforma base; usar actualizaciones vigentes y validar en el tenant del cliente |
+| macOS | Versión actualmente compatible y con soporte de Apple y Microsoft | Apple silicon o Intel | Aplicaciones web; Power BI Desktop solo en Windows |
 
-La plataforma base es Windows con Microsoft Edge. En macOS se completan todas las prácticas en el navegador; la demostración opcional de Power BI (Práctica 5) se hace con el servicio web de Power BI o en el equipo del instructor.
+La plataforma base es Windows 11 con Microsoft Edge estable vigente. No se fija una versión de sistema operativo o navegador: confirme que siga recibiendo soporte y actualizaciones de seguridad antes de cada curso. En macOS se completan las prácticas en el navegador; la demostración opcional de Power BI (Práctica 5) se hace con el servicio web de Power BI o en el equipo del instructor.
 
 # Software Requerido
 
 | Componente | Edición y versión requerida | Arquitectura | Obligatorio u opcional | Fuente oficial |
 |---|---|---|---|---|
-| Microsoft Edge o Google Chrome | Versión estable vigente | x64 | Obligatorio | [microsoft.com/edge](https://www.microsoft.com/es-es/edge/download) |
+| Microsoft Edge o Google Chrome | Versión estable vigente y actualizada | x64 | Obligatorio | [microsoft.com/edge](https://www.microsoft.com/es-es/edge/download) |
 | OneDrive, Word, Excel y PowerPoint para la web | Servicio administrado (Microsoft 365) | N/A | Obligatorio (prácticas 1, 2, 3, 5 y 8) | [m365.cloud.microsoft](https://m365.cloud.microsoft) |
 | Microsoft Teams | Servicio administrado (escritorio o web) | x64 | Obligatorio (prácticas 3, 5, 6 y 8) | [teams.microsoft.com](https://teams.microsoft.com) |
 | SharePoint Online | Servicio administrado | N/A | Obligatorio (prácticas 4, 5, 6, 7 y 8) | [m365.cloud.microsoft](https://m365.cloud.microsoft) |
 | Microsoft Forms | Servicio administrado | N/A | Obligatorio (Práctica 5) | [forms.office.com](https://forms.office.com) |
 | Microsoft Planner | Servicio administrado | N/A | Obligatorio (prácticas 6 y 7) | [planner.cloud.microsoft](https://planner.cloud.microsoft) |
 | Power Automate | Servicio administrado; solo conectores estándar | N/A | Obligatorio (Práctica 7) | [make.powerautomate.com](https://make.powerautomate.com) |
-| Microsoft 365 Copilot Chat (Copilot Chat básico) | Servicio administrado con protección de datos empresariales; no requiere licencia de Microsoft 365 Copilot | N/A | Obligatorio (prácticas 1, 2, 3 y 8) | [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) |
+| Microsoft Copilot Chat (básico) | Servicio administrado con protección de datos empresariales; el acceso y las capacidades dependen de la licencia y configuración del tenant | N/A | Obligatorio (prácticas 1, 2, 3 y 8) | [copilot.cloud.microsoft](https://copilot.cloud.microsoft) |
 | Power BI Desktop o servicio Power BI | Versión vigente | x64 | Opcional (demostración de la Práctica 5) | [Descarga de Power BI Desktop](https://www.microsoft.com/es-es/download/details.aspx?id=58494) |
 
 Los servicios de Microsoft 365 no tienen una versión fijable. Registrar en el [Registro de validación](#registro-validacion) la fecha de la prueba, la edición visible y cualquier restricción del tenant.
@@ -66,9 +66,9 @@ Los servicios de Microsoft 365 no tienen una versión fijable. Registrar en el [
 | Dependencia | Versión o restricción | Componente que la necesita | Método de instalación o habilitación |
 |---|---|---|---|
 | Conectores estándar: Microsoft Planner, SharePoint y Office 365 Outlook | Incluidos en Microsoft 365 | Práctica 7 | Disponibles en Power Automate; deben estar permitidos por la directiva de datos (DLP) del tenant |
-| Desencadenador *Cuando se completa una tarea* (Planner) | Requiere un plan asociado a un grupo de Microsoft 365 | Práctica 7 | El plan de la Práctica 6 se crea en el grupo `CierreOperativo-Practica` |
+| Desencadenador *Cuando se completa una tarea* (Planner) | Conector estándar; admite planes básicos (Basic) y el sondeo documentado es de 360 segundos | Práctica 7 | El plan de la Práctica 6 se crea en el grupo `CierreOperativo-Practica`; confirmar disponibilidad en el tenant |
 | Carga de archivos en Forms | Solo con formularios restringidos a la organización | Práctica 5 (pregunta «Documento de soporte») | Configuración del formulario |
-| Archivos de entrada | Versión de la rama `changes_course` | Prácticas 1 a 6 y 8 | Carpetas `CapituloNN/recursos/` |
+| Archivos de entrada | Revisión publicada del repositorio | Prácticas 1 a 6 y 8 | Carpetas `CapituloNN/recursos/` |
 
 ## Licencias, cuentas y permisos
 
@@ -87,7 +87,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 ## 1. Obtener los materiales
 
 - Repositorio autorizado: https://github.com/Netec-Mx/PROD-DIG-M365-Priv (botón **Code > Download ZIP**) o paquete ZIP del instructor.
-- Revisión que se utilizará: rama `main` después de integrar `changes_course`.
+- Revisión que se utilizará: versión publicada que el instructor distribuya para el curso.
 - Directorio de trabajo del participante: OneDrive, carpeta `CierreOperativo/Semana1/` (se crea en la Práctica 1).
 - Archivos de entrada distribuidos: `Capitulo01/recursos` a `Capitulo06/recursos` y `Capitulo08/recursos`. Los archivos de las prácticas 4, 6 y 8 los publica el instructor en el sitio de práctica (ver el paso 2).
 
@@ -97,7 +97,7 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 
 1. Iniciar sesión en [m365.cloud.microsoft](https://m365.cloud.microsoft) con una cuenta de participante.
 2. Abrir **Aplicaciones** y confirmar OneDrive, Word, Excel, PowerPoint, Teams, SharePoint, Forms, Planner y Power Automate.
-3. Abrir [Copilot Chat](https://m365.cloud.microsoft/chat) y confirmar el indicador de protección de datos empresariales.
+3. Abrir [Copilot Chat](https://copilot.cloud.microsoft) con la cuenta institucional y confirmar que el tenant muestra la protección de datos empresariales.
 
 **Plataforma y terminal:** cualquier sistema operativo compatible, navegador web.
 
@@ -106,17 +106,18 @@ Los accesos se entregan por el canal institucional del cliente. No registrar con
 ### Sitio de práctica `CierreOperativo-Practica` (instructor, antes del curso)
 
 1. En SharePoint, seleccionar **+ Crear sitio** > **Sitio de grupo** con el nombre `CierreOperativo-Practica` y privacidad **Privada**. Agregar a todos los participantes como **miembros**.
-2. En la biblioteca **Documentos** del sitio, cargar los 10 archivos de [Archivos_Problema_P4.zip](Capitulo04/recursos/Archivos_Problema_P4.zip).
+2. En la biblioteca **Documentos** del sitio, cargar los 10 archivos originales de [Archivos_Problema_P4.zip](Capitulo04/recursos/Archivos_Problema_P4.zip).
 3. Abrir `Informe_CierreOp_Abr2025_v1.xlsx`, hacer un cambio menor y guardar; repetir dos veces para que el historial tenga al menos 3 versiones.
-4. Para cada participante, cargar una copia `Notas_reunion_borrador_[Apellido].docx` y, en **Administrar acceso**, conceder **Puede editar** a **Todos excepto usuarios externos** (escenario de permisos excesivos de la Práctica 4).
+4. Para cada participante, cargar una copia `Notas_reunion_borrador_[Apellido].docx` y, en **Administrar acceso**, conceder **Puede editar** a **Todos excepto usuarios externos** (escenario de permisos excesivos de la Práctica 4). Mantenga las 10 fuentes originales; las copias personalizadas no sustituyen el archivo base.
 5. Crear la biblioteca `CierreMensual_Practicas` y cargar [Escenario_CierreMensual_P6.pdf](Capitulo06/recursos/Escenario_CierreMensual_P6.pdf) y [Expediente_CierreMensual_P8.zip](Capitulo08/recursos/Expediente_CierreMensual_P8.zip). Dejar a los participantes con permiso de lectura en esa biblioteca.
 
-**Resultado esperado:** el sitio tiene la biblioteca **Documentos** con 10 archivos más una copia de notas por participante, y la biblioteca `CierreMensual_Practicas` con 2 archivos.
+**Resultado esperado:** la biblioteca **Documentos** contiene 10 fuentes originales más una copia de notas por participante. `CierreMensual_Practicas` contiene los 2 insumos de las prácticas 6 y 8; los participantes tienen lectura en esta biblioteca y edición en sus bibliotecas personales de la Práctica 4.
 
 ### Equipos de Teams personales
 
 1. Con una cuenta de participante, comprobar si se puede crear un equipo: **Teams > Equipos > + > Crear equipo**.
 2. Si no se puede, el instructor o TI crea un equipo privado por participante con el nombre `CierreOperativo-[Apellido]` y lo agrega como **propietario**.
+3. En la Práctica 3 se crearán los canales `Informe-Mensual`, `Pendientes-y-Acuerdos` y `Prácticas M6-M8`.
 
 **Resultado esperado:** cada participante puede crear su equipo en la Práctica 3 o ya es propietario de uno.
 
@@ -164,9 +165,10 @@ OneDrive\CierreOperativo\Semana1\
 | Recurso | Nombre o identificador | Estructura o configuración base | Responsable de creación |
 |---|---|---|---|
 | Sitio y grupo de Microsoft 365 | `CierreOperativo-Practica` | Privado; participantes como miembros | Instructor o TI |
-| Biblioteca | `Documentos` (predeterminada) | 10 archivos problema de la Práctica 4, 3 versiones del informe v1 y una copia de notas con permisos abiertos por participante | Instructor |
+| Biblioteca | `Documentos` (predeterminada) | 10 archivos problema originales, 3 versiones del informe v1 y una copia de notas con permisos abiertos por participante | Instructor |
 | Biblioteca | `CierreMensual_Practicas` | `Escenario_CierreMensual_P6.pdf` y `Expediente_CierreMensual_P8.zip`; lectura para participantes | Instructor |
-| Bibliotecas, listas y planes del participante | `Documentos-CierreOperativo-[Apellido]`, `Registro_Cierre_[Apellido]`, `CierreMensual_[Apellido]` | Las crea cada participante en el sitio; el sufijo `[Apellido]` evita conflictos | Participante |
+| Biblioteca de trabajo del participante | `Documentos-CierreOperativo-[Apellido]` | Se crea en la Práctica 4; edición para organizar resultados de las prácticas 4, 5 y 8 | Participante |
+| Lista y plan del participante | `Registro_Cierre_[Apellido]`, `CierreMensual_[Apellido]` | Se crean en el sitio y grupo del curso; el sufijo `[Apellido]` evita conflictos | Participante |
 
 ## Correcciones de coherencia
 
@@ -177,14 +179,15 @@ OneDrive\CierreOperativo\Semana1\
 | Los participantes corregían el permiso de un mismo archivo de notas | Una copia `Notas_reunion_borrador_[Apellido].docx` por participante | Preparación del instructor (paso 2) |
 | La Práctica 6 marcaba como atrasadas solo 4 actividades, pero otras 3 también vencían antes del 30 de abril; la actividad 12 vencía antes que su dependencia | Fechas ajustadas: atrasadas 1, 2, 3 y 9; la actividad 12 vence después de la 10 | Aplicado en la Práctica 6 y su archivo de escenario |
 | La Práctica 7 proponía un desencadenador de cambio de cubo que el conector estándar de Planner no ofrece | Registro y notificación en un solo flujo con *Cuando se completa una tarea* | Aplicado en la Práctica 7 |
-| Enlaces a servicios de consumo (`onedrive.live.com`, `copilot.microsoft.com`) y 5 enlaces de ayuda inexistentes | `m365.cloud.microsoft`, `m365.cloud.microsoft/chat` y enlaces oficiales vigentes | Aplicado en las 8 prácticas |
+| Enlaces a servicios de consumo (`onedrive.live.com`, `copilot.microsoft.com`) y 5 enlaces de ayuda inexistentes | `m365.cloud.microsoft`, `copilot.cloud.microsoft` y enlaces oficiales vigentes | Aplicado en las 8 prácticas |
+| La Práctica 8 indicaba escribir en una biblioteca de solo lectura | `CierreMensual_Practicas` queda solo como origen de descarga; los archivos corregidos se guardan en `Documentos-CierreOperativo-[Apellido]` | Aplicado en la Práctica 8 |
 
 # Servicios Externos Requeridos
 
 | Servicio | URL, endpoint o región | Uso | Acceso requerido |
 |---|---|---|---|
 | Microsoft 365 | [m365.cloud.microsoft](https://m365.cloud.microsoft) | Todas las prácticas | Cuenta institucional |
-| Copilot Chat | [m365.cloud.microsoft/chat](https://m365.cloud.microsoft/chat) | Prácticas 1, 2, 3 y 8 | Cuenta institucional |
+| Copilot Chat | [copilot.cloud.microsoft](https://copilot.cloud.microsoft) | Prácticas 1, 2, 3 y 8 | Cuenta institucional |
 | Power Automate | [make.powerautomate.com](https://make.powerautomate.com) | Práctica 7 | Cuenta institucional |
 | GitHub | [github.com](https://github.com) | Descarga de materiales | Lectura del repositorio |
 
@@ -206,8 +209,8 @@ No aplica. El curso se realiza en el tenant de Microsoft 365 del cliente.
 |---|---|---|---|---|
 | V-01 | Cuenta | Iniciar sesión en m365.cloud.microsoft con una cuenta de participante | Aparecen las aplicaciones del curso | Captura |
 | V-02 | Copilot Chat | Abrir Copilot Chat y pegar la lista de la Práctica 1 | Responde con la protección de datos empresariales visible | Captura |
-| V-03 | Teams | Crear o abrir el equipo `CierreOperativo-[Apellido]` y agregar un canal | El canal se crea | Captura |
-| V-04 | Sitio de práctica | Abrir `CierreOperativo-Practica` como participante y crear una biblioteca de prueba con una columna de elección | Biblioteca creada; los 10 archivos de **Documentos** son visibles | Captura |
+| V-03 | Teams | Abrir el equipo y confirmar `General`, `Informe-Mensual`, `Pendientes-y-Acuerdos` y `Prácticas M6-M8` después de la Práctica 3 | Los cuatro canales están disponibles | Captura |
+| V-04 | Sitio de práctica | Abrir `CierreOperativo-Practica` como participante y crear una biblioteca de prueba con una columna de elección | Biblioteca creada; las 10 fuentes originales y la copia personal de notas son visibles | Captura |
 | V-05 | Historial de versiones | Abrir el historial de `Informe_CierreOp_Abr2025_v1.xlsx` | 3 o más versiones | Captura |
 | V-06 | Forms | Crear un formulario con una pregunta obligatoria y otra de carga de archivos | Formulario creado; la carga de archivos está disponible | Captura |
 | V-07 | Planner | Crear un plan en el grupo `CierreOperativo-Practica` | Plan creado en el grupo | Captura |
@@ -250,17 +253,18 @@ Para iniciar el curso, cada participante necesita una cuenta institucional de Mi
 
 | Fecha | Responsable | Plataforma o entorno probado | Resultado | Limitaciones o acciones pendientes |
 |---|---|---|---|---|
-| 2026-11-13 | Desarrollo de contenido Netec | Revisión documental, enlaces, recursos y coherencia con el temario | APTO para publicación del repositorio | No se validó en el tenant del cliente. Pendiente: V-01 a V-08 con una cuenta de participante |
+| 2026-11-23 | Desarrollo de contenido Netec | Revisión documental y contraste de pasos con documentación Microsoft vigente | Revisión documental realizada; no certifica la ejecución en el tenant | No se validó en el tenant del cliente. Pendiente: V-01 a V-08 con una cuenta de participante |
 
 ## Referencias oficiales
 
 | Documento o recurso | URL | Fecha de consulta |
 |---|---|---|
-| Microsoft 365 Copilot Chat | https://learn.microsoft.com/es-es/copilot/overview | 2026-11-13 |
-| Protección de datos empresariales | https://learn.microsoft.com/es-es/copilot/privacy-and-protections | 2026-11-13 |
-| Conector de Planner | https://learn.microsoft.com/es-es/connectors/planner/ | 2026-11-13 |
-| Niveles de permisos de SharePoint | https://learn.microsoft.com/es-es/sharepoint/understanding-permission-levels | 2026-11-13 |
-| Control de versiones en SharePoint | https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-en-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37 | 2026-11-13 |
-| URL e intervalos de IP de Microsoft 365 | https://learn.microsoft.com/es-es/microsoft-365/enterprise/urls-and-ip-address-ranges | 2026-11-13 |
+| Microsoft Copilot Chat: licencias y capacidades | https://learn.microsoft.com/es-es/copilot/plan/copilot-overview | 2026-11-23 |
+| Protección de datos empresariales | https://learn.microsoft.com/es-es/copilot/plan/enterprise-data-protection | 2026-11-23 |
+| Conector de Planner (planes básicos y sondeo) | https://learn.microsoft.com/es-es/connectors/planner/ | 2026-11-23 |
+| Niveles de permisos de SharePoint | https://learn.microsoft.com/es-es/sharepoint/understanding-permission-levels | 2026-11-23 |
+| Control de versiones en SharePoint | https://support.microsoft.com/es-es/office/habilitar-y-configurar-el-control-de-versiones-en-una-lista-o-biblioteca-1555d642-23ee-446a-990a-bcab618c7a37 | 2026-11-23 |
+| Archivos compartidos en canales de Teams | https://support.microsoft.com/es-es/teams/files/share-files-in-microsoft-teams | 2026-11-23 |
+| URL e intervalos de IP de Microsoft 365 | https://learn.microsoft.com/es-es/microsoft-365/enterprise/urls-and-ip-address-ranges | 2026-11-23 |
 
 [Inicio](README.md)
