@@ -15,7 +15,7 @@ En esta práctica inaugural recibirás una lista desordenada de 12 tareas del ci
 ## Objetivos de Aprendizaje
 
 - [ ] Aplicar criterios de priorización (urgencia, impacto, dependencia) a un conjunto de tareas operativas reales del cierre mensual.
-- [ ] Utilizar Copilot Chat básico (https://m365.cloud.microsoft/chat) con prompts estructurados para transformar una lista de tareas desordenadas en un plan semanal con fechas y responsables.
+- [ ] Utilizar Copilot Chat (https://copilot.cloud.microsoft) con prompts estructurados para transformar una lista de tareas desordenadas en un plan semanal con fechas y responsables.
 - [ ] Construir una lista de verificación digital en Excel Online que garantice que ninguna entrega crítica del cierre mensual quede sin fecha asignada.
 - [ ] Articular y justificar las tres prioridades seleccionadas con base en criterios de urgencia e impacto operativo.
 
@@ -34,11 +34,11 @@ En esta práctica inaugural recibirás una lista desordenada de 12 tareas del ci
 | Requisito | Detalle |
 |---|---|
 | Cuenta Microsoft 365 | Licencia institucional activa con acceso a OneDrive for Business, Excel Online y Word Online |
-| Copilot Chat básico | Acceso confirmado en https://m365.cloud.microsoft/chat con cuenta institucional (protección de datos empresariales habilitada). **No** se requiere licencia de Microsoft 365 Copilot (SKU adicional). |
-| Navegador | Microsoft Edge 134.0.3124.72+ (recomendado) o Google Chrome 134.0.6998.89+ |
+| Copilot Chat | Acceso con cuenta institucional en https://copilot.cloud.microsoft; la protección de datos y las capacidades dependen de la licencia y configuración del tenant. |
+| Navegador | Microsoft Edge o Google Chrome actualizado a una versión estable con soporte |
 | Conectividad | Conexión a Internet estable para acceder a los servicios en la nube |
 
-> **⚠️ Importante:** Si al iniciar sesión en https://m365.cloud.microsoft/chat no aparece el indicador «Protegido por tu organización» (o equivalente en inglés «Protected by your organization»), contacta al instructor antes de continuar. Esto indica que Copilot Chat con protección de datos empresariales no está habilitado en tu tenant.
+> **⚠️ Importante:** Inicia sesión con la cuenta institucional y confirma el indicador de protección de datos empresariales que muestre tu tenant. Si no aparece, contacta al instructor antes de compartir información institucional.
 
 ## Entorno de Laboratorio
 
@@ -180,7 +180,7 @@ TOP 3 PRIORIDADES (urgencia + impacto + dependencias):
 1. Abre una pestaña nueva e ingresa a:
 
 ```
-https://m365.cloud.microsoft/chat
+https://copilot.cloud.microsoft
 ```
 
 2. Si se te solicita, inicia sesión con tu **cuenta institucional** de Microsoft 365 (no con una cuenta personal).
@@ -437,7 +437,7 @@ Verificación completada por: [Tu nombre] — Fecha: [Hoy AAAA-MM-DD] — Los 4 
 
 **Objetivo:** Evaluar las limitaciones de Copilot Chat ante información contradictoria, aplicando supervisión humana.
 
-1. Regresa a la pestaña de Copilot Chat (https://m365.cloud.microsoft/chat). Inicia una **nueva conversación** (haz clic en «Nuevo chat» o «New chat»).
+1. Regresa a la pestaña de [Copilot Chat](https://copilot.cloud.microsoft). Inicia una **nueva conversación** (haz clic en «Nuevo chat» o «New chat»).
 2. Envía el siguiente prompt que contiene información deliberadamente contradictoria:
 
 ```
@@ -547,14 +547,14 @@ El Paso 12 constituye la prueba adversarial requerida. En él se envió a Copilo
 
 ### Problema 1: Copilot Chat no muestra el indicador de protección de datos empresariales
 
-**Síntoma:** Al acceder a https://m365.cloud.microsoft/chat con la cuenta institucional, no aparece el texto «Tu información personal y de la empresa está protegida en este chat» ni el icono de escudo.
+**Síntoma:** Al acceder a https://copilot.cloud.microsoft con la cuenta institucional, no aparece el indicador de protección de datos empresariales.
 
 **Causa:** El administrador del tenant no ha habilitado Copilot Chat con protección de datos empresariales para los usuarios estándar, o el navegador está usando una sesión de cuenta personal en lugar de la institucional.
 
 **Solución:**
 1. Cierra todas las ventanas del navegador.
 2. Abre una ventana **InPrivate** (Edge) o **Incógnito** (Chrome).
-3. Navega a https://m365.cloud.microsoft/chat e inicia sesión explícitamente con tu correo institucional.
+3. Navega a https://copilot.cloud.microsoft e inicia sesión explícitamente con tu correo institucional.
 4. Si el indicador sigue sin aparecer, verifica en https://myaccount.microsoft.com que la sesión activa corresponde a la cuenta institucional.
 5. Si el problema persiste, notifica al instructor, quien debe escalar con el área de TI. Como alternativa temporal, el instructor puede demostrar el uso de Copilot Chat en pantalla compartida mientras se resuelve el acceso.
 
